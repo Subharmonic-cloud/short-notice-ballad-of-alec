@@ -1,0 +1,699 @@
+{
+  "meta": {
+    "title": "Short Notice \u2014 The Ballad of Alec",
+    "subtitle": "NDGF Seasonal Changes \u2022 One-stop hunter reminder",
+    "generated": "2026-09-03",
+    "sources": [
+      "https://gf.nd.gov/regulations/deer",
+      "https://gf.nd.gov/regulations/hunting-general",
+      "https://gf.nd.gov/regulations/fishing",
+      "https://gf.nd.gov/hunting/season-dates",
+      "https://gf.nd.gov/licensing/residency",
+      "https://gf.nd.gov/wildlife/diseases/cwd",
+      "https://gf.nd.gov/regulations/moose-elk-sheep",
+      "https://ndresponse.gov/burn-restrictions-fire-danger-maps"
+    ],
+    "note": "All live NDGF pull 2026-09-03. Dates from https://gf.nd.gov/hunting/season-dates and proclamations. YoY diff vs 2023-2025 tentative->finalized."
+  },
+  "headsUp": [
+    {
+      "level": "high",
+      "icon": "\ud83d\udd25",
+      "title": "Fire Danger HIGH \u2014 Check Daily",
+      "body": "NDGF + NDResponse: burn restrictions may close PLOTS/WMA. No off-road travel on NDDH fire ban days.",
+      "link": "https://ndresponse.gov/burn-restrictions-fire-danger-maps",
+      "date": "2026-09-03"
+    },
+    {
+      "level": "watch",
+      "icon": "\ud83e\udd8c",
+      "title": "CWD Testing \u2014 Bring the Head",
+      "body": "Carcass or boned meat must be accompanied by head to final storage. OR photo-tag method: pic at kill site + tag closeup (timestamp/location on) \u2192 drop head at CWD site. Mandatory for 4A-F, 3B3.",
+      "link": "https://gf.nd.gov/wildlife/diseases/cwd",
+      "date": "2026-09-03"
+    },
+    {
+      "level": "info",
+      "icon": "\ud83d\udccb",
+      "title": "Nonresident WMA/PLOTS Blackout Oct 10-16",
+      "body": "N.D.C.C. 20.1-08-04.9: nonresidents cannot hunt GF WMAs or PLOTS Oct 10-16, 2026. Exception: PLOTS you own.",
+      "link": "https://gf.nd.gov/regulations/deer",
+      "date": "2026-09-03"
+    }
+  ],
+  "categories": [
+    {
+      "id": "deer",
+      "label": "Deer",
+      "icon": "\ud83e\udd8c",
+      "blurb": "Alec forgot the bow opener. Never again.",
+      "species": [
+        {
+          "id": "deer-bow",
+          "name": "Deer \u2014 Bow",
+          "units": "Statewide \u2022 Nonres private-only Sep 4-13 (no PLOTS unless owned)",
+          "season": {
+            "open": "Sep 4, 2026 12:00 noon",
+            "close": "Jan 3, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Any deer. No unit restriction. Orange required during gun season if afield.",
+          "nonresident": "Restricted to deer type on license. Sep 4-13 private land only (excl. PLOTS). Sep 14+ public allowed. Crossbow by permit only.",
+          "briefing": {
+            "sex": "Any deer (resident) / license-specific (nonres)",
+            "bag": "1 per license. 1 regular bow license/year. Herd-reduction allows +2 antlerless (city zones with access permit).",
+            "gear": "Compound/recurve \u226535lb @28\". Arrow \u226524\", broadhead \u22652 edges, \u2265\u00be\" cut. Mech. broadheads legal. Lighted nock OK. Crossbow \u226575lb, 14\" bolt, shoulder-fired.",
+            "unchanged": "Noon opener, Jan 3 closer, orange rule, 35lb minimum \u2014 unchanged since 2023."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Finalized Mar 25. No date shift vs 2025."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same Sep 4\u2013Jan 3 window. Herd-reduction zones expanded (Watford City added)."
+            },
+            {
+              "year": "2024-25",
+              "change": "Same framework. Pre-charged pneumatic .35cal/150gr/600fps clarified as legal."
+            }
+          ],
+          "major5": [
+            "2025: Watford City deer-bow herd reduction zone added (Fig.5)",
+            "2024: Airbow/pneumatic air gun spec finalized (.35cal/150gr/600fps)",
+            "2023: Youth muzzy eligibility tightened to antlerless-only for 11-13 in 4A-F without special mule deer tag",
+            "REMOVED 2024: telescoping sights ban clarified \u2014 1x scopes now explicitly legal on muzzy, verifiers legal on bow"
+          ],
+          "unitNotes": "Gun units 4B/4C + 4D/4E must stay in assigned unit first 2.5 days (Nov 6-8) then may swap within pair.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/deer",
+            "highlight": "Sec 1: Sep 4 (12 noon) \u2013 Jan 3. <mark>Nonresident private-only first 9.5 days</mark>. <mark>Plains air gun: \u2265.35cal/150gr/600fps</mark>. Herd reduction \u2192 Jan 3 sunset.",
+            "removed": "REMOVED: No general sex change \u2014 any-deer still resident bow.",
+            "added": "ADDED: South Bismarck/Mandan MDHRS lab access via ARS permit."
+          }
+        },
+        {
+          "id": "deer-gun",
+          "name": "Deer \u2014 Gun",
+          "units": "All units by lottery \u2022 39,100 licenses incl. gratis (2026)",
+          "season": {
+            "open": "Nov 6, 2026 12:00 noon",
+            "close": "Nov 22, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Weighted lottery. Unsuccessful \u2192 leftover lottery \u2192 first-come. 4B/4C/D/E 2.5-day stay rule.",
+          "nonresident": "Same lottery, same unit/type restriction. No Orange waiver.",
+          "briefing": {
+            "sex": "As printed: species (whitetail/mule) + antlered/antlerless. Special antlered mule tags only in 4A-F.",
+            "bag": "1 per license. Concurrent antlerless may run with bow/gun/muzzy if Director declares after lottery.",
+            "gear": "Centerfire \u2265.22, muzzy \u2265.45 (shoulder). Shotgun rifled slug/round ball \u226520ga, 18\" barrel. Handgun \u2265.35, 4\" barrel. FMJ / full-auto prohibited. Air gun same spec as bow.",
+            "unchanged": "16.5-day gun, orange required, concurrent season framework unchanged."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 6-22 (Fri\u2192Sun). 39,100 cap finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Nov 8-24. Similar cap. No major restriction change."
+            },
+            {
+              "year": "2024-25",
+              "change": "Nov 10-26. Centerfire-closed zones clarified (Devils Lake 2L, Bismarck/Mandan buffers)."
+            }
+          ],
+          "major5": [
+            "2026: License cap 39,100 \u2014 down slightly pre-2023; concurrent antlerless TBD post-lottery",
+            "REMOVED 2023: Youth concurrent restriction eased \u2014 14-15 with youth license now eligible to hunt youth season",
+            "WMA centerfire-closed areas posted at access points \u2014 check on-site, not just proclamation"
+          ],
+          "unitNotes": "Centerfire CLOSED: Devils Lake 2L Camp Grafton sliver, Bismarck/ Mandan river buffers, Drake WMA zones \u2014 shotgun/muzzy/bow only there.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/deer#1-dates",
+            "highlight": "Nov 6 noon \u2013 Nov 22. <mark>39,100 licenses</mark>. <mark>4B/C/D/E pair stay 2.5 days</mark>. Unit/type as printed.",
+            "removed": "REMOVED: No new statewide antler restriction \u2014 check unit-specific antlerless tags.",
+            "added": "ADDED: Confirm concurrent season after lottery \u2014 proclamation adds herd-reduction appendix."
+          }
+        },
+        {
+          "id": "deer-muzzy",
+          "name": "Deer \u2014 Muzzleloader",
+          "units": "Statewide \u2014 white-tailed only",
+          "season": {
+            "open": "Nov 27, 2026 12:00 noon",
+            "close": "Dec 13, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Weighted lottery, white-tailed + antler type as printed.",
+          "nonresident": "Same, lottery.",
+          "briefing": {
+            "sex": "White-tailed only (mule deer not legal muzzy). Antlered/antlerless per license.",
+            "bag": "1 per license. Tag must stay with head/antler or photo method if head dropped at CWD site.",
+            "gear": "Flint/percussion, loaded via muzzle, black powder/substitute only (no smokeless). Scope prohibited except 1x (no magnification).",
+            "unchanged": "Statewide white-tail only, Dec 13 close, 1x scope exception."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 27-Dec 13 finalized. No shift."
+            },
+            {
+              "year": "2025-26",
+              "change": "Nov 28-Dec 14. Same spec."
+            },
+            {
+              "year": "2024-25",
+              "change": "Smokeless still prohibited; 1x scopes explicitly listed."
+            }
+          ],
+          "major5": [
+            "REMOVED 2024: ambiguity on verifiers \u2014 now legal across bow/muzzy"
+          ],
+          "unitNotes": "Head of Mountain Preserve 2G2: muzzy/bow only, walk-in, muzzy/bow license required.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/deer",
+            "highlight": "<mark>Nov 27 noon \u2013 Dec 13. White-tailed only. No smokeless. 1\u00d7 scope only.</mark>",
+            "removed": "No change to Caliber \u2014 \u2265.45 long gun, \u2265.50 handgun muzzy.",
+            "added": ""
+          }
+        },
+        {
+          "id": "deer-youth",
+          "name": "Deer \u2014 Youth (Res. only)",
+          "units": "Statewide \u2014 11-15",
+          "season": {
+            "open": "Sep 18, 2026 12:00 noon",
+            "close": "Sep 27, 2026",
+            "status": "Finalized"
+          },
+          "resident": "11-13 any antlerless; 14-15 any deer (once-in-a-lifetime any-deer if never drew gun). Special mule-deer tag needed in 4A-F.",
+          "nonresident": "Not eligible \u2014 youth deer is resident only.",
+          "briefing": {
+            "sex": "11-13 antlerless only / 14-15 any deer. 4A-F mule deer needs unit-specific tag.",
+            "bag": "One youth license counts for youth + gun season (same tag). Adult mentor unaided verbal contact, unarmed, no firearm/bow.",
+            "gear": "Same as gun season. Quadriplegic gun license holders may hunt youth season.",
+            "unchanged": "Sep 18-27 window, mentor rule, para hunts \u2014 unchanged."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 18-27 finalized, quota tied to gun lottery."
+            },
+            {
+              "year": "2025-26",
+              "change": "Sep 20-29 window prior year."
+            },
+            {
+              "year": "2024-25",
+              "change": "Age cut clarified: 10 turning 11 in year eligible."
+            }
+          ],
+          "major5": [
+            "REMOVED: no new restriction \u2014 youth concurrent eligibility expanded for 14-15"
+          ],
+          "unitNotes": "4A-F antlerless mule deer requires special youth mule tag (unit-specific).",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/deer",
+            "highlight": "<mark>Sep 18 noon \u2013 Sep 27. Residents 11-13 antlerless, 14-15 any deer.</mark>",
+            "removed": "REMOVED: No carry for mentor \u2014 enforced.",
+            "added": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "upland",
+      "label": "Upland",
+      "icon": "\ud83d\udc26",
+      "blurb": "Pheasants, sharptail, grouse \u2014 where Alec gets winded.",
+      "species": [
+        {
+          "id": "pheasant",
+          "name": "Ring-necked Pheasant",
+          "units": "Statewide \u2014 male only (regular)",
+          "season": {
+            "open": "Oct 10, 2026",
+            "close": "Jan 3, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Male only regular; youth Sep 20-21 overlap. PLOTS/WMA blackout Oct 10-16 N/A ( pheasant not deer-only rule).",
+          "nonresident": "Same dates, nonres small-game license. PLOTS access after Oct 14 private-only bow rule not applicable \u2014 but check upland posting.",
+          "briefing": {
+            "sex": "Males only regular season. Hens protected.",
+            "bag": "3 daily, 12 possession (regular). Check proclamation sidebar for full limits \u2014 map varies 2024-26 slightly.",
+            "gear": "Shotgun plug 3 shells for migratory? Not required pheasant, but nontoxic not required upland. Blaze orange recommended.",
+            "unchanged": "Oct opener, Jan 3 closer, male-only \u2014 stable 5yr."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 10 \u2013 Jan 3 finalized. No bag change."
+            },
+            {
+              "year": "2025-26",
+              "change": "Oct 11 \u2013 Jan 4. Same bag 3/12."
+            },
+            {
+              "year": "2024-25",
+              "change": "Oct 12 \u2013 Jan 5. No major restriction."
+            }
+          ],
+          "major5": [
+            "5yr stable. REMOVED 2023: late-season hen protection clarified \u2014 no hen harvest regular season"
+          ],
+          "unitNotes": "No unit restrictions statewide. Parks (Unit 2L Grahams Island) require park permit.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/season-dates",
+            "highlight": "<mark>Oct 10 \u2013 Jan 3. Male pheasants only. Youth Sep 20-21.</mark>",
+            "removed": "No hen season \u2014 removed years ago, stays removed.",
+            "added": ""
+          }
+        },
+        {
+          "id": "grouse",
+          "name": "Sharp-tailed & Ruffed Grouse / Prairie Chicken",
+          "units": "Sharp-tail statewide; Ruffed NE; Prairie Chicken closed/limited",
+          "season": {
+            "open": "Sep 12, 2026",
+            "close": "Jan 3, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Sharp-tail Sep 12-Jan 3. Sage grouse closed. Prairie chicken by limited lottery if open.",
+          "nonresident": "Same; nonres prairie chicken not lottery-eligible if closed.",
+          "briefing": {
+            "sex": "Either sex where open.",
+            "bag": "Sharp-tail 3/12, Ruffed 3/12, Huns 3/12 \u2014 check daily aggregate. Prairie chicken closed 2026.",
+            "gear": "Shotgun only, no rifle. Nontoxic not required upland.",
+            "unchanged": "Sep 12 opener, Jan 3 close, sage closed \u2014 unchanged."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 12-Jan 3 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Sep 13-Jan 4."
+            },
+            {
+              "year": "2024-25",
+              "change": "Prairie chicken season tentative only, remained closed."
+            }
+          ],
+          "major5": [
+            "Sage grouse remains closed 5yr. Prairie chicken limited lottery suspended 2024-26"
+          ],
+          "unitNotes": "Sage grouse closed statewide. Check unit 4 prairie chicken lottery status.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/season-dates",
+            "highlight": "<mark>Sharp-tail Sep 12\u2013Jan 3. Sage closed.</mark>",
+            "removed": "REMOVED: no prairie chicken season 2024-26",
+            "added": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "waterfowl",
+      "label": "Waterfowl",
+      "icon": "\ud83e\udd86",
+      "blurb": "Ducks, geese, swans \u2014 bag limits get spicy. Extra work here.",
+      "species": [
+        {
+          "id": "ducks",
+          "name": "Ducks, Coots, Mergansers",
+          "units": "Low Plains / High Plains + Youth & Veteran splits",
+          "season": {
+            "open": "Sep 26, 2026 (Low Plains)",
+            "close": "Dec 6, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Sep 26-Dec 6 Low, Oct 3-Dec 6 High (check zone). Youth Sep 12-13, Vet Sep 19-20.",
+          "nonresident": "Nonres waterfowl needs nonres waterfowl lic + HIP + federal duck stamp. 14-day or season lic. Zone same.",
+          "briefing": {
+            "sex": "Hen mallard restrictions, scaup season within season \u2014 see matrix.",
+            "bag": "\u26a0\ufe0f EXTRA WORK: 6 ducks daily (mallard 5/2 hen, scaup 1-2 split, pintail 1, canvasback 2, wood duck 3, redhead 2). Coot 15, merg 5/2 hooded. Possession 3x daily.",
+            "gear": "Nontoxic shot required. Shotgun plugged to 3 shells. Electronic calls prohibited (except light geese spring).",
+            "unchanged": "Stamp + HIP + plugged gun \u2014 unchanged."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Low Plains Sep 26-Dec 6 finalized. High Plains Oct 3."
+            },
+            {
+              "year": "2025-26",
+              "change": "Scaup 2-bird window extended 10 days."
+            },
+            {
+              "year": "2024-25",
+              "change": "Pintail remained 1, canvasback 2 \u2014 no change."
+            }
+          ],
+          "major5": [
+            "2025: Scaup bag split modified (consult matrix)",
+            "2024: HIP registration moved online-only",
+            "REMOVED 2023: early teal season still closed ND",
+            "ADDED: Veteran/Active season Sep 19-20 now permanent"
+          ],
+          "unitNotes": "Low Plains vs High Plains zone line matters \u2014 Missouri River corridor. Check gf.nd.gov/waterfowl map.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/waterfowl",
+            "highlight": "<mark>6-duck, species caps matter. Youth Sep 12-13.</mark> Federal frameworks apply.",
+            "removed": "REMOVED: No lead shot \u2014 nontoxic only stays.",
+            "added": "ADDED: Vet season in regs."
+          }
+        },
+        {
+          "id": "geese",
+          "name": "Canada / White-front / Light Geese",
+          "units": "Early Canada Sep 1, Regular Sep 26, Light spring Mar 1",
+          "season": {
+            "open": "Sep 1, 2026 (Early Canada)",
+            "close": "Dec 20, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Early Canada 15/45, Regular 8/24, White-front 3/9, Light 20/no limit spring.",
+          "nonresident": "Same bags. Light goose spring conservation order Feb 21-May 10 \u2014 electronic calls + unplugged allowed.",
+          "briefing": {
+            "sex": "Either sex.",
+            "bag": "Canada early 15, regular 8; White-front 3; Light 20 (fall) / no limit spring CO.",
+            "gear": "Nontoxic, plugged 3 (except spring light geese \u2014 unplugged + e-callers legal).",
+            "unchanged": "Early/regular split, spring CO rules unchanged."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Early Sep 1, Light spring Feb 21-May 10."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "White-front season within Canada framework."
+            }
+          ],
+          "major5": [
+            "Spring Light Geese CO Feb 21-May 10 \u2014 e-caller + unplugged \u2014 stable 5yr"
+          ],
+          "unitNotes": "Tundra swan by lottery Sep 26-Dec 6 \u2014 separate tag.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/spring-light-geese",
+            "highlight": "<mark>Spring CO: unplugged + e-callers allowed.</mark>",
+            "removed": "No fall light goose e-caller \u2014 still prohibited.",
+            "added": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "label": "Fishing",
+      "icon": "\ud83c\udfa3",
+      "blurb": "Walleye, pike, darkhouse, paddlefish \u2014 different proclamation.",
+      "species": [
+        {
+          "id": "open-water",
+          "name": "Open Water / Ice Fishing",
+          "units": "Statewide \u2022 ANS rules statewide",
+          "season": {
+            "open": "Year-round (continuous)",
+            "close": "Continuous",
+            "status": "Finalized"
+          },
+          "resident": "General game + fishing lic. Darkhouse spearing Dec 1-Mar 15 (pike/walleye lakes).",
+          "nonresident": "Nonres fishing lic, 3-day/10-day options. Darkhouse same season, nonres allowed.",
+          "briefing": {
+            "sex": "N/A",
+            "bag": "Walleye 5 daily/10 possession (varies by water: Devils Lake, Sakakawea). Pike 5/10, perch varies.",
+            "gear": "2 lines open water, 4 ice (2 w/ tip-up). Barotrauma tool required Sakakawea deep water. ANS drain-plug out.",
+            "unchanged": "Year-round, 2/4 lines, drain rule \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "No statewide bag change. Lake-specific Sakakawea barotrauma descender rule stays."
+            },
+            {
+              "year": "2025-26",
+              "change": "ANS regs tightened \u2014 transport of live fish prohibited."
+            },
+            {
+              "year": "2024-25",
+              "change": "Paddlefish tag lottery moved online."
+            }
+          ],
+          "major5": [
+            "2025: ANS enforcement \u2014 drain + remove vegetation before leaving",
+            "2024: Darkhouse spearing lakes list updated",
+            "REMOVED: No live baitfish transport \u2014 removed as legal option (now prohibited)"
+          ],
+          "unitNotes": "Paddlefish snagging May 1-21 by tag only (Missouri/Yellowstone). Tag must be reported.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/fishing",
+            "highlight": "<mark>Year-round. 2 lines open, 4 ice. Drain plug out + no live bait transport.</mark>",
+            "removed": "REMOVED: Live bait transport \u2014 now illegal.",
+            "added": "ADDED: Barotrauma descender required >30ft Sakakawea."
+          }
+        }
+      ]
+    },
+    {
+      "id": "biggame",
+      "label": "Big Game \u2014 Other",
+      "icon": "\ud83c\udfd4\ufe0f",
+      "blurb": "The once-in-a-lifetime draws.",
+      "species": [
+        {
+          "id": "elk",
+          "name": "Elk",
+          "units": "E1-E7 (Badlands + Killdeer) \u2014 lottery Mar 25",
+          "season": {
+            "open": "Sep 4 / Oct 2 (unit dependent)",
+            "close": "Jan 3",
+            "status": "Finalized"
+          },
+          "resident": "Resident lottery. E1E/E2/E1W Oct 2-Jan 3. E3/E4 Sep 4-Jan 3. 75% resident split.",
+          "nonresident": "Nonres elk by lottery, limited (E units). Same dates, preference to residents.",
+          "briefing": {
+            "sex": "Bull/cow as drawn (once-in-a-lifetime bull tag).",
+            "bag": "1 elk per lifetime bull tag. Antlerless separate.",
+            "gear": "Centerfire \u2265.22, muzzy \u2265.45, archery same as deer. CWD head rule applies.",
+            "unchanged": "Lottery Mar 25, split season windows stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "E3/E4 Sep 4-Jan 3, E1E/E2 Oct 2-Jan 3 finalized Mar 25."
+            },
+            {
+              "year": "2025-26",
+              "change": "E6 Sep 4-Jan 3, E7 Oct 2-Jan 3."
+            },
+            {
+              "year": "2024-25",
+              "change": "Quota bump E3/E4 +2."
+            }
+          ],
+          "major5": [
+            "2026: quota flat 2024-26, lottery deadline Mar 25 final"
+          ],
+          "unitNotes": "E units map in moose-elk-sheep proclamation. Apply via gf.nd.gov/lotteries.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/moose-elk-sheep",
+            "highlight": "<mark>Lottery Mar 25. Unit windows Sep 4 vs Oct 2.</mark>",
+            "removed": "",
+            "added": ""
+          }
+        },
+        {
+          "id": "moose",
+          "name": "Moose",
+          "units": "M1-M5 \u2014 lottery Mar 25",
+          "season": {
+            "open": "Sep 4 / Oct 2",
+            "close": "Jan 3",
+            "status": "Finalized"
+          },
+          "resident": "Resident lottery, once-in-a-lifetime bull.",
+          "nonresident": "Very limited nonres moose (if any) \u2014 check lottery.",
+          "briefing": {
+            "sex": "As drawn",
+            "bag": "1 moose",
+            "gear": "Same as elk",
+            "unchanged": "Lottery Mar 25, Sep 4 start"
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 4-Jan 3 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Sep 6-Jan 5."
+            },
+            {
+              "year": "2024-25",
+              "change": "No major change."
+            }
+          ],
+          "major5": [
+            "Once-in-a-lifetime framework unchanged 5yr"
+          ],
+          "unitNotes": "Moose units NE ND. CWD not required but head submission encouraged.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/moose-elk-sheep",
+            "highlight": "<mark>Moose lottery Mar 25, Sep 4 opener.</mark>",
+            "removed": "",
+            "added": ""
+          }
+        },
+        {
+          "id": "pronghorn",
+          "name": "Pronghorn",
+          "units": "Archery Sep 4-27, Gun Oct 2-11 (by lottery)",
+          "season": {
+            "open": "Sep 4, 2026 (bow) / Oct 2, 2026 (gun)",
+            "close": "Sep 27 / Oct 11",
+            "status": "Finalized (bow), Tentative (gun quota)"
+          },
+          "resident": "Bow Sep 4-27 any pronghorn. Gun by lottery Oct 2-11.",
+          "nonresident": "Bow same, gun lottery limited.",
+          "briefing": {
+            "sex": "As drawn (buck/doe).",
+            "bag": "1",
+            "gear": "Rifle \u2265.22, archery \u226535lb, same head-tag rule.",
+            "unchanged": "Sep bow window stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Bow Sep 4-27 finalized, gun tentative quota pending."
+            },
+            {
+              "year": "2025-26",
+              "change": "Bow Sep 6-28, gun Oct 4-12."
+            },
+            {
+              "year": "2024-25",
+              "change": "Gun quota cut 15% due to winter kill."
+            }
+          ],
+          "major5": [
+            "2024: pronghorn gun quota cut \u2014 slowly rebounding",
+            "REMOVED: No doe-only restriction 2025-26"
+          ],
+          "unitNotes": "Spring light geese note: not pronghorn \u2014 keep separate.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/season-dates",
+            "highlight": "<mark>Bow Sep 4-27, Gun Oct 2-11 lottery.</mark>",
+            "removed": "",
+            "added": ""
+          }
+        },
+        {
+          "id": "bighorn",
+          "name": "Bighorn Sheep",
+          "units": "Badlands \u2014 raffle + 1 lottery tag",
+          "season": {
+            "open": "Oct 30, 2026",
+            "close": "Dec 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Lottery + MDF/WSF raffle. Once-in-a-lifetime.",
+          "nonresident": "Raffle tag open to nonres; lottery resident-only.",
+          "briefing": {
+            "sex": "Ram as drawn (\u00be curl +)",
+            "bag": "1 lifetime",
+            "gear": "Centerfire only, no archery harvest on sheep tag.",
+            "unchanged": "Single tag, Oct 30-Dec 31 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 30-Dec 31 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Nov 1-Dec 31."
+            },
+            {
+              "year": "2024-25",
+              "change": "Raffle proceeds to sheep conservation."
+            }
+          ],
+          "major5": [
+            "MDF license raffle \u2014 1 mule deer license statewide (separate from sheep)"
+          ],
+          "unitNotes": "Sheep units Badlands. Check once-in-a-lifetime eligibility before applying.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/moose-elk-sheep",
+            "highlight": "<mark>Sheep Oct 30\u2013Dec 31. Once-in-a-lifetime.</mark>",
+            "removed": "",
+            "added": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "nongame",
+      "label": "Non-Game / Fur",
+      "icon": "\ud83d\udc3e",
+      "blurb": "Coyote to mountain lion \u2014 year-rounders and the rest.",
+      "species": [
+        {
+          "id": "furbearers",
+          "name": "Furbearers & Coyote / Mt Lion / Turkey",
+          "units": "Youth turkey Sep 12, Fall turkey Oct 10, Spring turkey Apr 11, Mt lion Sep 1-Mar 31",
+          "season": {
+            "open": "Coyote year-round, Mt Lion Sep 1",
+            "close": "Year-round / Mar 31",
+            "status": "Finalized"
+          },
+          "resident": "Coyote year-round. Mt lion Sep 1-Mar 31 (quota). Fisher Nov 16-Dec 31, bobcat same. Turkey fall Oct 10-Jan 3, spring Apr 11-May 17.",
+          "nonresident": "Coyote year-round nonres. Mt lion nonres by quota. Turkey fall by lottery, youth spring Sep 12-13 waterfowl youth overlap.",
+          "briefing": {
+            "sex": "Turkey bearded only spring, either sex fall. Mt lion either sex until quota.",
+            "bag": "Turkey 1 spring, 1 fall (limited). Mt lion 1 until quota. Fisher 1, bobcat 1.",
+            "gear": "Turkey shotgun/bow, no rifles spring. Mt lion centerfire/bow, no dogs except July? Check.",
+            "unchanged": "Year-round coyote, fisher quota, turkey split stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Turkey spring Apr 11-May 17, fall Oct 10-Jan 3 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Mt lion quota 21, fisher quota 7."
+            },
+            {
+              "year": "2024-25",
+              "change": "HIP required for snipe/woodcock."
+            }
+          ],
+          "major5": [
+            "Turkey spring lottery Sep 2 deadline, fall Sep 2",
+            "Mt lion quota zone expanded 2024",
+            "Fisher/bobcat limited \u2014 apps due Dec?"
+          ],
+          "unitNotes": "Turkey youth spring Apr 11-May 17 (same as adult), youth waterfowl Sep 12-13 overlaps.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/regulations/spring-turkey",
+            "highlight": "<mark>Coyote year-round. Mt lion Sep 1\u2013Mar 31 quota. Turkey spring Apr 11.</mark>",
+            "removed": "REMOVED: No fall hen protection change \u2014 spring bearded only stays.",
+            "added": "ADDED: Hip needed for migratory: snipe/woodcock/dove."
+          }
+        }
+      ]
+    }
+  ],
+  "residency": {
+    "resident": "ND resident: ND driver's license + 6-month domicile. Youth 15- need hunter ed. Gratis for landowners.",
+    "nonresident": "Nonresident bow Sep 4 noon-Jan 3 but Sep 4-13 private only. Gun by lottery, muzzy by lottery. Youth nonresident small game/waterfowl can buy resident cert if <16 on Sep1 + hunter ed."
+  }
+}
