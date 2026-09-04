@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import data from './data/ndgf.json'
 
 const categories = data.categories
@@ -22,13 +22,27 @@ export default function App() {
   const [openId, setOpenId] = useState('deer-bow')
   const [query, setQuery] = useState('')
   const [yoyOpen, setYoyOpen] = useState({})
+  const [dark, setDark] = useState(false)
+
+  useEffect(() => {
+    const saved = localStorage.getItem('alec-dark')
+    const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const initial = saved ? saved === 'true' : prefers
+    setDark(initial)
+    if (initial) document.documentElement.classList.add('dark')
+  }, [])
+  useEffect(() => {
+    localStorage.setItem('alec-dark', String(dark))
+    if (dark) document.documentElement.classList.add('dark')
+    else document.documentElement.classList.remove('dark')
+  }, [dark])
 
   const filtered = useMemo(() => {
     if (!query) return categories
     const q = query.toLowerCase()
     return categories.map(c => ({
       ...c,
-      species: c.species.filter(s => s.name.toLowerCase().includes(q) || s.briefing.bag.toLowerCase().includes(q))
+      species: c.species.filter(s => s.name.toLowerCase().includes(q) || s.briefing.bag.toLowerCase().includes(q) || (s.trashTalk && s.trashTalk.toLowerCase().includes(q)))
     })).filter(c => c.species.length > 0)
   }, [query])
 
@@ -52,6 +66,7 @@ export default function App() {
               <div className="hidden sm:flex items-center gap-1.5 text-[11px] opacity-70 mr-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> LIVE NDGF PULL 2026-09-03
               </div>
+              <button onClick={() => setDark(!dark)} className="w-8 h-8 rounded-full bg-white/10 border border-white/15 grid place-items-center text-[14px] hover:bg-white/20 transition" title={dark ? 'Light mode' : 'Dark mode'}>{dark ? '☀️' : '🌙'}</button>
               <div className="flex bg-black/30 rounded-full p-1 border border-white/10">
                 <button onClick={() => setResidency('resident')} className={`px-3 sm:px-4 py-1.5 rounded-full text-[12px] font-semibold transition ${residency==='resident' ? 'bg-[#f4f1eb] text-[#1a2e1a]' : 'text-white/70 hover:text-white'}`}>Resident</button>
                 <button onClick={() => setResidency('nonresident')} className={`px-3 sm:px-4 py-1.5 rounded-full text-[12px] font-semibold transition ${residency==='nonresident' ? 'bg-[#c45d26] text-white' : 'text-white/70 hover:text-white'}`}>Nonresident</button>
@@ -70,7 +85,7 @@ export default function App() {
             </div>
             <div className="flex items-center gap-2 w-full sm:w-auto">
               <div className="relative flex-1 sm:w-[320px]">
-                <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search species, bag, gear…" className="w-full bg-white border border-[#e8e0d0] rounded-full pl-9 pr-3 py-2 text-[13px] placeholder:text-[#8b7355]/60 focus:outline-none focus:border-[#8b7355] focus:ring-2 focus:ring-[#8b7355]/20" />
+                <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search species, bag, gear, trash talk…" className="w-full bg-white border border-[#e8e0d0] rounded-full pl-9 pr-3 py-2 text-[13px] placeholder:text-[#8b7355]/60 focus:outline-none focus:border-[#8b7355] focus:ring-2 focus:ring-[#8b7355]/20" />
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 opacity-40">⌕</span>
               </div>
               <a href="#heads-up" className="hidden sm:inline-flex items-center gap-1.5 bg-[#1a2e1a] text-white text-[12px] font-semibold px-3 py-2 rounded-full">Heads Up →</a>
@@ -102,6 +117,7 @@ export default function App() {
           <span className="px-2.5 py-1 rounded-full bg-white border border-[#e8e0d0] font-mono">PLOTS/WMA Oct 10-16 nonres CLOSED</span>
           <span className="px-2.5 py-1 rounded-full bg-[#a3b18a]/30 border border-[#a3b18a] font-mono">★ Removals highlighted green</span>
           <span className="px-2.5 py-1 rounded-full bg-[#f4f1eb] border border-[#e8e0d0]">Sources: gf.nd.gov • ndresponse.gov</span>
+          <span className="px-2.5 py-1 rounded-full bg-[#1a2e1a] text-white border border-[#1a2e1a] font-mono hidden sm:inline">🌙 Dark theme toggle top-right</span>
         </div>
       </section>
 
@@ -114,7 +130,7 @@ export default function App() {
             <nav className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-none">
               {filtered.map(cat => (
                 <button key={cat.id} onClick={() => setActiveCat(cat.id)} className={`group flex items-center gap-3 px-3 py-2.5 rounded-[10px] border text-left shrink-0 lg:shrink transition ${activeCat===cat.id ? 'bg-[#1a2e1a] text-[#f4f1eb] border-[#1a2e1a] shadow' : 'bg-white border-[#e8e0d0] hover:border-[#c2b8a3] text-[#1a2e1a]'}`}>
-                  <span className="w-7 h-7 rounded-full grid place-items-center text-[14px] bg-[#f4f1eb] border border-[#e8e0d0] group-[.bg-[#1a2e1a]]:bg-white/10 group-[.bg-[#1a2e1a]]:border-white/20 shrink-0">{cat.icon}</span>
+                  <span className="w-7 h-7 rounded-full grid place-items-center text-[14px] bg-[#f4f1eb] border border-[#e8e0d0] shrink-0">{cat.icon}</span>
                   <span className="min-w-0">
                     <div className="text-[13px] font-semibold leading-none">{cat.label}</div>
                     <div className={`text-[11px] leading-none mt-1 ${activeCat===cat.id ? 'text-white/60' : 'text-[#8b7355]'}`}>{cat.species.length} species</div>
@@ -125,11 +141,11 @@ export default function App() {
             <div className="hidden lg:block bg-white border border-[#e8e0d0] rounded-[10px] p-3">
               <div className="text-[11px] tracking-widest uppercase font-semibold text-[#8b7355]">Resident vs Nonres</div>
               <p className="text-[12px] leading-[1.5] text-[#5a4a32] mt-1.5">{residency==='resident' ? data.residency.resident : data.residency.nonresident}</p>
-              <div className="mt-2 text-[11px] font-mono bg-[#f4f1eb] border border-[#e8e0d0] rounded px-2 py-1.5">Toggle top-right switches all briefings.</div>
+              <div className="mt-2 text-[11px] font-mono bg-[#f4f1eb] border border-[#e8e0d0] rounded px-2 py-1.5">Toggle top-right switches briefings & checklists.</div>
             </div>
             <div className="hidden lg:block bg-[#2d4a22] text-[#f4f1eb] rounded-[10px] p-3">
               <div className="text-[12px] font-semibold">How YoY works</div>
-              <p className="text-[12px] leading-[1.5] opacity-80 mt-1">Click any species → see 3-yr dropdown + 5-yr major changes. Green = removal. Barn red = added restriction.</p>
+              <p className="text-[12px] leading-[1.5] opacity-80 mt-1">Click any species → see 3-yr dropdown + 5-yr majors, trash talk, first-timer checklists, and proclamation highlights.</p>
             </div>
           </div>
         </aside>
@@ -176,6 +192,7 @@ export default function App() {
                             <span className="text-[11px] font-mono text-[#8b7355] hidden sm:inline">{sp.season.open.includes('Sep 4') ? 'Noon opener • Orange req.' : ''}</span>
                           </div>
                           <div className="sm:hidden mt-1.5 text-[11px] font-mono text-[#5a4a32] bg-[#f4f1eb] border border-[#e8e0d0] px-2 py-1 rounded-full inline-block">{sp.units}</div>
+                          {sp.trashTalk && <div className="mt-2 text-[12px] italic leading-[1.4] text-[#8b7355] flex gap-1.5"><span className="not-italic">💬</span><span>“{sp.trashTalk}”</span></div>}
                         </div>
                         <div className="flex items-center gap-2 shrink-0 mt-1">
                           <span className="hidden md:inline text-[11px] font-semibold tracking-wide uppercase text-[#8b7355]">{isOpen ? 'Hide' : 'Details'}</span>
@@ -243,6 +260,34 @@ export default function App() {
                                 <div className="mt-2 text-[11px] font-mono text-[#8b7355]">Unit/area: {sp.unitNotes}</div>
                               </div>
                             </div>
+
+                            {/* First-timer checklists */}
+                            {sp.firstTime && (
+                              <div className="grid md:grid-cols-2 gap-3">
+                                <div className="bg-white border border-[#e8e0d0] rounded-[10px] p-3">
+                                  <div className="flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-[#2d4a22] text-white grid place-items-center text-[11px]">✓</span>
+                                    <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#2d4a22]">First Time? — Resident</div>
+                                  </div>
+                                  <ul className="mt-2.5 space-y-1.5">
+                                    {sp.firstTime.resident.map((b,i) => (
+                                      <li key={i} className="text-[12px] leading-[1.5] flex gap-2"><span className="text-[#a3b18a] mt-1 text-[8px]">●</span><span>{b}</span></li>
+                                    ))}
+                                  </ul>
+                                </div>
+                                <div className="bg-[#1a2e1a] border border-[#1a2e1a] rounded-[10px] p-3 text-[#f4f1eb]">
+                                  <div className="flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-[#c45d26] text-white grid place-items-center text-[11px]">★</span>
+                                    <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#c45d26]">First Time? — Nonresident</div>
+                                  </div>
+                                  <ul className="mt-2.5 space-y-1.5">
+                                    {sp.firstTime.nonresident.map((b,i) => (
+                                      <li key={i} className="text-[12px] leading-[1.5] flex gap-2 text-[#e8ddd0]"><span className="text-[#c45d26] mt-1 text-[8px]">●</span><span>{b}</span></li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                            )}
 
                             {/* YoY dropdown + major 5 */}
                             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-3">
@@ -328,6 +373,7 @@ export default function App() {
 
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,600;9..144,0,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
       mark{ background:#a3b18a55; border-bottom:1px solid #8a9a6a; padding:0 2px; border-radius:2px;}
+      html.dark mark{ background:#a3b18a33; border-color:#5a6a4a; }
       .scrollbar-none::-webkit-scrollbar{display:none} .scrollbar-none{scrollbar-width:none}`}</style>
     </div>
   )

@@ -91,6 +91,24 @@
             "highlight": "Sec 1: Sep 4 (12 noon) \u2013 Jan 3. <mark>Nonresident private-only first 9.5 days</mark>. <mark>Plains air gun: \u2265.35cal/150gr/600fps</mark>. Herd reduction \u2192 Jan 3 sunset.",
             "removed": "REMOVED: No general sex change \u2014 any-deer still resident bow.",
             "added": "ADDED: South Bismarck/Mandan MDHRS lab access via ARS permit."
+          },
+          "trashTalk": "Alec tried to peek over the corn \u2014 still couldn't see the buck. Bow season waits for no short king.",
+          "firstTime": {
+            "resident": [
+              "Hunter ed if born after 1961 (or apprentice license + mentor)",
+              "Buy bow license online at gf.nd.gov \u2014 1 per year, mailed from Bismarck",
+              "Any deer, statewide, no unit \u2014 but WMA centerfire-closed still applies if you carry gun",
+              "Sep 4 noon opener \u2192 Jan 3 close \u2014 no hunting before noon day one",
+              "Wear orange during gun season even as bow hunter (Nov 6-22)",
+              "Tag immediately, keep head/antler or photo-tag method for CWD"
+            ],
+            "nonresident": [
+              "Nonres bow license online only \u2014 choose whitetail vs mule type",
+              "Sep 4-13: PRIVATE LAND ONLY (no PLOTS/WMA unless you own that PLOTS)",
+              "Sep 14+: public land opens \u2014 still orange during gun season",
+              "Crossbow only with director permit \u2014 don't assume",
+              "Same tag + head/photo rule as resident"
+            ]
           }
         },
         {
@@ -135,6 +153,23 @@
             "highlight": "Nov 6 noon \u2013 Nov 22. <mark>39,100 licenses</mark>. <mark>4B/C/D/E pair stay 2.5 days</mark>. Unit/type as printed.",
             "removed": "REMOVED: No new statewide antler restriction \u2014 check unit-specific antlerless tags.",
             "added": "ADDED: Confirm concurrent season after lottery \u2014 proclamation adds herd-reduction appendix."
+          },
+          "trashTalk": "Alec brought a step stool to the deer stand. Game warden said 'nice try, still need orange.'",
+          "firstTime": {
+            "resident": [
+              "Apply lottery at gf.nd.gov/lotteries \u2014 deadline early June",
+              "Weighted lottery: more points if you\u2019ve been skunked before",
+              "39,100 tags \u2014 if you miss, leftover lottery then first-come",
+              "16.5 days: Nov 6 noon \u2013 Nov 22 \u2014 unit/type as printed, read it twice",
+              "4B/4C and 4D/4E: stay in your unit first 2.5 days (Nov 6-8)",
+              "Gratis landowner? Apply via Bismarck office, separate from online"
+            ],
+            "nonresident": [
+              "Same lottery, same deadline \u2014 no separate nonres gun pool",
+              "If drawn, unit and species (whitetail/mule, antlered/antlerless) is locked",
+              "Nonres WMA/PLOTS blackout Oct 10-16 still counts \u2014 don't scout then",
+              "Need ND hunting cert + habitat stamp \u2014 buy before you apply"
+            ]
           }
         },
         {
@@ -177,6 +212,20 @@
             "highlight": "<mark>Nov 27 noon \u2013 Dec 13. White-tailed only. No smokeless. 1\u00d7 scope only.</mark>",
             "removed": "No change to Caliber \u2014 \u2265.45 long gun, \u2265.50 handgun muzzy.",
             "added": ""
+          },
+          "trashTalk": "Muzzleloader smoke is the only time Alec looks tall \u2014 disappearing in a cloud.",
+          "firstTime": {
+            "resident": [
+              "Lottery at gf.nd.gov \u2014 white-tailed only, statewide",
+              "No smokeless \u2014 black powder/sub only. 1x scope only (no magnification)",
+              "Nov 27 noon \u2013 Dec 13, orange required",
+              "Tag same as gun \u2014 head or photo method"
+            ],
+            "nonresident": [
+              "Same lottery, same white-tail only rule",
+              "If you own PLOTS, you can use it muzzy season",
+              "1x scope only \u2014 leave the 3-9x at home"
+            ]
           }
         },
         {
@@ -219,6 +268,19 @@
             "highlight": "<mark>Sep 18 noon \u2013 Sep 27. Residents 11-13 antlerless, 14-15 any deer.</mark>",
             "removed": "REMOVED: No carry for mentor \u2014 enforced.",
             "added": ""
+          },
+          "trashTalk": "Youth season: Alec finally qualified\u2026 on height, not age.",
+          "firstTime": {
+            "resident": [
+              "Residents 11-15 only \u2014 11-13 antlerless only, 14-15 any deer",
+              "Needs hunter ed + adult mentor (unaided voice, unarmed, no bow/gun)",
+              "One youth tag covers youth season Sep 18-27 AND gun season \u2014 not two tags",
+              "4A-F mule deer needs special youth mule tag \u2014 unit-specific"
+            ],
+            "nonresident": [
+              "Youth deer is RESIDENT ONLY \u2014 nonres youth cannot apply",
+              "Nonres youth can do small game/waterfowl on resident cert if <16 Sep 1 + hunter ed"
+            ]
           }
         }
       ]
@@ -269,6 +331,20 @@
             "highlight": "<mark>Oct 10 \u2013 Jan 3. Male pheasants only. Youth Sep 20-21.</mark>",
             "removed": "No hen season \u2014 removed years ago, stays removed.",
             "added": ""
+          },
+          "trashTalk": "Pheasants flush at 6 feet. Alec flushes at 5'6\". Advantage: bird.",
+          "firstTime": {
+            "resident": [
+              "Male only \u2014 hens are off limits. Count your tail feathers",
+              "Oct 10 \u2013 Jan 3, statewide, no unit lottery",
+              "3 daily / 12 possession \u2014 don't be the 'I thought it was 6' guy",
+              "Youth Sep 20-21 before regular \u2014 take a kid, look like a hero"
+            ],
+            "nonresident": [
+              "Nonres small game license + habitat \u2014 buy before you walk PLOTS",
+              "Same male-only, same dates \u2014 no nonres restriction on pheasant",
+              "PLOTS open but respect posted + call ahead on fire ban days"
+            ]
           }
         },
         {
@@ -311,6 +387,19 @@
             "highlight": "<mark>Sharp-tail Sep 12\u2013Jan 3. Sage closed.</mark>",
             "removed": "REMOVED: no prairie chicken season 2024-26",
             "added": ""
+          },
+          "trashTalk": "Sharp-tail said 'is that a hunter or a tumbleweed?' \u2014 Alec in the prairie grass.",
+          "firstTime": {
+            "resident": [
+              "Sharp-tail & Huns Sep 12 \u2013 Jan 3, statewide",
+              "Sage grouse CLOSED 5yrs \u2014 don't even think about it",
+              "Prairie chicken closed/lottery \u2014 check proclamation, not memory",
+              "3/12 sharp-tail, ruffed where open \u2014 don't mix bags"
+            ],
+            "nonresident": [
+              "Same seasons, same closures",
+              "Prairie chicken lottery resident-leaning \u2014 nonres odds low if open"
+            ]
           }
         }
       ]
@@ -364,6 +453,20 @@
             "highlight": "<mark>6-duck, species caps matter. Youth Sep 12-13.</mark> Federal frameworks apply.",
             "removed": "REMOVED: No lead shot \u2014 nontoxic only stays.",
             "added": "ADDED: Vet season in regs."
+          },
+          "trashTalk": "Ducks fly at 40 mph. Alec runs at 4 mph. Math says: use decoys.",
+          "firstTime": {
+            "resident": [
+              "Federal duck stamp + HIP + plugged gun (3 shells) \u2014 no excuses",
+              "Low Plains Sep 26, High Plains Oct 3 \u2014 know your zone line (Missouri River)",
+              "6 duck bag but species caps kill you: mallard 5/2 hen, scaup 1-2 split, pintail 1",
+              "Youth Sep 12-13, Vet Sep 19-20 \u2014 let the kids shoot first"
+            ],
+            "nonresident": [
+              "Nonres waterfowl lic (14-day or season) + HIP + stamp",
+              "Same zones, same bags \u2014 14-day starts when you pick, not Sep 26",
+              "Nontoxic shot only \u2014 lead = ticket, and Alec will never let you hear the end"
+            ]
           }
         },
         {
@@ -406,6 +509,18 @@
             "highlight": "<mark>Spring CO: unplugged + e-callers allowed.</mark>",
             "removed": "No fall light goose e-caller \u2014 still prohibited.",
             "added": ""
+          },
+          "trashTalk": "Geese honk louder than Alec after missing \u2014 which is saying something.",
+          "firstTime": {
+            "resident": [
+              "Early Canada Sep 1 (15/45) \u2014 then 8/24 regular, White-front 3/9",
+              "Light geese Sep 26 \u2013 Dec 20 + Spring CO Feb 21-May 10 (no limit, e-callers + unplugged OK)",
+              "Tundra swan lottery separate \u2014 don't shoot a swan on a goose tag"
+            ],
+            "nonresident": [
+              "Same bags, same spring CO \u2014 spring is your best nonres value",
+              "Spring CO: unplugged + e-callers legal \u2014 fall? absolutely not"
+            ]
           }
         }
       ]
@@ -458,6 +573,20 @@
             "highlight": "<mark>Year-round. 2 lines open, 4 ice. Drain plug out + no live bait transport.</mark>",
             "removed": "REMOVED: Live bait transport \u2014 now illegal.",
             "added": "ADDED: Barotrauma descender required >30ft Sakakawea."
+          },
+          "trashTalk": "Fish don't care how tall you are. Finally, Alec's even playing field.",
+          "firstTime": {
+            "resident": [
+              "General + fishing lic \u2014 2 lines open water, 4 ice (tip-ups)",
+              "Walleye 5/10 statewide but Devils/Sakakawea have special regs \u2014 check lake",
+              "Drain + dry + no live bait transport \u2014 ANS rule, not suggestion",
+              "Paddlefish May 1-21 tag lottery \u2014 snag, tag, report"
+            ],
+            "nonresident": [
+              "3-day/10-day nonres fishing \u2014 darkhouse spearing Dec 1-Mar 15 included",
+              "Same ANS drain rule \u2014 they check at ramps",
+              "Barotrauma descender needed >30ft on Sakakawea \u2014 they enforce"
+            ]
           }
         }
       ]
@@ -508,6 +637,19 @@
             "highlight": "<mark>Lottery Mar 25. Unit windows Sep 4 vs Oct 2.</mark>",
             "removed": "",
             "added": ""
+          },
+          "trashTalk": "Elk bugle, Alec squeaks. Once-in-a-lifetime tag, once-in-a-lifetime squeak.",
+          "firstTime": {
+            "resident": [
+              "Lottery Mar 25 deadline \u2014 don't miss it",
+              "Once-in-a-lifetime bull tag \u2014 don't waste on a spike if you can hold",
+              "E units Badlands/Killdeer \u2014 Sep 4 vs Oct 2 windows by unit",
+              "75% resident quota \u2014 odds better than nonres"
+            ],
+            "nonresident": [
+              "Very limited nonres elk \u2014 same Mar 25, same windows",
+              "Nonres draw odds brutal \u2014 bring preference points and patience"
+            ]
           }
         },
         {
@@ -550,6 +692,18 @@
             "highlight": "<mark>Moose lottery Mar 25, Sep 4 opener.</mark>",
             "removed": "",
             "added": ""
+          },
+          "trashTalk": "Moose don't ask your height. They just block the whole trail.",
+          "firstTime": {
+            "resident": [
+              "Once-in-a-lifetime bull \u2014 lottery Mar 25",
+              "Sep 4 \u2013 Jan 3 windows, unit M1-M5",
+              "Shoulder-fired only, same CWD head rule if in CWD unit"
+            ],
+            "nonresident": [
+              "Moose nonres tags almost mythical \u2014 check lottery for any",
+              "If you draw, same season, same gear"
+            ]
           }
         },
         {
@@ -593,6 +747,18 @@
             "highlight": "<mark>Bow Sep 4-27, Gun Oct 2-11 lottery.</mark>",
             "removed": "",
             "added": ""
+          },
+          "trashTalk": "Pronghorn runs 55 mph. Alec's excuse runs faster.",
+          "firstTime": {
+            "resident": [
+              "Bow Sep 4-27 any pronghorn \u2014 great first big-game taste",
+              "Gun Oct 2-11 by lottery \u2014 buck/doe as drawn, 1 tag",
+              "Winter kill cut quota 2024 \u2014 numbers rebounding"
+            ],
+            "nonresident": [
+              "Bow same Sep 4-27, gun lottery limited nonres pool",
+              "Bow is your best nonres odds"
+            ]
           }
         },
         {
@@ -635,6 +801,18 @@
             "highlight": "<mark>Sheep Oct 30\u2013Dec 31. Once-in-a-lifetime.</mark>",
             "removed": "",
             "added": ""
+          },
+          "trashTalk": "Bighorn lives on cliffs. Alec lives on excuses. Both are steep.",
+          "firstTime": {
+            "resident": [
+              "Once-in-a-lifetime ram (\u00be curl+) \u2014 lottery + raffle (WSF/MDF)",
+              "Oct 30 \u2013 Dec 31 Badlands cliffs \u2014 centerfire only",
+              "Raffle tag open to all \u2014 auction funds sheep"
+            ],
+            "nonresident": [
+              "Lottery resident-only; raffle tag is your shot \u2014 buy it",
+              "Same Oct 30-Dec 31, same \u00be curl rule"
+            ]
           }
         }
       ]
@@ -687,6 +865,20 @@
             "highlight": "<mark>Coyote year-round. Mt lion Sep 1\u2013Mar 31 quota. Turkey spring Apr 11.</mark>",
             "removed": "REMOVED: No fall hen protection change \u2014 spring bearded only stays.",
             "added": "ADDED: Hip needed for migratory: snipe/woodcock/dove."
+          },
+          "trashTalk": "Coyote year-round \u2014 Alec's trash talk is also year-round. Perfect match.",
+          "firstTime": {
+            "resident": [
+              "Coyote year-round \u2014 no license needed on own land, else furbearer",
+              "Mt lion Sep 1 \u2013 Mar 31 quota (21) \u2014 call NDGF before you go",
+              "Turkey spring Apr 11-May 17 bearded only, fall Oct 10-Jan 3 either sex \u2014 shotgun/bow, no rifles spring",
+              "Fisher/bobcat limited quota \u2014 app early"
+            ],
+            "nonresident": [
+              "Coyote year-round nonres, turkey fall lottery, mt lion quota applies",
+              "Spring turkey nonres lottery Sep 2 deadline \u2014 don't miss",
+              "HIP needed for snipe/woodcock/dove \u2014 not just ducks"
+            ]
           }
         }
       ]

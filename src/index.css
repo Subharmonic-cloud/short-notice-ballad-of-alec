@@ -23,5 +23,22 @@ body {
   font-family: "Instrument Sans", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 ::selection { background: rgba(196,93,38,0.18); }
+
+/* Dark theme — triggered by html.dark */
+html.dark { color-scheme: dark; }
+html.dark body { background: #0f1710; color: #e6ddd0; }
+html.dark .bg-white { background-color: #1b2a1b !important; }
+html.dark .bg-\[\#f4f1eb\] { background-color: #142114 !important; }
+html.dark .bg-\[\#fdfcfa\] { background-color: #142114 !important; }
+html.dark .bg-\[\#ede8dc\] { background-color: #1e2e1e !important; }
+html.dark .border-\[\#e8e0d0\] { border-color: #2a3d2a !important; }
+html.dark .border-\[\#c2b8a3\] { border-color: #2a3d2a !important; }
+html.dark .text-\[\#1a2e1a\] { color: #e6ddd0 !important; }
+html.dark .text-\[\#5a4a32\] { color: #a8b5a0 !important; }
+html.dark .text-\[\#8b7355\] { color: #9ab09a !important; }
+html.dark header.bg-\[\#1a2e1a\] { background-color: #0a150a !important; }
+html.dark .bg-\[\#1a2e1a\] { background-color: #1a2e1a !important; } /* keep ink for badges where needed */
+html.dark .divide-\[\#ede8dc\] > * + * { border-color: #2a3d2a !important; }
