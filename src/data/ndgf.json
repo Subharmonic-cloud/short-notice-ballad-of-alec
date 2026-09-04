@@ -939,5 +939,45 @@
   "residency": {
     "resident": "ND resident: ND driver's license + 6-month domicile. Youth 15- need hunter ed. Gratis for landowners.",
     "nonresident": "Nonresident bow Sep 4 noon-Jan 3 but Sep 4-13 private only. Gun by lottery, muzzy by lottery. Youth nonresident small game/waterfowl can buy resident cert if <16 on Sep1 + hunter ed."
+  },
+  "access": {
+    "title": "Land Access \u2014 Posted, E-Posted & Buildings",
+    "note": "ND Century Code 20.1-01-17.1 & 20.1-01-18 \u2014 when in doubt, ask.",
+    "rules": [
+      {
+        "label": "Non-posted = Open",
+        "body": "Land not physically posted AND not E-posted on the NDGF map is legally open to hunting (walk-in). Still need to obey building/safety zones."
+      },
+      {
+        "label": "E-Posted = Posted",
+        "body": "Check the NDGF E-Posting map before you go. If it's purple/E-posted, it's posted \u2014 same as a sign. No hunting without permission."
+      },
+      {
+        "label": "If they tried to post \u2014 skip",
+        "body": "If an attempt to post is evident (signs up, even if spacing/height isn\u2019t perfect to code), treat it as posted and move on. Don\u2019t be the test case."
+      },
+      {
+        "label": "Buildings still count",
+        "body": "Regardless of posting: no hunting within 440 yards of an occupied building, home, or livestock building without owner consent. Also obey 440-yard schools/churches and road right-of-way rules."
+      },
+      {
+        "label": "PLOTS/WMA",
+        "body": "PLOTS is private land open to sportsmen \u2014 respect the sign, stay on enrolled acres, no driving off trail. WMA rules posted at access \u2014 orange/vehicle restrictions may apply."
+      }
+    ],
+    "links": [
+      {
+        "label": "NDGF E-Posting Map",
+        "url": "https://gf.nd.gov/private-lands/electronic-posting"
+      },
+      {
+        "label": "Posting Regulations (NDGF)",
+        "url": "https://gf.nd.gov/hunting/posting-land"
+      },
+      {
+        "label": "PLOTS Guide",
+        "url": "https://gf.nd.gov/private-lands/plots"
+      }
+    ]
   }
 }
