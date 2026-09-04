@@ -13,6 +13,14 @@ const states = [
   { id: 'wy', label: 'WY', name: 'Wyoming', data: wyData, icon: '🦬', placeholder: true },
 ]
 
+const stateThemes = {
+  nd: { bg: '#f4f1eb', header: '#1a2e1a', accent: '#c45d26', pill: '#c45d26', paper: '#ffffff' },
+  sd: { bg: '#fdf6e3', header: '#1d3557', accent: '#e76f51', pill: '#e76f51', paper: '#ffffff' }, // SD wheat + navy
+  mt: { bg: '#e8f5e9', header: '#1b4332', accent: '#f2c75c', pill: '#2d6a4f', paper: '#ffffff' }, // MT forest + gold
+  mn: { bg: '#e0f2f7', header: '#003844', accent: '#ff9f1c', pill: '#0077b6', paper: '#ffffff' }, // MN lake + blaze
+  wy: { bg: '#fef3c7', header: '#432818', accent: '#d4a574', pill: '#99582a', paper: '#ffffff' }, // WY prairie + saddle
+}
+
 function Badge({ type, children }) {
   const map = {
     removal: 'bg-[#a3b18a] text-[#1a2e1a] border-[#8a9a6a]',
@@ -104,6 +112,7 @@ export default function App() {
   const data = activeState.data
   const categories = data.categories
   const headsUp = data.headsUp
+  const theme = stateThemes[stateId] || stateThemes.nd
 
   useEffect(() => {
     const saved = localStorage.getItem('alec-dark')
@@ -135,13 +144,13 @@ export default function App() {
   const activeCategory = filtered.find(c => c.id === activeCat) || filtered[0]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: dark ? '#0f1710' : theme.bg, transition: 'background-color 0.3s ease' }}>
       {/* Header - ink */}
-      <header className="sticky top-0 z-40 bg-[#1a2e1a] text-[#f4f1eb] border-b border-black/20">
+      <header className="sticky top-0 z-40 text-[#f4f1eb] border-b border-black/20" style={{ backgroundColor: theme.header, transition: 'background-color 0.3s ease' }}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[68px] gap-4">
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-9 h-9 rounded-[6px] bg-[#c45d26] grid place-items-center text-white font-black text-[11px] leading-none shrink-0">SN<br/>24</div>
+              <div className="w-9 h-9 rounded-[6px] grid place-items-center text-white font-black text-[11px] leading-none shrink-0" style={{ backgroundColor: theme.accent }}>SN<br/>24</div>
               <div className="min-w-0">
                 <h1 className="font-display font-bold text-[18px] sm:text-[20px] leading-none tracking-[-0.02em] truncate">Short Notice <span className="font-normal opacity-60">— the ballad of Alec</span></h1>
                 <p className="text-[11px] tracking-[0.12em] uppercase opacity-60 hidden sm:block">NDGF Seasonal Changes • One-stop hunter reminder</p>
@@ -183,14 +192,19 @@ export default function App() {
       {/* State Tabs */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-3">
         <div className="flex flex-wrap items-center gap-2">
-          {states.map(s => (
-            <button key={s.id} onClick={() => setStateId(s.id)} className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-[13px] font-semibold transition ${stateId === s.id ? 'bg-[#1a2e1a] text-white border-[#1a2e1a] shadow' : 'bg-white border-[#e8e0d0] hover:border-[#c2b8a3] text-[#1a2e1a]'}`}>
-              <span>{s.icon}</span>{s.label}
-              {s.placeholder && <span className="text-[10px] tracking-widest uppercase bg-black/10 border border-black/10 px-1.5 py-0.5 rounded-full">Soon</span>}
-              {s.id === 'nd' && <span className="hidden sm:inline text-[10px] opacity-60">• NDGF live</span>}
-              {s.id === 'sd' && <span className="hidden sm:inline text-[10px] opacity-60">• GFP live</span>}
-            </button>
-          ))}
+          {states.map(s => {
+            const st = stateThemes[s.id] || stateThemes.nd
+            const active = stateId === s.id
+            return (
+              <button key={s.id} onClick={() => setStateId(s.id)} className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-[13px] font-semibold transition ${active ? 'text-white shadow' : 'bg-white hover:border-[#c2b8a3] text-[#1a2e1a]'}`} style={active ? { backgroundColor: st.header, borderColor: st.header } : { borderColor: st.accent + '55', backgroundColor: dark ? '#1b2a1b' : 'white' }}>
+                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: active ? st.accent : st.header }} />
+                <span>{s.icon}</span>{s.label}
+                {s.placeholder && <span className="text-[10px] tracking-widest uppercase bg-black/10 border border-black/10 px-1.5 py-0.5 rounded-full">Soon</span>}
+                {s.id === 'nd' && <span className="hidden sm:inline text-[10px] opacity-60">• NDGF live</span>}
+                {s.id === 'sd' && <span className="hidden sm:inline text-[10px] opacity-60">• GFP live</span>}
+              </button>
+            )
+          })}
           <span className="text-[11px] font-mono text-[#8b7355] ml-1 hidden sm:inline">{activeState.name} — {activeState.data.meta.subtitle}</span>
         </div>
         {activeState.placeholder && (
