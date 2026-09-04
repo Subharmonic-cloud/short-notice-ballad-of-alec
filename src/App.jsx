@@ -8,7 +8,7 @@ import wyData from './data/wy.json'
 const states = [
   { id: 'nd', label: 'ND', name: 'North Dakota', data: ndData, icon: '🌾' },
   { id: 'sd', label: 'SD', name: 'South Dakota', data: sdData, icon: '🦌' },
-  { id: 'mt', label: 'MT', name: 'Montana', data: mtData, icon: '🏔️', placeholder: true },
+  { id: 'mt', label: 'MT', name: 'Montana', data: mtData, icon: '🏔️' },
   { id: 'mn', label: 'MN', name: 'Minnesota', data: mnData, icon: '🌲', placeholder: true },
   { id: 'wy', label: 'WY', name: 'Wyoming', data: wyData, icon: '🦬', placeholder: true },
 ]
@@ -139,7 +139,7 @@ export default function App() {
       ...c,
       species: c.species.filter(s => s.name.toLowerCase().includes(q) || s.briefing.bag.toLowerCase().includes(q) || (s.trashTalk && s.trashTalk.toLowerCase().includes(q)))
     })).filter(c => c.species.length > 0)
-  }, [query])
+  }, [query, categories])
 
   const activeCategory = filtered.find(c => c.id === activeCat) || filtered[0]
 
@@ -553,8 +553,8 @@ export default function App() {
       </footer>
 
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,600;9..144,0,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-      mark{ background:#a3b18a55; border-bottom:1px solid #8a9a6a; padding:0 2px; border-radius:2px;}
-      html.dark mark{ background:#a3b18a33; border-color:#5a6a4a; }
+      mark{ background:${theme.accent}26; border-bottom:1px solid ${theme.accent}88; padding:0 2px; border-radius:2px;}
+      html.dark mark{ background:${theme.accent}33; border-color:${theme.accent}66; }
       .scrollbar-none::-webkit-scrollbar{display:none} .scrollbar-none{scrollbar-width:none}`}</style>
     </div>
   )

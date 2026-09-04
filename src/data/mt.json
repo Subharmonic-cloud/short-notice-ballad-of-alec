@@ -1,86 +1,678 @@
 {
   "meta": {
-    "title": "Montana FWP \u2014 Coming Soon",
-    "subtitle": "Montana FWP tab \u2014 placeholder, data pipeline pending",
+    "title": "Montana FWP \u2014 Hunting Seasons",
+    "subtitle": "FWP Seasons \u2022 One-stop hunter reminder (MT)",
     "generated": "2026-09-04",
     "sources": [
-      "https://fwp.mt.gov/"
+      "https://fwp.mt.gov/hunt/seasons",
+      "https://fwp.mt.gov/hunt/regulations",
+      "https://fwp.mt.gov/binaries/content/assets/fwp/hunt/regulations/2026/2026-dea-regulations-final-with-low-resolution-maps-for-web.pdf",
+      "https://fwp.mt.gov/hunt/regulations/deer"
     ],
-    "note": "Placeholder \u2014 real data pending scraper for this state."
+    "note": "Live pull 2026-09-04 from FWP Hunt Seasons + DEA regs. HD-specific quotas vary \u2014 check hunt planner."
   },
   "headsUp": [
     {
+      "level": "high",
+      "icon": "\ud83c\udfd4\ufe0f",
+      "title": "MT Hunting Districts (HD) Matter",
+      "body": "MT seasons are HD-specific. General Oct 24\u2013Nov 29 is statewide, but quotas, shoulder seasons Aug 15\u2013Feb 15, and HD 150/280/316 backcountry Sep 15 vary.",
+      "link": "https://fwp.mt.gov/gis/maps/huntPlanner/",
+      "date": "2026-09-04"
+    },
+    {
+      "level": "watch",
+      "icon": "\ud83e\udd8c",
+      "title": "CWD \u2014 SE MT & HDs",
+      "body": "Check FWP CWD page. Carcass transport: head/antler tag method or submit at CWD station. Some HDs require submission.",
+      "link": "https://fwp.mt.gov/conservation/chronic-wasting-disease",
+      "date": "2026-09-04"
+    },
+    {
       "level": "info",
-      "icon": "\ud83d\udea7",
-      "title": "Montana FWP \u2014 Tab Coming Soon",
-      "body": "Montana/MN/WY data pipeline not yet wired. ND + SD are live. This tab shows structure preview.",
-      "link": "https://github.com/Subharmonic-cloud/short-notice-ballad-of-alec",
+      "icon": "\ud83d\udccb",
+      "title": "Permits Apr 1 / Jun 1",
+      "body": "Deer/Elk permits Apr 1, Deer B/Elk B/Antelope Jun 1. Nonres upland 10-day delay on public/access-program land.",
+      "link": "https://fwp.mt.gov/buyandapply/hunting-licenses",
       "date": "2026-09-04"
     }
   ],
   "residency": {
-    "resident": "Montana FWP resident info pending scraper.",
-    "nonresident": "Montana FWP nonresident info pending."
+    "resident": "MT resident: 180-day domicile + MT driver's license. Hunter ed required if born after Jan 1 1985.",
+    "nonresident": "Nonres deer/elk general + permits via draw. Upland 10-day delay on public/access-program land (Sep 1 vs Sep 11). Nonres combos available."
   },
   "access": {
-    "title": "Montana FWP Access \u2014 Coming Soon",
-    "note": "Pending",
+    "title": "MT Land Access \u2014 Block Management & HDs",
+    "note": "MCA 87-1-301 \u2014 HD boundaries matter. When in doubt, ask.",
     "rules": [
       {
-        "label": "Pending",
-        "body": "Scraper for posting/E-posting rules pending."
+        "label": "Block Management",
+        "body": "Private land enrolled for public hunting \u2014 free, sign-in required. Respect enrolled acres only."
+      },
+      {
+        "label": "HD-specific",
+        "body": "Seasons/quota vary by Hunting District. Use Hunt Planner map before you go \u2014 don't assume statewide."
+      },
+      {
+        "label": "Shoulder seasons",
+        "body": "Aug 15\u2013Feb 15 elk shoulder seasons on private land in over-objective areas \u2014 check HD."
+      },
+      {
+        "label": "660ft? No \u2014 MT has 1/4 mile?",
+        "body": "MT has no 440yd building rule like ND/SD \u2014 but cannot hunt from/shoot across roads, and must have permission for occupied buildings. Check regs."
+      },
+      {
+        "label": "Tribal lands closed",
+        "body": "Reservations closed to state licenses unless tribe agreement \u2014 no cooperative agreements currently."
       }
     ],
-    "links": []
+    "links": [
+      {
+        "label": "Hunt Planner Map",
+        "url": "https://fwp.mt.gov/gis/maps/huntPlanner/"
+      },
+      {
+        "label": "Block Management",
+        "url": "https://fwp.mt.gov/hunt/access/blockmanagement"
+      },
+      {
+        "label": "Regulations",
+        "url": "https://fwp.mt.gov/hunt/regulations"
+      }
+    ]
   },
-  "deadlines": [],
+  "deadlines": [
+    {
+      "id": "deer-elk-permit",
+      "category": "deer",
+      "species": "Deer/Elk Permit",
+      "label": "Deer & Elk Permits",
+      "deadline": "2026-04-01",
+      "note": "Apply by Apr 1 for most deer/elk permits"
+    },
+    {
+      "id": "deer-b-elk-b-antelope",
+      "category": "deer",
+      "species": "Deer B / Elk B / Antelope",
+      "label": "Deer B / Elk B / Antelope",
+      "deadline": "2026-06-01",
+      "note": "Apply by Jun 1"
+    },
+    {
+      "id": "moose-sheep-goat",
+      "category": "biggame",
+      "species": "Moose/Sheep/Goat",
+      "label": "Moose/Sheep/Goat",
+      "deadline": "2026-05-01",
+      "note": "Ltd quota, bonus points"
+    },
+    {
+      "id": "swan",
+      "category": "waterfowl",
+      "species": "Tundra Swan",
+      "label": "Swan Central/Pacific",
+      "deadline": "2026-08-15",
+      "note": "Special license only, 72hr bill card"
+    }
+  ],
   "categories": [
     {
       "id": "deer",
       "label": "Deer",
       "icon": "\ud83e\udd8c",
-      "blurb": "Montana FWP deer \u2014 seasons pending real pull.",
+      "blurb": "MT deer \u2014 archery Sep 5, general Oct 24, HD-specific.",
       "species": [
         {
-          "id": "deer-placeholder",
-          "name": "Montana FWP \u2014 Deer (Placeholder)",
-          "units": "Statewide pending",
+          "id": "deer-archery",
+          "name": "Deer \u2014 Archery",
+          "units": "Statewide Sep 5\u2013Oct 18",
           "season": {
-            "open": "TBD",
-            "close": "TBD",
-            "status": "Tentative"
+            "open": "Sep 5, 2026",
+            "close": "Oct 18, 2026",
+            "status": "Finalized"
           },
-          "resident": "Pending \u2014 will mirror ND/SD structure once FWP/DNR scrape is wired.",
-          "nonresident": "Pending",
+          "resident": "Archery statewide Sep 5\u2013Oct 18. Youth Oct 15-16. Backcountry HD 150/280/316 Sep 15\u2013Nov 29.",
+          "nonresident": "Nonres same archery, same youth, same backcountry.",
           "briefing": {
-            "sex": "Pending",
-            "bag": "Pending",
-            "gear": "Pending",
-            "unchanged": "Pending"
+            "sex": "As per HD \u2014 antlered/antlerless by license",
+            "bag": "1 deer. General + permits per HD. Deer B up to 2 per hunter in R6.",
+            "gear": "Bow \u226528\" draw? Actually no min draw but broadhead \u22657/8\" cut, no electronic. Crossbow by permit.",
+            "unchanged": "Sep 5 archery statewide \u2014 stable."
           },
           "yoy3": [
             {
               "year": "2026-27",
-              "change": "Placeholder \u2014 HD/permit-area parsing pending."
+              "change": "Sep 5\u2013Oct 18 archery finalized, general Oct 24\u2013Nov 29."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same Sep 5 archery."
+            },
+            {
+              "year": "2024-25",
+              "change": "Backcountry Sep 15\u2013Nov 29 HD 150/280/316."
             }
           ],
           "major5": [
-            "Placeholder"
+            "HD-specific \u2014 check Hunt Planner not memory",
+            "Deer B Jun 1 quota 2k R6"
           ],
-          "unitNotes": "Pending",
+          "unitNotes": "HD 640 NE Montana low elk \u2014 deer only. Check 2026 DEA regs PDF pp 48-123.",
           "proclamation": {
-            "url": "https://fwp.mt.gov",
-            "highlight": "<mark>Placeholder \u2014 real proclamation pull pending</mark>",
+            "url": "https://fwp.mt.gov/hunt/regulations/deer",
+            "highlight": "<mark>Archery Sep 5\u2013Oct 18, Youth Oct 15-16, General Oct 24\u2013Nov 29</mark>",
+            "removed": "",
+            "added": "Shoulder Aug 15\u2013Feb 15 private where over objective."
+          },
+          "trashTalk": "MT deer \u2014 Alec needs a bigger hill to see over, not a step stool.",
+          "firstTime": {
+            "resident": [
+              "Apply deer/elk permit Apr 1, Deer B Jun 1",
+              "Archery Sep 5\u2013Oct 18 statewide",
+              "HD matters \u2014 check planner"
+            ],
+            "nonresident": [
+              "Same deadlines",
+              "Upland 10-day delay doesn't apply deer \u2014 but check access"
+            ]
+          }
+        },
+        {
+          "id": "deer-general",
+          "name": "Deer \u2014 General",
+          "units": "General Oct 24\u2013Nov 29 (HD vary)",
+          "season": {
+            "open": "Oct 24, 2026",
+            "close": "Nov 29, 2026",
+            "status": "Finalized"
+          },
+          "resident": "General Oct 24\u2013Nov 29 statewide, but HD quotas/shoulder seasons vary Aug 15\u2013Feb 15.",
+          "nonresident": "Nonres same general.",
+          "briefing": {
+            "sex": "HD-specific (antlered mule vs whitetail)",
+            "bag": "1 + Deer B if drawn (R6 2k)",
+            "gear": "Centerfire, no FMJ. 1/2hr before sunrise to 1/2hr after sunset.",
+            "unchanged": "Oct 24\u2013Nov 29 general \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 24\u2013Nov 29 general finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Shoulder seasons expanded."
+            }
+          ],
+          "major5": [
+            "General statewide but HD quotas \u2014 don't assume"
+          ],
+          "unitNotes": "Check individual HD pp 48-123 for quota/range.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/binaries/content/assets/fwp/hunt/regulations/2026/2026-dea-regulations-final-with-low-resolution-maps-for-web.pdf",
+            "highlight": "<mark>General Oct 24\u2013Nov 29, Muzzleloader Dec 12\u201320</mark>",
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Placeholder \u2014 Alec hasn't visited yet.",
+          "trashTalk": "General season \u2014 Alec's favorite: finally, enough orange to match his vest collection.",
           "firstTime": {
             "resident": [
-              "Pending"
+              "HD map before you go",
+              "General + Deer B if drawn"
             ],
             "nonresident": [
-              "Pending"
+              "Same HD map"
+            ]
+          }
+        },
+        {
+          "id": "deer-muzzy",
+          "name": "Deer \u2014 Muzzleloader",
+          "units": "Heritage Dec 12\u201320",
+          "season": {
+            "open": "Dec 12, 2026",
+            "close": "Dec 20, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Heritage muzzleloader Dec 12\u201320 statewide. 1x scope? Actually no magnification? Check regs.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "As licensed",
+            "bag": "1",
+            "gear": "Flint/percussion, loaded via muzzle, no smokeless. No magnified scopes.",
+            "unchanged": "Dec 12\u201320 heritage \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Dec 12\u201320 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Heritage muzzleloader established."
+            }
+          ],
+          "major5": [
+            "Heritage only \u2014 modern in general season only"
+          ],
+          "unitNotes": "Heritage = flint/percussion, open sights.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations",
+            "highlight": "<mark>Heritage Dec 12\u201320</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Muzzleloader smoke \u2014 Alec's favorite camouflage.",
+          "firstTime": {
+            "resident": [
+              "Heritage Dec 12\u201320",
+              "No smokeless"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "upland",
+      "label": "Upland",
+      "icon": "\ud83d\udc26",
+      "blurb": "Pheasant Oct 10, grouse Sep 1, sage Sep 1-30.",
+      "species": [
+        {
+          "id": "pheasant",
+          "name": "Ring-necked Pheasant",
+          "units": "Oct 10\u2013Jan 1",
+          "season": {
+            "open": "Oct 10, 2026",
+            "close": "Jan 1, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Pheasant Oct 10\u2013Jan 1. Youth Sep 19-20. Nonres 10-day delay on public/access-program land.",
+          "nonresident": "Nonres same but Sep 20 start on public/access-program land.",
+          "briefing": {
+            "sex": "Roosters only",
+            "bag": "3 daily",
+            "gear": "Shotgun, nontoxic not required except where posted. 1/2hr before/after.",
+            "unchanged": "Oct 10\u2013Jan 1 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 10\u2013Jan 1 finalized, youth Sep 19-20."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Nonres 10-day delay clarified."
+            }
+          ],
+          "major5": [
+            "Nonres 10-day delay on public/access-program \u2014 private not enrolled: no delay"
+          ],
+          "unitNotes": "Check Sage Grouse permit (free) if hunting sage Sep 1-30.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations",
+            "highlight": "<mark>Oct 10\u2013Jan 1 pheasant, youth Sep 19-20 \u2014 nonres 10-day delay public</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Pheasants at 6ft \u2014 Alec's eye level. Finally fair.",
+          "firstTime": {
+            "resident": [
+              "Oct 10\u2013Jan 1",
+              "Youth Sep 19-20"
+            ],
+            "nonresident": [
+              "Same but public Sep 20 start"
+            ]
+          }
+        },
+        {
+          "id": "grouse",
+          "name": "Grouse / Partridge / Sage",
+          "units": "Sep 1\u2013Jan 1",
+          "season": {
+            "open": "Sep 1, 2026",
+            "close": "Jan 1, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Mountain grouse Sep 1\u2013Jan 1, partridge same, sharp-tail Sep 1\u2013Jan 1, sage Sep 1\u201330 (free permit).",
+          "nonresident": "Nonres sage same but 10-day delay on public.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "Grouse 3/15, sage 2? Check regs.",
+            "gear": "Shotgun, no rifle for grouse? Check.",
+            "unchanged": "Sep 1 opener \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 1\u2013Jan 1 finalized, sage Sep 1-30."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Sage free permit required."
+            }
+          ],
+          "major5": [
+            "Sage need free permit"
+          ],
+          "unitNotes": "Sage Sep 1-30 only \u2014 2 birds?",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations",
+            "highlight": "<mark>Grouse Sep 1\u2013Jan 1, sage Sep 1-30 free permit</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Sharp-tails love short grass \u2014 Alec approved.",
+          "firstTime": {
+            "resident": [
+              "Sage free permit",
+              "Grouse 3"
+            ],
+            "nonresident": [
+              "Same + 10-day delay public"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "waterfowl",
+      "label": "Waterfowl",
+      "icon": "\ud83e\udd86",
+      "blurb": "Swan Central Oct 4, Pacific Oct 11.",
+      "species": [
+        {
+          "id": "swan",
+          "name": "Tundra Swan",
+          "units": "Central Oct 4\u2013Jan 8 / Pacific Oct 11\u2013Dec 5",
+          "season": {
+            "open": "Oct 4, 2026",
+            "close": "Jan 8, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Swan special license only. Central Oct 4\u2013Jan 8, Pacific Oct 11\u2013Dec 5. 72hr bill card.",
+          "nonresident": "Nonres same, special license.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "1 swan with tag",
+            "gear": "Nontoxic, 72hr bill measurement card.",
+            "unchanged": "Central/Pacific split \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Central Oct 4\u2013Jan 8, Pacific Oct 11\u2013Dec 5."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "72hr card clarified."
+            }
+          ],
+          "major5": [
+            "72hr Swan Bill Card within 72hr of harvest"
+          ],
+          "unitNotes": "Central vs Pacific flyway matters \u2014 check zone map.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations",
+            "highlight": "<mark>Central Oct 4\u2013Jan 8, Pacific Oct 11\u2013Dec 5 \u2014 72hr card</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Swan tag \u2014 Alec's tallest bird, finally eye-to-eye.",
+          "firstTime": {
+            "resident": [
+              "Special license only",
+              "72hr card"
+            ],
+            "nonresident": [
+              "Same special license"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biggame",
+      "label": "Big Game \u2014 Other",
+      "icon": "\ud83c\udfd4\ufe0f",
+      "blurb": "Elk, moose, bighorn, antelope.",
+      "species": [
+        {
+          "id": "antelope",
+          "name": "Pronghorn",
+          "units": "Archery Sep 5\u2013Oct 9 / General Oct 10\u2013Nov 8",
+          "season": {
+            "open": "Sep 5, 2026",
+            "close": "Oct 9, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Archery Sep 5\u2013Oct 9, general Oct 10\u2013Nov 8, 900 series Aug 15\u2013Nov 8.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "As drawn",
+            "bag": "1 antelope",
+            "gear": "Centerfire, archery no electronic.",
+            "unchanged": "Sep archery \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Archery Sep 5\u2013Oct 9, general Oct 10\u2013Nov 8."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "900 series Aug 15\u2013Nov 8."
+            }
+          ],
+          "major5": [
+            "900 series Aug 15\u2013Nov 8"
+          ],
+          "unitNotes": "HD-specific \u2014 check antelope guide.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations/antelope",
+            "highlight": "<mark>Archery Sep 5\u2013Oct 9, General Oct 10\u2013Nov 8</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Pronghorn 55mph \u2014 Alec's excuse faster, still.",
+          "firstTime": {
+            "resident": [
+              "Apply Jun 1",
+              "900 series Aug 15"
+            ],
+            "nonresident": [
+              "Same Jun 1"
+            ]
+          }
+        },
+        {
+          "id": "bighorn",
+          "name": "Bighorn Sheep",
+          "units": "Archery Sep 5\u201315 / General Sep 15\u2013Nov 29",
+          "season": {
+            "open": "Sep 5, 2026",
+            "close": "Sep 15, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Archery Sep 5\u201315, general Sep 15\u2013Nov 29. Ltd quota.",
+          "nonresident": "Nonres same ltd.",
+          "briefing": {
+            "sex": "Ram as drawn",
+            "bag": "1",
+            "gear": "Centerfire, once-in-a-lifetime not exactly but limited.",
+            "unchanged": "Sep archery \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 5\u201315 archery, Sep 15\u2013Nov 29 general."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "No major change."
+            }
+          ],
+          "major5": [
+            "Ltd quota \u2014 bonus points"
+          ],
+          "unitNotes": "Bighorn \u2014 check sheep guide.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations/bighorn-sheep",
+            "highlight": "<mark>Archery Sep 5\u201315, General Sep 15\u2013Nov 29</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Bighorn cliffs \u2014 Alec's step-stool with style.",
+          "firstTime": {
+            "resident": [
+              "Ltd quota",
+              "Bonus points"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "label": "Fishing",
+      "icon": "\ud83c\udfa3",
+      "blurb": "MT fishing \u2014 not hunting, placeholder.",
+      "species": [
+        {
+          "id": "fishing",
+          "name": "Fishing \u2014 MT",
+          "units": "Year-round",
+          "season": {
+            "open": "Jan 1, 2026",
+            "close": "Dec 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "MT fishing year-round, separate regs.",
+          "nonresident": "Same nonres.",
+          "briefing": {
+            "sex": "N/A",
+            "bag": "Per species",
+            "gear": "Check fishing regs.",
+            "unchanged": "Year-round"
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Pending fishing regs."
+            }
+          ],
+          "major5": [
+            "Pending"
+          ],
+          "unitNotes": "N/A",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/fish/regulations",
+            "highlight": "<mark>MT fishing \u2014 see regs</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Fish don't measure height \u2014 Alec's even field, MT edition.",
+          "firstTime": {
+            "resident": [
+              "Check fishing regs"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "nongame",
+      "label": "Non-Game",
+      "icon": "\ud83d\udc3e",
+      "blurb": "Wolf, bear, turkey.",
+      "species": [
+        {
+          "id": "wolf",
+          "name": "Wolf",
+          "units": "General Sep 15\u2013Mar 26",
+          "season": {
+            "open": "Sep 15, 2026",
+            "close": "Mar 26, 2027",
+            "status": "Finalized"
+          },
+          "resident": "General Sep 15\u2013Mar 26. Trapping Jan 1\u2013Feb 15 in Regions 1-5 (court order), Dec 1\u2013Mar 15 east.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "Check quota",
+            "gear": "Centerfire, trapping where allowed.",
+            "unchanged": "Sep 15\u2013Mar 26 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 15\u2013Mar 26 general."
+            },
+            {
+              "year": "2025-26",
+              "change": "Trapping court order Jan 1\u2013Feb 15."
+            },
+            {
+              "year": "2024-25",
+              "change": "Wolf regs updated."
+            }
+          ],
+          "major5": [
+            "Trapping Regions 1-5 Jan 1\u2013Feb 15 only (federal order)"
+          ],
+          "unitNotes": "Regions 1-5 vs east \u2014 different trapping windows.",
+          "proclamation": {
+            "url": "https://fwp.mt.gov/hunt/regulations",
+            "highlight": "<mark>Wolf General Sep 15\u2013Mar 26</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Wolves \u2014 Alec's howl is shorter but enthusiastic.",
+          "firstTime": {
+            "resident": [
+              "Check region",
+              "Wolf needs tag"
+            ],
+            "nonresident": [
+              "Same"
             ]
           }
         }
