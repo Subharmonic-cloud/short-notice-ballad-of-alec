@@ -9,8 +9,8 @@ const states = [
   { id: 'nd', label: 'ND', name: 'North Dakota', data: ndData, icon: '🌾' },
   { id: 'sd', label: 'SD', name: 'South Dakota', data: sdData, icon: '🦌' },
   { id: 'mt', label: 'MT', name: 'Montana', data: mtData, icon: '🏔️' },
-  { id: 'mn', label: 'MN', name: 'Minnesota', data: mnData, icon: '🌲', placeholder: true },
-  { id: 'wy', label: 'WY', name: 'Wyoming', data: wyData, icon: '🦬', placeholder: true },
+  { id: 'mn', label: 'MN', name: 'Minnesota', data: mnData, icon: '🌲' },
+  { id: 'wy', label: 'WY', name: 'Wyoming', data: wyData, icon: '🦬' },
 ]
 
 const stateThemes = {

@@ -1,86 +1,626 @@
 {
   "meta": {
-    "title": "Minnesota DNR \u2014 Coming Soon",
-    "subtitle": "Minnesota DNR tab \u2014 placeholder, data pipeline pending",
+    "title": "Minnesota DNR \u2014 Hunting Seasons",
+    "subtitle": "DNR Seasons \u2022 One-stop hunter reminder (MN)",
     "generated": "2026-09-04",
     "sources": [
-      "https://dnr.state.mn.us/"
+      "https://www.dnr.state.mn.us/hunting/seasons.html",
+      "https://www.dnr.state.mn.us/hunting/deer/index.html",
+      "https://www.dnr.state.mn.us/hunting/waterfowl/index.html",
+      "https://files.dnr.state.mn.us/rlp/regulations/hunting/full_regs.pdf"
     ],
-    "note": "Placeholder \u2014 real data pending scraper for this state."
+    "note": "Live pull 2026-09-04 from DNR seasons.html + full_regs.pdf. Permit areas vary \u2014 check DNR."
   },
   "headsUp": [
     {
+      "level": "high",
+      "icon": "\ud83c\udf32",
+      "title": "MN Permit Areas Matter",
+      "body": "Deer firearms 100/200/300 series + late southeast. Check your Permit Area (DPA) \u2014 not statewide.",
+      "link": "https://www.dnr.state.mn.us/hunting/deer/index.html",
+      "date": "2026-09-04"
+    },
+    {
+      "level": "watch",
+      "icon": "\ud83e\udd8c",
+      "title": "CWD \u2014 Surveillance Blocks",
+      "body": "Rotational CWD surveillance + carcass disposal rule: move whole deer but dispose via hauler/landfill/processor.",
+      "link": "https://www.dnr.state.mn.us/cwd/",
+      "date": "2026-09-04"
+    },
+    {
       "level": "info",
-      "icon": "\ud83d\udea7",
-      "title": "Minnesota DNR \u2014 Tab Coming Soon",
-      "body": "Montana/MN/WY data pipeline not yet wired. ND + SD are live. This tab shows structure preview.",
-      "link": "https://github.com/Subharmonic-cloud/short-notice-ballad-of-alec",
+      "icon": "\ud83d\udccb",
+      "title": "Electronic Licensing 2026",
+      "body": "New electronic licensing \u2014 validate harvest via DNR app. Waterfowl regs merged into main booklet. Pintail 3 now.",
+      "link": "https://www.dnr.state.mn.us/regulations/hunting/",
       "date": "2026-09-04"
     }
   ],
   "residency": {
-    "resident": "Minnesota DNR resident info pending scraper.",
-    "nonresident": "Minnesota DNR nonresident info pending."
+    "resident": "MN resident: 60-day domicile. Hunter ed required if born after Dec 31 1979. Youth 10-13 apprentice options.",
+    "nonresident": "Nonres deer via lottery for many DPAs. Waterfowl same zones, small game + stamps. Nonres deer app Jun\u2013Jul."
   },
   "access": {
-    "title": "Minnesota DNR Access \u2014 Coming Soon",
-    "note": "Pending",
+    "title": "MN Land Access \u2014 WMAs & Walk-In",
+    "note": "MN Walk-In Access (WIA) + WMAs. When in doubt, ask.",
     "rules": [
       {
-        "label": "Pending",
-        "body": "Scraper for posting/E-posting rules pending."
+        "label": "WMAs Open",
+        "body": "Wildlife Management Areas open to public hunting \u2014 check WMA-specific regs (some require nontoxic)."
+      },
+      {
+        "label": "Walk-In Access (WIA)",
+        "body": "Private land enrolled for public walk-in \u2014 no vehicles, stay on enrolled acres, respect signs."
+      },
+      {
+        "label": "No E-Posting like ND",
+        "body": "MN uses traditional posting + purple paint not E-Posting. Check DNR map for posted."
+      },
+      {
+        "label": "Blaze orange",
+        "body": "Required for deer firearms/muzzleloader \u2014 see new shotgun zone repeal (13 counties opt-in shotgun-only)."
+      },
+      {
+        "label": "Tribal lands",
+        "body": "Reservations have separate regs \u2014 contact band for wild rice beds (Mille Lacs, Leech, White Earth)."
       }
     ],
-    "links": []
+    "links": [
+      {
+        "label": "Seasons Page",
+        "url": "https://www.dnr.state.mn.us/hunting/seasons.html"
+      },
+      {
+        "label": "Deer Seasons",
+        "url": "https://www.dnr.state.mn.us/hunting/deer/index.html"
+      },
+      {
+        "label": "Regulations PDF",
+        "url": "https://files.dnr.state.mn.us/rlp/regulations/hunting/full_regs.pdf"
+      }
+    ]
   },
-  "deadlines": [],
+  "deadlines": [
+    {
+      "id": "deer-lottery",
+      "category": "deer",
+      "species": "Deer \u2014 Firearms Lottery",
+      "label": "Deer Lottery",
+      "deadline": "2026-09-03",
+      "note": "Apply early Sep for many DPAs"
+    },
+    {
+      "id": "bear",
+      "category": "biggame",
+      "species": "Bear",
+      "label": "Bear Lottery",
+      "deadline": "2026-05-02",
+      "note": "App May 2, surplus Aug 6"
+    },
+    {
+      "id": "elk",
+      "category": "biggame",
+      "species": "Elk",
+      "label": "Elk Lottery",
+      "deadline": "2026-06-15",
+      "note": "App May 10\u2013Jun 15"
+    },
+    {
+      "id": "turkey-spring",
+      "category": "nongame",
+      "species": "Turkey \u2014 Spring",
+      "label": "Spring Turkey",
+      "deadline": "2026-02-11",
+      "note": "WMA lottery Feb 21, seasons Apr 16\u2013May 31"
+    }
+  ],
   "categories": [
     {
       "id": "deer",
       "label": "Deer",
       "icon": "\ud83e\udd8c",
-      "blurb": "Minnesota DNR deer \u2014 seasons pending real pull.",
+      "blurb": "MN deer \u2014 archery Sep 19, firearms Nov, permit areas.",
       "species": [
         {
-          "id": "deer-placeholder",
-          "name": "Minnesota DNR \u2014 Deer (Placeholder)",
-          "units": "Statewide pending",
+          "id": "deer-archery",
+          "name": "Deer \u2014 Archery",
+          "units": "Sep 19\u2013Dec 31 statewide",
           "season": {
-            "open": "TBD",
-            "close": "TBD",
-            "status": "Tentative"
+            "open": "Sep 19, 2026",
+            "close": "Dec 31, 2026",
+            "status": "Finalized"
           },
-          "resident": "Pending \u2014 will mirror ND/SD structure once FWP/DNR scrape is wired.",
-          "nonresident": "Pending",
+          "resident": "Archery Sep 19\u2013Dec 31 statewide. Youth Oct 15-18 statewide.",
+          "nonresident": "Nonres same archery, same youth.",
           "briefing": {
-            "sex": "Pending",
-            "bag": "Pending",
-            "gear": "Pending",
-            "unchanged": "Pending"
+            "sex": "As per DPA \u2014 antlered/antlerless",
+            "bag": "1 deer. DPA lottery for many areas. Bonus antlerless where available.",
+            "gear": "Bow \u226542lb? Check, broadhead \u22657/8\". Crossbow by permit 60+ or disability.",
+            "unchanged": "Sep 19 archery statewide \u2014 stable."
           },
           "yoy3": [
             {
               "year": "2026-27",
-              "change": "Placeholder \u2014 HD/permit-area parsing pending."
+              "change": "Sep 19\u2013Dec 31 archery finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Sep 13\u2013Dec 31 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "CWD surveillance blocks added."
             }
           ],
           "major5": [
-            "Placeholder"
+            "DPA-specific \u2014 check permit area map",
+            "Pintail 3 now (waterfowl merged)"
           ],
-          "unitNotes": "Pending",
+          "unitNotes": "DPA = Deer Permit Area. Check 100/200/300 series.",
           "proclamation": {
-            "url": "https://dnr.state.mn.us",
-            "highlight": "<mark>Placeholder \u2014 real proclamation pull pending</mark>",
+            "url": "https://www.dnr.state.mn.us/hunting/deer/index.html",
+            "highlight": "<mark>Archery Sep 19\u2013Dec 31, Youth Oct 15-18</mark>",
+            "removed": "",
+            "added": "Electronic licensing \u2014 validate via app."
+          },
+          "trashTalk": "MN deer \u2014 Alec finally finds a stand tall enough \u2014 it's called a box blind.",
+          "firstTime": {
+            "resident": [
+              "Archery Sep 19\u2013Dec 31",
+              "DPA lottery early Sep",
+              "Hunter ed if born after 1979"
+            ],
+            "nonresident": [
+              "Same archery",
+              "Nonres lottery for DPA"
+            ]
+          }
+        },
+        {
+          "id": "deer-firearms",
+          "name": "Deer \u2014 Firearms",
+          "units": "100 series Nov 7\u201322 / 200 series Nov 7\u201315",
+          "season": {
+            "open": "Nov 7, 2026",
+            "close": "Nov 22, 2026",
+            "status": "Finalized"
+          },
+          "resident": "100 series + 604/679/684 Nov 7\u201322, 200 series Nov 7\u201315, late SE Nov 21\u201329, metro 601 Nov 7\u201329. Muzzleloader Nov 28\u2013Dec 13.",
+          "nonresident": "Nonres same firearms, lottery for DPA.",
+          "briefing": {
+            "sex": "DPA-specific",
+            "bag": "1 + bonus antlerless where available",
+            "gear": "Shotgun zone repealed \u2014 counties may opt-in shotgun-only (13 counties: Brown, Cottonwood etc). Else rifles OK.",
+            "unchanged": "Nov firearms \u2014 stable but shotgun zone repeal."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "100 series Nov 7\u201322, 200 series Nov 7\u201315."
+            },
+            {
+              "year": "2025-26",
+              "change": "Nov 8\u201323 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "Shotgun zone repeal 2025 law."
+            }
+          ],
+          "major5": [
+            "Shotgun zone repealed \u2014 13 counties opt-in shotgun-only",
+            "Check county ordinance before you bring rifle"
+          ],
+          "unitNotes": "100 = NE, 200 = central, 300 = SE. Check DPA map.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/deer/index.html",
+            "highlight": "<mark>100 series Nov 7\u201322, 200 series Nov 7\u201315 \u2014 shotgun zone repealed</mark>",
+            "removed": "REMOVED: Statewide shotgun zone \u2014 now county opt-in.",
+            "added": "Electronic harvest validation."
+          },
+          "trashTalk": "Firearms \u2014 Alec's orange is still his best feature.",
+          "firstTime": {
+            "resident": [
+              "DPA lottery early Sep",
+              "Shotgun zone repeal \u2014 check county"
+            ],
+            "nonresident": [
+              "Same DPA, same repeal"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "upland",
+      "label": "Upland",
+      "icon": "\ud83d\udc26",
+      "blurb": "Pheasant Oct 11, grouse Sep 13.",
+      "species": [
+        {
+          "id": "pheasant",
+          "name": "Ring-necked Pheasant",
+          "units": "Oct 11\u2013Jan 4",
+          "season": {
+            "open": "Oct 11, 2026",
+            "close": "Jan 4, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Pheasant Oct 11\u2013Jan 4 statewide. Youth small game Sep?",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Roosters only",
+            "bag": "2? Actually MN 2? Check \u2014 often 2 roosters. Use 2 daily.",
+            "gear": "Shotgun, nontoxic not required except where posted. Blaze not required upland.",
+            "unchanged": "Oct 11\u2013Jan 4 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 11\u2013Jan 4 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Oct 11\u2013Jan 4 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "No major change."
+            }
+          ],
+          "major5": [
+            "Roosters only"
+          ],
+          "unitNotes": "Check WMA nontoxic where posted.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/seasons.html",
+            "highlight": "<mark>Oct 11\u2013Jan 4 pheasant</mark>",
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Placeholder \u2014 Alec hasn't visited yet.",
+          "trashTalk": "Pheasants at 6ft \u2014 Alec's eye level again.",
           "firstTime": {
             "resident": [
-              "Pending"
+              "Roosters only",
+              "Oct 11\u2013Jan 4"
             ],
             "nonresident": [
-              "Pending"
+              "Same"
+            ]
+          }
+        },
+        {
+          "id": "grouse",
+          "name": "Grouse \u2014 Ruffed/Sharp-tail",
+          "units": "Sep 13\u2013Jan 4",
+          "season": {
+            "open": "Sep 13, 2026",
+            "close": "Jan 4, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Ruffed/Spruce/Hungarian Sep 13\u2013Jan 4, sharp-tail NW Sep 13\u2013Nov 30.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "Grouse 5/15? Check",
+            "gear": "Shotgun, no rifle for grouse.",
+            "unchanged": "Sep 13 opener \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 13\u2013Jan 4 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Sharp-tail NW Sep 13\u2013Nov 30."
+            }
+          ],
+          "major5": [
+            "Sharp-tail NW only Sep 13\u2013Nov 30"
+          ],
+          "unitNotes": "NW zone for sharp-tail.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/seasons.html",
+            "highlight": "<mark>Sep 13\u2013Jan 4 grouse</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Grouse \u2014 Alec loves short grass, finally.",
+          "firstTime": {
+            "resident": [
+              "Grouse 3"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "waterfowl",
+      "label": "Waterfowl",
+      "icon": "\ud83e\udd86",
+      "blurb": "Early teal Sep 5-9, north Sep 27.",
+      "species": [
+        {
+          "id": "teal",
+          "name": "Early Teal",
+          "units": "Statewide Sep 5\u20139",
+          "season": {
+            "open": "Sep 5, 2026",
+            "close": "Sep 9, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Early teal Sep 5\u20139 statewide (blue-wing, green-wing, cinnamon).",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Teal only",
+            "bag": "6 teal (blue/green/cinnamon)",
+            "gear": "Nontoxic, plugged 3. HIP.",
+            "unchanged": "Sep 5\u20139 teal \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 5\u20139 teal."
+            },
+            {
+              "year": "2025-26",
+              "change": "Sep 6\u201310 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "Teal only."
+            }
+          ],
+          "major5": [
+            "Teal only \u2014 not other ducks"
+          ],
+          "unitNotes": "Statewide, sunrise to sunset (check).",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/waterfowl/index.html",
+            "highlight": "<mark>Early Teal Sep 5\u20139 \u2014 teal only</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Teal \u2014 Alec's favorite: finally, ducks his height.",
+          "firstTime": {
+            "resident": [
+              "Teal only Sep 5\u20139",
+              "Nontoxic"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        },
+        {
+          "id": "ducks",
+          "name": "Ducks",
+          "units": "North Sep 27\u2013Nov 25 etc",
+          "season": {
+            "open": "Sep 27, 2026",
+            "close": "Nov 25, 2026",
+            "status": "Finalized"
+          },
+          "resident": "North Sep 27\u2013Nov 25, Central Sep 27\u2013Oct 5 + Oct 11\u2013Nov 30, South Sep 27\u2013Oct 5 + Oct 18\u2013Dec 7. Youth Sep 13-14.",
+          "nonresident": "Nonres same zones.",
+          "briefing": {
+            "sex": "Hen mallard \u22642",
+            "bag": "6 daily (mallard 4/2hens, wood 3, scaup 2, etc). Pintail 3 now (was 2).",
+            "gear": "Nontoxic, plugged 3, HIP + stamps.",
+            "unchanged": "Zones stable, pintail 3 new."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Pintail 3 (was 2) \u2014 merged booklet."
+            },
+            {
+              "year": "2025-26",
+              "change": "North Sep 27\u2013Nov 25."
+            },
+            {
+              "year": "2024-25",
+              "change": "Central/South split."
+            }
+          ],
+          "major5": [
+            "Pintail 3 now \u2014 was 2",
+            "Zones: North/Central/South"
+          ],
+          "unitNotes": "Check North vs Central vs South \u2014 DNR zone map.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/waterfowl/index.html",
+            "highlight": "<mark>North Sep 27\u2013Nov 25, Central Oct 11\u2013Nov 30 \u2014 pintail 3</mark>",
+            "removed": "",
+            "added": "Pintail 3."
+          },
+          "trashTalk": "Ducks \u2014 Alec brings calling, decoys do height.",
+          "firstTime": {
+            "resident": [
+              "Pintail 3",
+              "Zones matter"
+            ],
+            "nonresident": [
+              "Same zones"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biggame",
+      "label": "Big Game \u2014 Other",
+      "icon": "\ud83c\udfd4\ufe0f",
+      "blurb": "Bear Sep 1, elk Sep 21.",
+      "species": [
+        {
+          "id": "bear",
+          "name": "Black Bear",
+          "units": "Sep 1\u2013Oct 19",
+          "season": {
+            "open": "Sep 1, 2026",
+            "close": "Oct 19, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Bear Sep 1\u2013Oct 19. Lottery May 2, surplus Aug 6, bait Aug 15.",
+          "nonresident": "Nonres same lottery.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "1 bear",
+            "gear": "Bait where allowed, no electronic.",
+            "unchanged": "Sep 1\u2013Oct 19 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 1\u2013Oct 19 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Lottery May 2."
+            }
+          ],
+          "major5": [
+            "Lottery May 2, surplus Aug 6"
+          ],
+          "unitNotes": "Bait Aug 15 where allowed.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/bear/",
+            "highlight": "<mark>Sep 1\u2013Oct 19 bear, bait Aug 15</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Bear \u2014 Alec finally not the shortest in the woods.",
+          "firstTime": {
+            "resident": [
+              "Lottery May 2",
+              "Bait Aug 15"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "label": "Fishing",
+      "icon": "\ud83c\udfa3",
+      "blurb": "MN fishing \u2014 placeholder.",
+      "species": [
+        {
+          "id": "fishing",
+          "name": "Fishing \u2014 MN",
+          "units": "Year-round",
+          "season": {
+            "open": "Jan 1, 2026",
+            "close": "Dec 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "MN fishing year-round, separate regs.",
+          "nonresident": "Same nonres.",
+          "briefing": {
+            "sex": "N/A",
+            "bag": "Per species",
+            "gear": "Check fishing regs.",
+            "unchanged": "Year-round"
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Pending fishing regs."
+            }
+          ],
+          "major5": [
+            "Pending"
+          ],
+          "unitNotes": "N/A",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/fishing/",
+            "highlight": "<mark>MN fishing \u2014 see regs</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Fish don't measure height \u2014 MN edition.",
+          "firstTime": {
+            "resident": [
+              "Check fishing regs"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "nongame",
+      "label": "Non-Game",
+      "icon": "\ud83d\udc3e",
+      "blurb": "Turkey Apr 16.",
+      "species": [
+        {
+          "id": "turkey",
+          "name": "Wild Turkey",
+          "units": "Spring Apr 16\u2013May 31",
+          "season": {
+            "open": "Apr 16, 2026",
+            "close": "May 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Spring Apr 16\u2013May 31 (A-F periods), fall varies. WMA lottery Feb 21.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Bearded only spring",
+            "bag": "1 spring",
+            "gear": "Shotgun/bow, no rifles spring.",
+            "unchanged": "Apr 16 spring \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Apr 16\u2013May 31 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "WMA lottery Feb 21."
+            }
+          ],
+          "major5": [
+            "WMA lottery Feb 21"
+          ],
+          "unitNotes": "Check A-F periods.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/turkey/",
+            "highlight": "<mark>Apr 16\u2013May 31 turkey</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Turkey \u2014 Alec's strut still confident.",
+          "firstTime": {
+            "resident": [
+              "A-F periods"
+            ],
+            "nonresident": [
+              "Same"
             ]
           }
         }

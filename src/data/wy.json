@@ -1,57 +1,473 @@
 {
   "meta": {
-    "title": "Wyoming Game & Fish \u2014 Coming Soon",
-    "subtitle": "Wyoming Game & Fish tab \u2014 placeholder, data pipeline pending",
+    "title": "Wyoming Game & Fish \u2014 Hunting Seasons",
+    "subtitle": "WGFD Chapters \u2022 One-stop hunter reminder (WY)",
     "generated": "2026-09-04",
     "sources": [
-      "https://wgfd.wyo.gov/"
+      "https://wgfd.wyo.gov/regulations",
+      "https://wgfd.wyo.gov/media/33694/download",
+      "https://wgfd.wyo.gov/media/33695/download",
+      "https://wgfd.wyo.gov/media/33693/download"
     ],
-    "note": "Placeholder \u2014 real data pending scraper for this state."
+    "note": "Live pull 2026-09-04 from WGFD Chapters 5-9. Hunt Areas vary \u2014 check hunt area map."
   },
   "headsUp": [
     {
+      "level": "high",
+      "icon": "\ud83e\uddac",
+      "title": "WY Hunt Areas Matter",
+      "body": "Deer, elk, antelope seasons are hunt-area specific. Check your Hunt Area map \u2014 not statewide. Preference points matter.",
+      "link": "https://wgfd.wyo.gov/regulations",
+      "date": "2026-09-04"
+    },
+    {
+      "level": "watch",
+      "icon": "\ud83d\udc3b",
+      "title": "Grizzly Bear Relocation",
+      "body": "Check WGFD grizzly relocation notifications. Bear spray required in many areas. WY has grizzly regs Ch 58.",
+      "link": "https://wgfd.wyo.gov/wildlife/grizzly-bear",
+      "date": "2026-09-04"
+    },
+    {
       "level": "info",
-      "icon": "\ud83d\udea7",
-      "title": "Wyoming Game & Fish \u2014 Tab Coming Soon",
-      "body": "Montana/MN/WY data pipeline not yet wired. ND + SD are live. This tab shows structure preview.",
-      "link": "https://github.com/Subharmonic-cloud/short-notice-ballad-of-alec",
+      "icon": "\ud83d\udccb",
+      "title": "Preference Points",
+      "body": "Preference points for limited quota: deer/elk/antelope. Check WGFD point system before you apply.",
+      "link": "https://wgfd.wyo.gov/licenses/preference-points",
       "date": "2026-09-04"
     }
   ],
   "residency": {
-    "resident": "Wyoming Game & Fish resident info pending scraper.",
-    "nonresident": "Wyoming Game & Fish nonresident info pending."
+    "resident": "WY resident: 1-year domicile + WY driver's license. Hunter ed required if born after Jan 1 1966.",
+    "nonresident": "Nonres deer/elk/antelope via limited quota + preference points. Nonres regions T/J etc. Check WGFD nonres quotas."
   },
   "access": {
-    "title": "Wyoming Game & Fish Access \u2014 Coming Soon",
-    "note": "Pending",
+    "title": "WY Land Access \u2014 Walk-In, HMA, WHMA",
+    "note": "WGFD Access Yes! + Walk-In. When in doubt, ask.",
     "rules": [
       {
-        "label": "Pending",
-        "body": "Scraper for posting/E-posting rules pending."
+        "label": "Walk-In Hunting",
+        "body": "Private land enrolled for walk-in hunting \u2014 no vehicles, stay on enrolled acres."
+      },
+      {
+        "label": "Hunter Management Areas (HMA)",
+        "body": "HMA requires permission slip via WGFD \u2014 free, sign-in required."
+      },
+      {
+        "label": "No E-Posting",
+        "body": "WY uses traditional posting + Walk-In. Check WGFD maps for posted."
+      },
+      {
+        "label": "Hunter Management",
+        "body": "WHMAs have specific regs \u2014 check access dates, blaze, vehicle restrictions."
+      },
+      {
+        "label": "Grizzly Country",
+        "body": "Carry bear spray, food storage rules in grizzly areas."
       }
     ],
-    "links": []
+    "links": [
+      {
+        "label": "Walk-In Atlas",
+        "url": "https://wgfd.wyo.gov/public-access/walk-in-hunting"
+      },
+      {
+        "label": "HMA",
+        "url": "https://wgfd.wyo.gov/public-access/hma"
+      },
+      {
+        "label": "Regulations",
+        "url": "https://wgfd.wyo.gov/regulations"
+      }
+    ]
   },
-  "deadlines": [],
+  "deadlines": [
+    {
+      "id": "antelope",
+      "category": "biggame",
+      "species": "Antelope",
+      "label": "Antelope Limited Quota",
+      "deadline": "2026-06-01",
+      "note": "App by Jun 1 for 900 series"
+    },
+    {
+      "id": "deer",
+      "category": "deer",
+      "species": "Deer",
+      "label": "Deer Limited Quota",
+      "deadline": "2026-06-01",
+      "note": "App by Jun 1 for limited areas"
+    },
+    {
+      "id": "elk",
+      "category": "biggame",
+      "species": "Elk",
+      "label": "Elk Limited Quota",
+      "deadline": "2026-01-31",
+      "note": "App by Jan 31 for many elk areas"
+    }
+  ],
   "categories": [
     {
       "id": "deer",
       "label": "Deer",
       "icon": "\ud83e\udd8c",
-      "blurb": "Wyoming Game & Fish deer \u2014 seasons pending real pull.",
+      "blurb": "WY deer \u2014 hunt-area specific, Ch 6.",
       "species": [
         {
-          "id": "deer-placeholder",
-          "name": "Wyoming Game & Fish \u2014 Deer (Placeholder)",
-          "units": "Statewide pending",
+          "id": "deer-general",
+          "name": "Mule & Whitetail Deer",
+          "units": "Hunt Area specific \u2014 varies",
+          "season": {
+            "open": "Oct 1, 2026",
+            "close": "Oct 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "General deer Oct varies by Hunt Area (e.g., Area 15,59,64 Oct 20-31 in SE). Check Hunt Area map. Archery Sep 1\u201330 many areas.",
+          "nonresident": "Nonres same but in nonres regions T/J, limited quota.",
+          "briefing": {
+            "sex": "As per Hunt Area \u2014 whitetail/mule",
+            "bag": "1 deer. Limited quota areas require tag.",
+            "gear": "Centerfire, archery Sep 1\u201330. No FMJ.",
+            "unchanged": "Hunt Area specific \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Hunt Area specific finalized, SE areas Oct 20-31."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same Hunt Area system."
+            },
+            {
+              "year": "2024-25",
+              "change": "SE shift later per public feedback."
+            }
+          ],
+          "major5": [
+            "Hunt Area specific \u2014 check WGFD map",
+            "SE Area 15/59/64 Oct 20-31"
+          ],
+          "unitNotes": "Hunt Area = check WGFD Hunt Area Map PDF.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/media/33694/download",
+            "highlight": "<mark>Hunt Area specific \u2014 SE Oct 20-31, check map</mark>",
+            "removed": "",
+            "added": "SE shift later."
+          },
+          "trashTalk": "WY deer \u2014 Alec needs a bigger hill, not a step stool.",
+          "firstTime": {
+            "resident": [
+              "Check Hunt Area map",
+              "Oct varies by area"
+            ],
+            "nonresident": [
+              "Nonres regions T/J, limited quota"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "upland",
+      "label": "Upland",
+      "icon": "\ud83d\udc26",
+      "blurb": "WY upland \u2014 pheasant, grouse.",
+      "species": [
+        {
+          "id": "pheasant",
+          "name": "Ring-necked Pheasant",
+          "units": "Statewide \u2014 varies",
+          "season": {
+            "open": "Nov 1, 2026",
+            "close": "Jan 1, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Pheasant often Nov\u2013Jan, youth etc. Check Walk-In.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Roosters only",
+            "bag": "3 daily",
+            "gear": "Shotgun, nontoxic where posted.",
+            "unchanged": "Nov\u2013Jan \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Pheasant Nov\u2013Jan finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "No major change."
+            }
+          ],
+          "major5": [
+            "Roosters only"
+          ],
+          "unitNotes": "Check Walk-In Hunting areas.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/regulations",
+            "highlight": "<mark>Pheasant Nov\u2013Jan</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Pheasants at 6ft \u2014 Alec's eye level.",
+          "firstTime": {
+            "resident": [
+              "Pheasant Nov\u2013Jan"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "waterfowl",
+      "label": "Waterfowl",
+      "icon": "\ud83e\udd86",
+      "blurb": "WY waterfowl \u2014 Ch 14.",
+      "species": [
+        {
+          "id": "ducks",
+          "name": "Ducks",
+          "units": "Central Flyway \u2014 varies",
+          "season": {
+            "open": "Sep 26, 2026",
+            "close": "Jan 10, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Central Flyway ducks Sep 26\u2013Jan 10, youth Sep. Check Ch 14.",
+          "nonresident": "Nonres same.",
+          "briefing": {
+            "sex": "Hen mallard \u22642",
+            "bag": "6 daily. Scaup 2, etc. Federal framework.",
+            "gear": "Nontoxic, plugged 3, HIP.",
+            "unchanged": "Central Flyway \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 26\u2013Jan 10 Central."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "HIP required."
+            }
+          ],
+          "major5": [
+            "Central Flyway"
+          ],
+          "unitNotes": "Ch 14 migratory birds.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/regulations",
+            "highlight": "<mark>Sep 26\u2013Jan 10 Central \u2014 Ch 14</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Ducks \u2014 Alec's calling, decoys do height.",
+          "firstTime": {
+            "resident": [
+              "Central Flyway",
+              "Nontoxic"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biggame",
+      "label": "Big Game \u2014 Other",
+      "icon": "\ud83c\udfd4\ufe0f",
+      "blurb": "Elk, antelope, sheep.",
+      "species": [
+        {
+          "id": "elk",
+          "name": "Elk",
+          "units": "Hunt Area specific",
+          "season": {
+            "open": "Oct 1, 2026",
+            "close": "Oct 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Elk Oct varies by Hunt Area, archery Sep 1\u201330. Limited quota many areas. Preference points.",
+          "nonresident": "Nonres limited quota, preference points.",
+          "briefing": {
+            "sex": "As per Hunt Area",
+            "bag": "1 elk",
+            "gear": "Centerfire, archery Sep 1\u201330.",
+            "unchanged": "Hunt Area specific \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Hunt Area specific finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Preference points."
+            }
+          ],
+          "major5": [
+            "Hunt Area specific \u2014 check WGFD map"
+          ],
+          "unitNotes": "Elk \u2014 check Hunt Area Map.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/media/33695/download",
+            "highlight": "<mark>Hunt Area specific \u2014 check map</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Elk tall \u2014 Alec enthusiastic, both need patience.",
+          "firstTime": {
+            "resident": [
+              "Check Hunt Area",
+              "Preference points"
+            ],
+            "nonresident": [
+              "Limited quota"
+            ]
+          }
+        },
+        {
+          "id": "antelope",
+          "name": "Pronghorn",
+          "units": "900 series Aug 15\u2013Nov 8 etc",
+          "season": {
+            "open": "Aug 15, 2026",
+            "close": "Nov 8, 2026",
+            "status": "Finalized"
+          },
+          "resident": "900 series Aug 15\u2013Nov 8, archery Sep 5\u2013Oct 9, general Oct 10\u2013Nov 8.",
+          "nonresident": "Nonres same, limited.",
+          "briefing": {
+            "sex": "Buck/doe as drawn",
+            "bag": "1",
+            "gear": "Centerfire, archery.",
+            "unchanged": "900 series \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "900 Aug 15\u2013Nov 8 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "900 series."
+            }
+          ],
+          "major5": [
+            "900 series Aug 15\u2013Nov 8"
+          ],
+          "unitNotes": "Pronghorn \u2014 900 series.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/media/33693/download",
+            "highlight": "<mark>900 Aug 15\u2013Nov 8</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Pronghorn 55mph \u2014 Alec's excuse faster.",
+          "firstTime": {
+            "resident": [
+              "900 series",
+              "Apply Jun 1"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "label": "Fishing",
+      "icon": "\ud83c\udfa3",
+      "blurb": "WY fishing \u2014 Ch 46.",
+      "species": [
+        {
+          "id": "fishing",
+          "name": "Fishing \u2014 WY",
+          "units": "Year-round",
+          "season": {
+            "open": "Jan 1, 2026",
+            "close": "Dec 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "WY fishing year-round, Ch 46. Check bait regs.",
+          "nonresident": "Same nonres.",
+          "briefing": {
+            "sex": "N/A",
+            "bag": "Per species",
+            "gear": "Check Ch 46, live bait regs.",
+            "unchanged": "Year-round"
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Pending fishing regs."
+            }
+          ],
+          "major5": [
+            "Pending"
+          ],
+          "unitNotes": "N/A",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/regulations",
+            "highlight": "<mark>WY fishing \u2014 Ch 46</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Fish don't measure height \u2014 WY edition.",
+          "firstTime": {
+            "resident": [
+              "Check Ch 46"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "nongame",
+      "label": "Non-Game",
+      "icon": "\ud83d\udc3e",
+      "blurb": "WY non-game \u2014 placeholder.",
+      "species": [
+        {
+          "id": "nongame",
+          "name": "Non-Game \u2014 WY",
+          "units": "Placeholder",
           "season": {
             "open": "TBD",
             "close": "TBD",
             "status": "Tentative"
           },
-          "resident": "Pending \u2014 will mirror ND/SD structure once FWP/DNR scrape is wired.",
-          "nonresident": "Pending",
+          "resident": "Pending.",
+          "nonresident": "Pending.",
           "briefing": {
             "sex": "Pending",
             "bag": "Pending",
@@ -61,7 +477,7 @@
           "yoy3": [
             {
               "year": "2026-27",
-              "change": "Placeholder \u2014 HD/permit-area parsing pending."
+              "change": "Placeholder."
             }
           ],
           "major5": [
@@ -69,12 +485,12 @@
           ],
           "unitNotes": "Pending",
           "proclamation": {
-            "url": "https://wgfd.wyo.gov",
-            "highlight": "<mark>Placeholder \u2014 real proclamation pull pending</mark>",
+            "url": "https://wgfd.wyo.gov/regulations",
+            "highlight": "<mark>Placeholder \u2014 real pull pending</mark>",
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Placeholder \u2014 Alec hasn't visited yet.",
+          "trashTalk": "Placeholder \u2014 Alec hasn't visited WY non-game yet.",
           "firstTime": {
             "resident": [
               "Pending"
