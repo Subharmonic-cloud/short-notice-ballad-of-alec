@@ -100,6 +100,122 @@ function DeadlineAlertCard({ deadlines = [] }) {
   )
 }
 
+function isSeasonActive(season) {
+  if (!season || !season.open || season.status === 'Tentative' && season.open === 'TBD') return false
+  const openStr = season.open, closeStr = season.close
+  if (openStr.includes('Year-round') || openStr.includes('Continuous') || closeStr.includes('Continuous') || closeStr.includes('Year-round')) return true
+  if (openStr === 'TBD' || closeStr === 'TBD') return false
+  try {
+    const now = new Date()
+    // Parse like "Sep 4, 2026" or "Sep 4, 2026 12:00 noon"
+    const parse = s => {
+      // remove time part
+      let t = s.replace(' 12:00 noon','').replace(' 12 noon','').trim()
+      // ensure year
+      let d = new Date(t)
+      if (isNaN(d)) {
+        // try with current year if no year
+        d = new Date(t + ' ' + now.getFullYear())
+      }
+      return d
+    }
+    let open = parse(openStr)
+    let close = parse(closeStr)
+    if (isNaN(open) || isNaN(close)) return false
+    // handle wrap year (close before open, e.g., Sep-Jan)
+    if (close < open) {
+      // if now is after open, close is next year; if now before close, open is last year
+      if (now >= open) close.setFullYear(close.getFullYear()+1)
+      else open.setFullYear(open.getFullYear()-1)
+    }
+    return now >= open && now <= close
+  } catch { return false }
+}
+
+function ActiveMap({ categories, theme, stateId }) {
+  const huntingCats = categories.filter(c => c.id !== 'fishing')
+  const fishingCat = categories.find(c => c.id === 'fishing')
+  const activeHunting = huntingCats.reduce((acc, c) => acc + c.species.filter(s => isSeasonActive(s.season)).length, 0)
+  const activeCategories = huntingCats.filter(c => c.species.some(s => isSeasonActive(s.season))).length
+  const fishingActive = fishingCat ? fishingCat.species.filter(s => isSeasonActive(s.season)).length : 0
+  // group like deer/upland/duck 3
+  const deerActive = categories.find(c => c.id==='deer')?.species.filter(s => isSeasonActive(s.season)).length || 0
+  const uplandActive = categories.find(c => c.id==='upland')?.species.filter(s => isSeasonActive(s.season)).length || 0
+  const waterfowlActive = categories.find(c => c.id==='waterfowl')?.species.filter(s => isSeasonActive(s.season)).length || 0
+  const display = `${activeCategories}${fishingActive ? '/1' : ''}`
+  const detail = `${activeHunting} species · ${activeCategories} hunting cats`
+  return (
+    <div className="bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden">
+      <div className="px-3 py-2.5 flex items-center justify-between" style={{ backgroundColor: theme.header, color: 'white' }}>
+        <span className="text-[12px] font-bold tracking-wide flex items-center gap-1.5"><span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: theme.accent }} /> What’s Open Now — {stateId.toUpperCase()}</span>
+        <span className="text-[11px] font-mono bg-white/15 border border-white/20 px-2 py-1 rounded-full">{new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'})}</span>
+      </div>
+      <div className="p-3 grid sm:grid-cols-[140px_1fr] gap-3 items-center">
+        {/* Mini 5-state map */}
+        <div className="relative bg-[#f4f1eb] border border-[#e8e0d0] rounded-[10px] p-2 h-[120px] overflow-hidden">
+          <svg viewBox="0 0 200 120" className="w-full h-full">
+            {/* MT */}<rect x="10" y="20" width="60" height="40" rx="4" fill={stateId==='mt' ? theme.header : '#e8e0d0'} stroke={stateThemes.mt.accent} strokeWidth="1.5" />
+            <text x="40" y="45" textAnchor="middle" fontSize="9" fontWeight="700" fill={stateId==='mt' ? 'white' : '#5a4a32'}>MT</text>
+            {/* ND */}<rect x="72" y="10" width="50" height="35" rx="4" fill={stateId==='nd' ? theme.header : stateId==='mt' ? '#e8f5e9' : '#e8e0d0'} stroke={stateThemes.nd.accent} strokeWidth="1.5" />
+            <text x="97" y="32" textAnchor="middle" fontSize="9" fontWeight="700" fill={stateId==='nd' ? 'white' : '#5a4a32'}>ND</text>
+            {/* SD */}<rect x="72" y="47" width="50" height="35" rx="4" fill={stateId==='sd' ? theme.header : '#fdf6e3'} stroke={stateThemes.sd.accent} strokeWidth="1.5" />
+            <text x="97" y="69" textAnchor="middle" fontSize="9" fontWeight="700" fill={stateId==='sd' ? 'white' : '#5a4a32'}>SD</text>
+            {/* MN */}<rect x="124" y="10" width="50" height="72" rx="4" fill={stateId==='mn' ? theme.header : '#e0f2f7'} stroke={stateThemes.mn.accent} strokeWidth="1.5" />
+            <text x="149" y="45" textAnchor="middle" fontSize="9" fontWeight="700" fill={stateId==='mn' ? 'white' : '#5a4a32'}>MN</text>
+            {/* WY */}<rect x="20" y="62" width="50" height="35" rx="4" fill={stateId==='wy' ? theme.header : '#fef3c7'} stroke={stateThemes.wy.accent} strokeWidth="1.5" />
+            <text x="45" y="84" textAnchor="middle" fontSize="9" fontWeight="700" fill={stateId==='wy' ? 'white' : '#5a4a32'}>WY</text>
+          </svg>
+          <div className="absolute bottom-1 right-1 text-[10px] font-mono bg-white border border-[#e8e0d0] px-1.5 py-0.5 rounded-full">{stateId.toUpperCase()} selected</div>
+        </div>
+        <div className="grid gap-2">
+          <div className="flex items-baseline gap-2">
+            <span className="text-[42px] font-black leading-none tracking-tighter" style={{ color: theme.header }}>{display}</span>
+            <span className="text-[12px] font-semibold text-[#8b7355]">active {fishingActive ? '(hunting / fishing)' : '(hunting cats)'}<br/><span className="font-mono text-[11px]">{detail} · fishing {fishingActive ? 'year-round' : '0'}</span></span>
+          </div>
+          <div className="grid grid-cols-3 gap-1.5 text-[11px]">
+            <div className={`rounded-full px-2.5 py-1.5 border text-center font-semibold ${deerActive ? 'text-white' : 'bg-white text-[#8b7355] border-[#e8e0d0]'}`} style={deerActive ? { backgroundColor: theme.header, borderColor: theme.header } : {}}>{deerActive ? '● ' : '○ '}Deer {deerActive}</div>
+            <div className={`rounded-full px-2.5 py-1.5 border text-center font-semibold ${uplandActive ? 'text-white' : 'bg-white text-[#8b7355] border-[#e8e0d0]'}`} style={uplandActive ? { backgroundColor: theme.header, borderColor: theme.header } : {}}>{uplandActive ? '● ' : '○ '}Upland {uplandActive}</div>
+            <div className={`rounded-full px-2.5 py-1.5 border text-center font-semibold ${waterfowlActive ? 'text-white' : 'bg-white text-[#8b7355] border-[#e8e0d0]'}`} style={waterfowlActive ? { backgroundColor: theme.header, borderColor: theme.header } : {}}>{waterfowlActive ? '● ' : '○ '}Duck/Goose {waterfowlActive}</div>
+          </div>
+          <div className="text-[11px] leading-[1.4] text-[#8b7355]">Numbers = hunting categories with ≥1 open season. Fishing year-round in ND counts as <span className="font-mono bg-[#f4f1eb] border border-[#e8e0d0] px-1 rounded">3/1</span> (3 hunting cats + 1 fishing). “3” alone = hunting cats only.</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function NewHunterCard({ todo, theme }) {
+  const [done, setDone] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('alec-todo') || '{}') } catch { return {} }
+  })
+  const toggle = i => {
+    const n = { ...done, [i]: !done[i] }
+    setDone(n)
+    localStorage.setItem('alec-todo', JSON.stringify(n))
+  }
+  useEffect(() => {
+    try { const s = JSON.parse(localStorage.getItem('alec-todo') || '{}'); setDone(s) } catch {}
+  }, [todo])
+  const completed = Object.values(done).filter(Boolean).length
+  return (
+    <div className="bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden">
+      <div className="px-3 py-2.5 flex items-center justify-between" style={{ backgroundColor: theme.header, color: 'white' }}>
+        <span className="text-[12px] font-bold tracking-wide flex items-center gap-1.5"><span className="w-5 h-5 rounded-full bg-white/20 grid place-items-center text-[10px]">✓</span> New Hunter — To-Do to Get Tags ({todo.length})</span>
+        <span className="text-[11px] font-mono bg-white/15 border border-white/20 px-2 py-1 rounded-full">{completed}/{todo.length} done</span>
+      </div>
+      <div className="p-2 grid gap-1.5">
+        {todo.map((t,i) => (
+          <label key={i} className={`flex gap-2.5 p-2 rounded-[10px] border cursor-pointer transition ${done[i] ? 'bg-[#a3b18a]/15 border-[#a3b18a]' : 'bg-[#f4f1eb] border-[#e8e0d0] hover:border-[#c2b8a3]'}`}>
+            <input type="checkbox" checked={!!done[i]} onChange={() => toggle(i)} className="mt-0.5 accent-[#1a2e1a] w-4 h-4 shrink-0" />
+            <span className={`text-[12px] leading-[1.4] flex-1 ${done[i] ? 'line-through text-[#5a4a32] opacity-70' : 'text-[#1a2e1a]'}`}>{t.step}</span>
+            <a href={t.link} target="_blank" rel="noreferrer" className="shrink-0 text-[11px] font-mono bg-white border border-[#e8e0d0] px-2 py-1 rounded-full hover:border-[#c2b8a3] h-fit">Open ↗</a>
+          </label>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
   const [residency, setResidency] = useState('resident')
   const [activeCat, setActiveCat] = useState('deer')
@@ -210,6 +326,12 @@ export default function App() {
         {activeState.placeholder && (
           <div className="mt-2 text-[12px] bg-amber-50 border border-amber-200 rounded-[10px] px-3 py-2 text-amber-900">🚧 {activeState.name} placeholder — structure preview. Real season dates & proclamations pending pipeline (see ND/SD for live example).</div>
         )}
+      </div>
+
+      {/* Active Map + New Hunter Todo */}
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5 grid lg:grid-cols-[1.1fr_0.9fr] gap-3">
+        <ActiveMap categories={categories} theme={theme} stateId={stateId} />
+        {data.newHunterTodo && <NewHunterCard todo={data.newHunterTodo} theme={theme} />}
       </div>
 
       {/* Heads Up strip */}

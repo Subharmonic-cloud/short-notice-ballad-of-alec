@@ -502,5 +502,37 @@
         }
       ]
     }
+  ],
+  "newHunterTodo": [
+    {
+      "step": "1. Hunter Ed (born after Jan 1, 1966) + Conservation Stamp",
+      "done": false,
+      "link": "https://wgfd.wyo.gov/licenses-applications"
+    },
+    {
+      "step": "2. Buy General Deer/Elk or apply limited quota by Jun 1 (preference points)",
+      "done": false,
+      "link": "https://wgfd.wyo.gov/regulations"
+    },
+    {
+      "step": "3. Deer Hunt Area specific \u2014 check Hunt Area Map (SE Oct 20-31)",
+      "done": false,
+      "link": "https://wgfd.wyo.gov/regulations"
+    },
+    {
+      "step": "4. Antelope 900 series Aug 15 \u2014 apply by Jun 1, preference points matter",
+      "done": false,
+      "link": "https://wgfd.wyo.gov/licenses/preference-points"
+    },
+    {
+      "step": "5. HIP + Federal Stamp + Conservation Stamp for waterfowl",
+      "done": false,
+      "link": "https://wgfd.wyo.gov/hunting-trapping"
+    },
+    {
+      "step": "6. Walk-In + HMA sign-in, bear spray in grizzly country",
+      "done": false,
+      "link": "https://wgfd.wyo.gov/public-access"
+    }
   ]
 }

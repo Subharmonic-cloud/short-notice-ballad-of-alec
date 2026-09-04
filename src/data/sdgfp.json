@@ -771,5 +771,37 @@
         }
       ]
     }
+  ],
+  "newHunterTodo": [
+    {
+      "step": "1. Hunter Ed (born after 1966) + Habitat Stamp",
+      "done": false,
+      "link": "https://gfp.sd.gov/hunt-fish-license/"
+    },
+    {
+      "step": "2. Deer Archery Sep 1 \u2014 buy over-the-counter; West/East River firearms by lottery (apply Mar-Jun)",
+      "done": false,
+      "link": "https://gfp.sd.gov/hunting/deer/"
+    },
+    {
+      "step": "3. Pheasant Traditional Oct 17 \u2014 buy Small Game + Habitat, no lottery",
+      "done": false,
+      "link": "https://gfp.sd.gov/hunting/pheasant/"
+    },
+    {
+      "step": "4. Waterfowl: HIP + Federal Stamp 16+; Nonres waterfowl lottery Jun 16-Jul 8",
+      "done": false,
+      "link": "https://gfp.sd.gov/hunting/waterfowl/"
+    },
+    {
+      "step": "5. Check E-Posting (purple) + 660ft safety zone",
+      "done": false,
+      "link": "https://gfp.sd.gov/electronic-posting/"
+    },
+    {
+      "step": "6. Youth Mentored Apr 11+ \u2014 adult must be within arm's reach",
+      "done": false,
+      "link": "https://gfp.sd.gov/hunting/youth/"
+    }
   ]
 }

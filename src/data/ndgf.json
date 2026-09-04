@@ -1069,5 +1069,37 @@
       "deadline": "2026-11-01",
       "note": "Limited quota \u2014 check pred Nov."
     }
+  ],
+  "newHunterTodo": [
+    {
+      "step": "1. Hunter Ed (if born after Dec 31, 1961)",
+      "done": false,
+      "link": "https://gf.nd.gov/education/hunter"
+    },
+    {
+      "step": "2. Buy General Game & Habitat + Small Game (res) or Nonres Small Game",
+      "done": false,
+      "link": "https://gf.nd.gov/buy-apply"
+    },
+    {
+      "step": "3. Deer Gun lottery \u2014 apply by Jun 3 (weighted, 39,100 tags) or buy Bow over-the-counter Sep 4",
+      "done": false,
+      "link": "https://gf.nd.gov/hunting/lotteries"
+    },
+    {
+      "step": "4. Youth? 11-15 resident only Sep 18-27 \u2014 needs mentor (unaided voice, unarmed)",
+      "done": false,
+      "link": "https://gf.nd.gov/hunting/youth"
+    },
+    {
+      "step": "5. HIP + Federal Duck Stamp (16+) + State Waterfowl if hunting ducks/geese",
+      "done": false,
+      "link": "https://gf.nd.gov/hunting/waterfowl"
+    },
+    {
+      "step": "6. Check E-Posting map + 440yd building rule before you walk",
+      "done": false,
+      "link": "https://gf.nd.gov/hunting/posting-land"
+    }
   ]
 }

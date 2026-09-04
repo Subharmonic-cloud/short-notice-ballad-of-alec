@@ -626,5 +626,37 @@
         }
       ]
     }
+  ],
+  "newHunterTodo": [
+    {
+      "step": "1. Hunter Ed (born after Dec 31, 1979) + Firearms Safety",
+      "done": false,
+      "link": "https://www.dnr.state.mn.us/hunting/deer/index.html"
+    },
+    {
+      "step": "2. Buy Small Game + Deer License \u2014 many DPAs by lottery (apply early Sep)",
+      "done": false,
+      "link": "https://www.dnr.state.mn.us/hunting/seasons.html"
+    },
+    {
+      "step": "3. Deer archery Sep 19 \u2014 over-the-counter; firearms 100/200 series by DPA",
+      "done": false,
+      "link": "https://www.dnr.state.mn.us/hunting/deer/index.html"
+    },
+    {
+      "step": "4. Pheasant Oct 11 \u2014 small game; WMA nontoxic where posted",
+      "done": false,
+      "link": "https://www.dnr.state.mn.us/hunting/smallgame/"
+    },
+    {
+      "step": "5. Waterfowl: HIP + Federal Stamp 16+ + State Stamp 18-64, early teal Sep 5-9",
+      "done": false,
+      "link": "https://www.dnr.state.mn.us/hunting/waterfowl/"
+    },
+    {
+      "step": "6. New electronic licensing \u2014 validate harvest via DNR app",
+      "done": false,
+      "link": "https://www.dnr.state.mn.us/regulations/hunting/"
+    }
   ]
 }

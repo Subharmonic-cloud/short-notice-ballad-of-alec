@@ -678,5 +678,37 @@
         }
       ]
     }
+  ],
+  "newHunterTodo": [
+    {
+      "step": "1. Hunter Ed (born after Jan 1, 1985) + Bowhunter Ed for archery",
+      "done": false,
+      "link": "https://fwp.mt.gov/buyandapply/hunting-licenses"
+    },
+    {
+      "step": "2. Buy Base Hunting License + Conservation + General Deer/Elk (or apply permits Apr 1 / Jun 1)",
+      "done": false,
+      "link": "https://fwp.mt.gov/hunt/regulations"
+    },
+    {
+      "step": "3. Deer B/Elk B/Antelope apply by Jun 1 \u2014 check Hunt District (HD) quotas",
+      "done": false,
+      "link": "https://fwp.mt.gov/gis/maps/huntPlanner/"
+    },
+    {
+      "step": "4. Nonres upland: 10-day delay on public/Block Management (Sep 1 vs Sep 11)",
+      "done": false,
+      "link": "https://fwp.mt.gov/hunt/access/blockmanagement"
+    },
+    {
+      "step": "5. HIP + Federal Stamp for waterfowl, swan special license 72hr card",
+      "done": false,
+      "link": "https://fwp.mt.gov/hunt/regulations"
+    },
+    {
+      "step": "6. Check Block Management sign-in + HD boundaries before you go",
+      "done": false,
+      "link": "https://fwp.mt.gov/hunt/access"
+    }
   ]
 }
