@@ -770,6 +770,100 @@
           }
         }
       ]
+    },
+    {
+      "id": "trapping",
+      "label": "Trapping",
+      "icon": "\ud83e\udea4",
+      "blurb": "Trapping \u2014 beaver, bobcat, mink etc.",
+      "species": [
+        {
+          "id": "beaver",
+          "name": "Beaver \u2014 SD",
+          "units": "Statewide",
+          "season": {
+            "open": "Nov 1, 2026",
+            "close": "Apr 30, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Resident, no limit.",
+          "nonresident": "Nonres Dec 1\u2013Jan 31.",
+          "briefing": {
+            "sex": "Either",
+            "bag": "No limit",
+            "gear": "Traps.",
+            "unchanged": "Nov 1\u2013Apr 30."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 1\u2013Apr 30"
+            }
+          ],
+          "major5": [
+            "No limit"
+          ],
+          "unitNotes": "Black Hills vs statewide.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/trapping/",
+            "highlight": "<mark>Beaver Nov 1\u2013Apr 30</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Beaver \u2014 SD dams bigger than Alec.",
+          "firstTime": {
+            "resident": [
+              "Trapping license"
+            ],
+            "nonresident": [
+              "Nonres Dec 1"
+            ]
+          }
+        },
+        {
+          "id": "bobcat",
+          "name": "Bobcat \u2014 SD",
+          "units": "Statewide",
+          "season": {
+            "open": "Dec 1, 2026",
+            "close": "Feb 15, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Pelt tag, 24hr.",
+          "nonresident": "Nonres limited.",
+          "briefing": {
+            "sex": "Either",
+            "bag": "No limit pelt tag",
+            "gear": "Traps, dogs.",
+            "unchanged": "Dec 1\u2013Feb 15."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Dec 1\u2013Feb 15"
+            }
+          ],
+          "major5": [
+            "Pelt tag"
+          ],
+          "unitNotes": "Check.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/trapping/",
+            "highlight": "<mark>Bobcat Dec 1\u2013Feb 15</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Bobcat \u2014 SD prairie ghost.",
+          "firstTime": {
+            "resident": [
+              "Bobcat tag"
+            ],
+            "nonresident": [
+              "Nonres"
+            ]
+          }
+        }
+      ]
     }
   ],
   "newHunterTodo": [

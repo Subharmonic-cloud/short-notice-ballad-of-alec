@@ -501,6 +501,100 @@
           }
         }
       ]
+    },
+    {
+      "id": "trapping",
+      "label": "Trapping",
+      "icon": "\ud83e\udea4",
+      "blurb": "Trapping \u2014 beaver, bobcat, mink etc.",
+      "species": [
+        {
+          "id": "beaver",
+          "name": "Beaver \u2014 WY",
+          "units": "Trapping Areas Sep 1\u2013May 31",
+          "season": {
+            "open": "Sep 1, 2026",
+            "close": "May 31, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Resident trapping.",
+          "nonresident": "Resident.",
+          "briefing": {
+            "sex": "Either",
+            "bag": "No limit",
+            "gear": "Traps, check area map.",
+            "unchanged": "Sep 1\u2013May 31."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 1\u2013May 31"
+            }
+          ],
+          "major5": [
+            "No limit"
+          ],
+          "unitNotes": "Area map.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/regulations",
+            "highlight": "<mark>Beaver Sep 1\u2013May 31</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Beaver \u2014 WY dams.",
+          "firstTime": {
+            "resident": [
+              "Trapping area map"
+            ],
+            "nonresident": [
+              "Resident"
+            ]
+          }
+        },
+        {
+          "id": "bobcat",
+          "name": "Bobcat \u2014 WY",
+          "units": "Dec 1\u2013Feb 15 etc",
+          "season": {
+            "open": "Dec 1, 2026",
+            "close": "Feb 15, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Pelt tag.",
+          "nonresident": "Resident.",
+          "briefing": {
+            "sex": "Either",
+            "bag": "No limit",
+            "gear": "Traps.",
+            "unchanged": "Dec 1\u2013Feb 15."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Dec 1\u2013Feb 15"
+            }
+          ],
+          "major5": [
+            "Pelt tag"
+          ],
+          "unitNotes": "Check.",
+          "proclamation": {
+            "url": "https://wgfd.wyo.gov/regulations",
+            "highlight": "<mark>Bobcat Dec 1\u2013Feb 15</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Bobcat \u2014 WY ghost.",
+          "firstTime": {
+            "resident": [
+              "Bobcat tag"
+            ],
+            "nonresident": [
+              "Resident"
+            ]
+          }
+        }
+      ]
     }
   ],
   "newHunterTodo": [

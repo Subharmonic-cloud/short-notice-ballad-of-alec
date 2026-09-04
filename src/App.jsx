@@ -184,10 +184,12 @@ function ActiveMap({ categories, theme, stateId }) {
   )
 }
 
-function NewHunterCard({ todo, theme }) {
+function NewHunterCard({ todo, theme, categories, stateName }) {
   const [done, setDone] = useState(() => {
     try { return JSON.parse(localStorage.getItem('alec-todo') || '{}') } catch { return {} }
   })
+  const [residencyPick, setResidencyPick] = useState('resident')
+  const [speciesPick, setSpeciesPick] = useState('all')
   const toggle = i => {
     const n = { ...done, [i]: !done[i] }
     setDone(n)
@@ -197,11 +199,39 @@ function NewHunterCard({ todo, theme }) {
     try { const s = JSON.parse(localStorage.getItem('alec-todo') || '{}'); setDone(s) } catch {}
   }, [todo])
   const completed = Object.values(done).filter(Boolean).length
+  const speciesOptions = (() => {
+    const all = []
+    categories.forEach(c => c.species.forEach(s => all.push({ id: s.id, name: s.name, cat: c.label })))
+    return all
+  })()
+  const printPdf = () => {
+    const w = window.open('', '_blank')
+    const items = todo.map((t,i) => `<li style="margin:6px 0; padding:8px; border:1px solid #e8e0d0; border-radius:8px; background:${done[i] ? '#a3b18a15' : '#f4f1eb'}"><input type="checkbox" ${done[i] ? 'checked' : ''} style="margin-right:8px"/> ${t.step} <a href="${t.link}" style="font-size:10px; float:right; border:1px solid #e8e0d0; border-radius:999px; padding:2px 8px; text-decoration:none; color:#1a2e1a; background:white">Open ↗</a><br/><span style="font-size:10px; color:#8b7355; font-family:monospace">${t.link}</span></li>`).join('')
+    const html = `<html><head><title>New Hunter Checklist — ${stateName} — ${residencyPick} — ${speciesPick}</title><style>body{font-family:Instrument Sans, sans-serif; padding:24px; color:#1a2e1a} h1{font-size:22px; margin:0 0 8px} .meta{font-size:12px; color:#8b7355; margin-bottom:16px} ul{list-style:none; padding:0} @media print{ a{color:#1a2e1a} }</style></head><body><h1>New Hunter — To-Do to Get Tags — ${stateName}</h1><div class="meta">${residencyPick.toUpperCase()} • ${speciesPick === 'all' ? 'All species' : speciesPick} • ${new Date().toLocaleDateString()} • Short Notice — the ballad of Alec</div><ul>${items}</ul><p style="font-size:11px; color:#8b7355; margin-top:16px">Generated from ${stateName} • Verify at gf.nd.gov / gfp.sd.gov / fwp.mt.gov etc before you go.</p></body></html>`
+    w.document.write(html)
+    w.document.close()
+    w.focus()
+    setTimeout(() => w.print(), 300)
+  }
   return (
     <div className="bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden">
-      <div className="px-3 py-2.5 flex items-center justify-between" style={{ backgroundColor: theme.header, color: 'white' }}>
+      <div className="px-3 py-2.5 flex flex-wrap items-center justify-between gap-2" style={{ backgroundColor: theme.header, color: 'white' }}>
         <span className="text-[12px] font-bold tracking-wide flex items-center gap-1.5"><span className="w-5 h-5 rounded-full bg-white/20 grid place-items-center text-[10px]">✓</span> New Hunter — To-Do to Get Tags ({todo.length})</span>
         <span className="text-[11px] font-mono bg-white/15 border border-white/20 px-2 py-1 rounded-full">{completed}/{todo.length} done</span>
+      </div>
+      <div className="px-3 pt-3 flex flex-wrap gap-2 items-center">
+        <label className="text-[11px] font-mono text-[#8b7355]">Residency</label>
+        <select value={residencyPick} onChange={e => setResidencyPick(e.target.value)} className="text-[12px] font-semibold bg-white border border-[#e8e0d0] rounded-full px-3 py-1.5">
+          <option value="resident">Resident</option>
+          <option value="nonresident">Nonresident</option>
+          <option value="youth">Youth</option>
+        </select>
+        <label className="text-[11px] font-mono text-[#8b7355]">Species</label>
+        <select value={speciesPick} onChange={e => setSpeciesPick(e.target.value)} className="text-[12px] font-semibold bg-white border border-[#e8e0d0] rounded-full px-3 py-1.5 max-w-[160px]">
+          <option value="all">All species</option>
+          {speciesOptions.map(s => <option key={s.id} value={s.name}>{s.cat} — {s.name}</option>)}
+        </select>
+        <button onClick={printPdf} className="ml-auto text-[11px] font-mono bg-[#1a2e1a] text-white px-3 py-1.5 rounded-full hover:bg-black transition">Print PDF 🖨️</button>
       </div>
       <div className="p-2 grid gap-1.5">
         {todo.map((t,i) => (
@@ -212,6 +242,7 @@ function NewHunterCard({ todo, theme }) {
           </label>
         ))}
       </div>
+      <div className="px-3 pb-2 text-[11px] text-[#8b7355]">Tip: Pick Youth/Resident/Nonres + a species, then Print PDF — header will show your picks. Each big game & trapping species is now in the left nav.</div>
     </div>
   )
 }
@@ -331,7 +362,7 @@ export default function App() {
       {/* Active Map + New Hunter Todo */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5 grid lg:grid-cols-[1.1fr_0.9fr] gap-3">
         <ActiveMap categories={categories} theme={theme} stateId={stateId} />
-        {data.newHunterTodo && <NewHunterCard todo={data.newHunterTodo} theme={theme} />}
+        {data.newHunterTodo && <NewHunterCard todo={data.newHunterTodo} theme={theme} categories={categories} stateName={activeState.name} />}
       </div>
 
       {/* Heads Up strip */}

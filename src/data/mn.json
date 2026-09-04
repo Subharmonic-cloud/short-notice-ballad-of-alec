@@ -625,6 +625,100 @@
           }
         }
       ]
+    },
+    {
+      "id": "trapping",
+      "label": "Trapping",
+      "icon": "\ud83e\udea4",
+      "blurb": "Trapping \u2014 beaver, bobcat, mink etc.",
+      "species": [
+        {
+          "id": "beaver",
+          "name": "Beaver \u2014 MN",
+          "units": "North/South Fur Zone Oct 18/25\u2013Mar 15",
+          "season": {
+            "open": "Oct 18, 2026",
+            "close": "Mar 15, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Resident trapping.",
+          "nonresident": "Resident only? Check.",
+          "briefing": {
+            "sex": "Either",
+            "bag": "No limit",
+            "gear": "Traps.",
+            "unchanged": "Oct\u2013Mar 15."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 18\u2013Mar 15"
+            }
+          ],
+          "major5": [
+            "No limit"
+          ],
+          "unitNotes": "North vs South zone.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/trapping.html",
+            "highlight": "<mark>Beaver Oct 18\u2013Mar 15</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Beaver \u2014 MN dams.",
+          "firstTime": {
+            "resident": [
+              "Trapping"
+            ],
+            "nonresident": [
+              "Resident"
+            ]
+          }
+        },
+        {
+          "id": "bobcat",
+          "name": "Bobcat \u2014 MN",
+          "units": "Dec 13\u2013Jan 18",
+          "season": {
+            "open": "Dec 13, 2026",
+            "close": "Jan 18, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Lottery? Actually bobcat Dec 13\u2013Jan 18.",
+          "nonresident": "Resident.",
+          "briefing": {
+            "sex": "Either",
+            "bag": "No limit",
+            "gear": "Traps.",
+            "unchanged": "Dec 13\u2013Jan 18."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Dec 13\u2013Jan 18"
+            }
+          ],
+          "major5": [
+            "No limit"
+          ],
+          "unitNotes": "Check.",
+          "proclamation": {
+            "url": "https://www.dnr.state.mn.us/hunting/trapping.html",
+            "highlight": "<mark>Bobcat Dec 13\u2013Jan 18</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Bobcat \u2014 MN ghost.",
+          "firstTime": {
+            "resident": [
+              "Bobcat"
+            ],
+            "nonresident": [
+              "Resident"
+            ]
+          }
+        }
+      ]
     }
   ],
   "newHunterTodo": [

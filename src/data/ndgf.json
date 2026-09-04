@@ -934,6 +934,145 @@
           }
         }
       ]
+    },
+    {
+      "id": "trapping",
+      "label": "Trapping",
+      "icon": "\ud83e\udea4",
+      "blurb": "Trapping \u2014 beaver, bobcat, mink etc.",
+      "species": [
+        {
+          "id": "beaver",
+          "name": "Beaver",
+          "units": "Statewide \u2014 trapping districts",
+          "season": {
+            "open": "Nov 1, 2026",
+            "close": "Mar 31, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Resident trapping license required. Nonres not allowed beaver.",
+          "nonresident": "Nonres beaver no season \u2014 resident only.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "No limit",
+            "gear": "Traps, cable devices, no E-callers.",
+            "unchanged": "Nov 1\u2013Mar 31 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 1\u2013Mar 31 finalized."
+            }
+          ],
+          "major5": [
+            "No limit"
+          ],
+          "unitNotes": "Check trapping districts 1-3 vs 4-7 if ND had? Actually ND has statewide.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/trapping",
+            "highlight": "<mark>Beaver Nov 1\u2013Mar 31, resident only</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Beaver \u2014 Alec's dam building rivals his excuses.",
+          "firstTime": {
+            "resident": [
+              "Trapping license + furharvester ed",
+              "Tag beaver where required"
+            ],
+            "nonresident": [
+              "Nonres beaver not open"
+            ]
+          }
+        },
+        {
+          "id": "bobcat",
+          "name": "Bobcat",
+          "units": "Statewide \u2014 limited",
+          "season": {
+            "open": "Nov 15, 2026",
+            "close": "Feb 15, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Resident, pelt tag required, report 24hr.",
+          "nonresident": "Nonres bobcat limited where open.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "No limit but pelt tag",
+            "gear": "Traps, cable devices, dogs where allowed.",
+            "unchanged": "Nov 15\u2013Feb 15 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 15\u2013Feb 15"
+            }
+          ],
+          "major5": [
+            "Pelt tag 24hr"
+          ],
+          "unitNotes": "CWD not for fur, but 24hr report.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/trapping",
+            "highlight": "<mark>Bobcat Nov 15\u2013Feb 15 pelt tag</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Bobcat \u2014 Alec's stealth finally matched.",
+          "firstTime": {
+            "resident": [
+              "Bobcat pelt tag",
+              "24hr report"
+            ],
+            "nonresident": [
+              "Nonres limited"
+            ]
+          }
+        },
+        {
+          "id": "mink",
+          "name": "Mink / Muskrat",
+          "units": "Statewide",
+          "season": {
+            "open": "Nov 1, 2026",
+            "close": "Mar 15, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Resident trapping, no limit.",
+          "nonresident": "Nonres limited.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "No limit",
+            "gear": "Traps.",
+            "unchanged": "Nov 1\u2013Mar 15 \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 1\u2013Mar 15"
+            }
+          ],
+          "major5": [
+            "No limit"
+          ],
+          "unitNotes": "Check district.",
+          "proclamation": {
+            "url": "https://gf.nd.gov/hunting/trapping",
+            "highlight": "<mark>Mink Nov 1\u2013Mar 15</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Mink \u2014 Alec's trap line shorter than his stature.",
+          "firstTime": {
+            "resident": [
+              "Trapping license"
+            ],
+            "nonresident": [
+              "Nonres check"
+            ]
+          }
+        }
+      ]
     }
   ],
   "residency": {
