@@ -248,7 +248,17 @@ export default function App() {
                               <div className="bg-white border border-[#e8e0d0] rounded-[10px] p-3">
                                 <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">Bag Limits</div>
                                 <div className="text-[13px] leading-[1.5] mt-1">{sp.briefing.bag}</div>
-                                {sp.id==='ducks' && <div className="mt-2 text-[11px] font-mono bg-amber-50 border border-amber-200 rounded px-2 py-1">Check matrix — hen mallard/scaup caps rotate</div>}
+                                {sp.bagTable && (
+                                  <div className="mt-2.5 border border-[#e8e0d0] rounded-[8px] overflow-hidden divide-y divide-[#ede8dc]">
+                                    <div className="grid grid-cols-[1.4fr_0.7fr] gap-2 px-2.5 py-1.5 bg-[#f4f1eb] text-[10px] tracking-[0.12em] uppercase font-bold text-[#8b7355]"><span>Species</span><span>Daily</span></div>
+                                    {sp.bagTable.map((r,i) => (
+                                      <div key={i} className="grid grid-cols-[1.4fr_0.7fr] gap-2 px-2.5 py-1.5 text-[12px] leading-[1.3] items-center">
+                                        <span className="font-medium">{r.species}{r.note && <span className="font-normal text-[#8b7355]"> — {r.note}</span>}</span>
+                                        <span className="font-mono font-semibold bg-[#f4f1eb] border border-[#e8e0d0] rounded-full px-2 py-0.5 text-center text-[11px]">{r.limit}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
                               </div>
                               <div className="bg-white border border-[#e8e0d0] rounded-[10px] p-3">
                                 <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">Gear Updates</div>

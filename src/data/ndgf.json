@@ -422,8 +422,8 @@
           "resident": "Sep 26-Dec 6 Low, Oct 3-Dec 6 High (check zone). Youth Sep 12-13, Vet Sep 19-20.",
           "nonresident": "Nonres waterfowl needs nonres waterfowl lic + HIP + federal duck stamp. 14-day or season lic. Zone same.",
           "briefing": {
-            "sex": "Hen mallard \u22642, pintail/scaup within season \u2014 see species caps left. Federal framework applies.",
-            "bag": "6 ducks daily (possession 18). Within that: mallard 4 (\u22642 hens) \u2022 wood duck 3 \u2022 scaup 2 \u2022 redhead 2 \u2022 canvasback 2 \u2022 black duck 2 \u2022 pintail 1 (2026 framework may allow 3 \u2014 verify gf.nd.gov/waterfowl before you go). Coot 15 (45), merganser 5 (\u22642 hooded, 15). Scaup may have split 45-day window \u2014 check dates.",
+            "sex": "Hen mallard \u22642 within mallard 4; pintail/scaup caps within 6 \u2014 table left.",
+            "bag": "6 ducks daily (possession 18) \u2014 see breakdown table. Federal framework: verify pintail 1 vs 3 at gf.nd.gov/waterfowl before you go.",
             "gear": "Nontoxic shot required. Shotgun plugged to 3 shells. Electronic calls prohibited (except light geese spring).",
             "unchanged": "Stamp + HIP + plugged gun \u2014 unchanged."
           },
@@ -467,7 +467,59 @@
               "Same zones, same bags \u2014 14-day starts when you pick, not Sep 26",
               "Nontoxic shot only \u2014 lead = ticket, and Alec will never let you hear the end"
             ]
-          }
+          },
+          "bagTable": [
+            {
+              "species": "Mallard",
+              "limit": "4 (\u22642 hens)",
+              "note": "hens count toward 4"
+            },
+            {
+              "species": "Scaup (Bluebill / Bluehead)",
+              "limit": "2",
+              "note": "lesser + greater combined; may be 45-day split"
+            },
+            {
+              "species": "Wood Duck",
+              "limit": "3",
+              "note": ""
+            },
+            {
+              "species": "Redhead",
+              "limit": "2",
+              "note": ""
+            },
+            {
+              "species": "Canvasback",
+              "limit": "2",
+              "note": ""
+            },
+            {
+              "species": "Black Duck",
+              "limit": "2",
+              "note": ""
+            },
+            {
+              "species": "Pintail",
+              "limit": "1",
+              "note": "2026 framework may allow 3 \u2014 verify"
+            },
+            {
+              "species": "Teal (blue-wing, green-wing), Gadwall, Wigeon, Shoveler, etc.",
+              "limit": "counts toward 6",
+              "note": "no separate cap \u2014 fill remaining of 6"
+            },
+            {
+              "species": "Coot",
+              "limit": "15 (45)",
+              "note": "separate from duck bag"
+            },
+            {
+              "species": "Merganser",
+              "limit": "5 (\u22642 hooded, 15)",
+              "note": "separate"
+            }
+          ]
         },
         {
           "id": "geese",
