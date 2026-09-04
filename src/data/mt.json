@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Montana FWP \u2014 Coming Soon",
+    "subtitle": "Montana FWP tab \u2014 placeholder, data pipeline pending",
+    "generated": "2026-09-04",
+    "sources": [
+      "https://fwp.mt.gov/"
+    ],
+    "note": "Placeholder \u2014 real data pending scraper for this state."
+  },
+  "headsUp": [
+    {
+      "level": "info",
+      "icon": "\ud83d\udea7",
+      "title": "Montana FWP \u2014 Tab Coming Soon",
+      "body": "Montana/MN/WY data pipeline not yet wired. ND + SD are live. This tab shows structure preview.",
+      "link": "https://github.com/Subharmonic-cloud/short-notice-ballad-of-alec",
+      "date": "2026-09-04"
+    }
+  ],
+  "residency": {
+    "resident": "Montana FWP resident info pending scraper.",
+    "nonresident": "Montana FWP nonresident info pending."
+  },
+  "access": {
+    "title": "Montana FWP Access \u2014 Coming Soon",
+    "note": "Pending",
+    "rules": [
+      {
+        "label": "Pending",
+        "body": "Scraper for posting/E-posting rules pending."
+      }
+    ],
+    "links": []
+  },
+  "deadlines": [],
+  "categories": [
+    {
+      "id": "deer",
+      "label": "Deer",
+      "icon": "\ud83e\udd8c",
+      "blurb": "Montana FWP deer \u2014 seasons pending real pull.",
+      "species": [
+        {
+          "id": "deer-placeholder",
+          "name": "Montana FWP \u2014 Deer (Placeholder)",
+          "units": "Statewide pending",
+          "season": {
+            "open": "TBD",
+            "close": "TBD",
+            "status": "Tentative"
+          },
+          "resident": "Pending \u2014 will mirror ND/SD structure once FWP/DNR scrape is wired.",
+          "nonresident": "Pending",
+          "briefing": {
+            "sex": "Pending",
+            "bag": "Pending",
+            "gear": "Pending",
+            "unchanged": "Pending"
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Placeholder \u2014 HD/permit-area parsing pending."
+            }
+          ],
+          "major5": [
+            "Placeholder"
+          ],
+          "unitNotes": "Pending",
+          "proclamation": {
+            "url": "https://fwp.mt.gov",
+            "highlight": "<mark>Placeholder \u2014 real proclamation pull pending</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Placeholder \u2014 Alec hasn't visited yet.",
+          "firstTime": {
+            "resident": [
+              "Pending"
+            ],
+            "nonresident": [
+              "Pending"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,17 @@
 import { useState, useMemo, useEffect } from 'react'
-import data from './data/ndgf.json'
+import ndData from './data/ndgf.json'
+import sdData from './data/sdgfp.json'
+import mtData from './data/mt.json'
+import mnData from './data/mn.json'
+import wyData from './data/wy.json'
 
-const categories = data.categories
-const headsUp = data.headsUp
+const states = [
+  { id: 'nd', label: 'ND', name: 'North Dakota', data: ndData, icon: '🌾' },
+  { id: 'sd', label: 'SD', name: 'South Dakota', data: sdData, icon: '🦌' },
+  { id: 'mt', label: 'MT', name: 'Montana', data: mtData, icon: '🏔️', placeholder: true },
+  { id: 'mn', label: 'MN', name: 'Minnesota', data: mnData, icon: '🌲', placeholder: true },
+  { id: 'wy', label: 'WY', name: 'Wyoming', data: wyData, icon: '🦬', placeholder: true },
+]
 
 function Badge({ type, children }) {
   const map = {
@@ -16,7 +25,7 @@ function Badge({ type, children }) {
   return <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase border ${map[type] || map.info}`}>{children}</span>
 }
 
-function DeadlineAlertCard() {
+function DeadlineAlertCard({ deadlines = [] }) {
   const [email, setEmail] = useState('')
   const [selected, setSelected] = useState(['deer-gun', 'swan'])
   const [status, setStatus] = useState(null)
@@ -60,7 +69,7 @@ function DeadlineAlertCard() {
         <div>
           <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">Categories you care about</div>
           <div className="mt-1.5 grid grid-cols-2 gap-1.5 max-h-[120px] overflow-auto pr-1">
-            {(data.deadlines || []).map(dl => (
+            {(deadlines || []).map(dl => (
               <label key={dl.id} className={`flex items-center gap-2 px-2.5 py-1.5 rounded-full border text-[12px] cursor-pointer transition ${selected.includes(dl.id) ? 'bg-[#1a2e1a] text-white border-[#1a2e1a]' : 'bg-white border-[#e8e0d0] hover:border-[#c2b8a3] text-[#1a2e1a]'}`}>
                 <input type="checkbox" checked={selected.includes(dl.id)} onChange={() => toggle(dl.id)} className="accent-[#c45d26] w-3.5 h-3.5" />
                 <span className="truncate">{dl.species.replace(' — ', ' ')}</span>
@@ -68,7 +77,7 @@ function DeadlineAlertCard() {
             ))}
           </div>
           <div className="mt-1.5 flex flex-wrap gap-1">
-            <button type="button" onClick={() => setSelected((data.deadlines || []).map(d => d.id))} className="text-[11px] font-mono bg-[#f4f1eb] border border-[#e8e0d0] px-2 py-1 rounded-full">All</button>
+            <button type="button" onClick={() => setSelected((deadlines || []).map(d => d.id))} className="text-[11px] font-mono bg-[#f4f1eb] border border-[#e8e0d0] px-2 py-1 rounded-full">All</button>
             <button type="button" onClick={() => setSelected([])} className="text-[11px] font-mono bg-white border border-[#e8e0d0] px-2 py-1 rounded-full">None</button>
             <span className="text-[11px] font-mono text-[#8b7355] self-center">{selected.length} selected</span>
           </div>
@@ -90,6 +99,11 @@ export default function App() {
   const [query, setQuery] = useState('')
   const [yoyOpen, setYoyOpen] = useState({})
   const [dark, setDark] = useState(false)
+  const [stateId, setStateId] = useState('nd')
+  const activeState = states.find(s => s.id === stateId) || states[0]
+  const data = activeState.data
+  const categories = data.categories
+  const headsUp = data.headsUp
 
   useEffect(() => {
     const saved = localStorage.getItem('alec-dark')
@@ -103,6 +117,11 @@ export default function App() {
     if (dark) document.documentElement.classList.add('dark')
     else document.documentElement.classList.remove('dark')
   }, [dark])
+  useEffect(() => {
+    // reset category when switching states if current not in new state
+    if (!categories.find(c => c.id === activeCat)) setActiveCat(categories[0]?.id || 'deer')
+    setOpenId(categories[0]?.species[0]?.id || '')
+  }, [stateId])
 
   const filtered = useMemo(() => {
     if (!query) return categories
@@ -161,6 +180,24 @@ export default function App() {
         </div>
       </header>
 
+      {/* State Tabs */}
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-3">
+        <div className="flex flex-wrap items-center gap-2">
+          {states.map(s => (
+            <button key={s.id} onClick={() => setStateId(s.id)} className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-[13px] font-semibold transition ${stateId === s.id ? 'bg-[#1a2e1a] text-white border-[#1a2e1a] shadow' : 'bg-white border-[#e8e0d0] hover:border-[#c2b8a3] text-[#1a2e1a]'}`}>
+              <span>{s.icon}</span>{s.label}
+              {s.placeholder && <span className="text-[10px] tracking-widest uppercase bg-black/10 border border-black/10 px-1.5 py-0.5 rounded-full">Soon</span>}
+              {s.id === 'nd' && <span className="hidden sm:inline text-[10px] opacity-60">• NDGF live</span>}
+              {s.id === 'sd' && <span className="hidden sm:inline text-[10px] opacity-60">• GFP live</span>}
+            </button>
+          ))}
+          <span className="text-[11px] font-mono text-[#8b7355] ml-1 hidden sm:inline">{activeState.name} — {activeState.data.meta.subtitle}</span>
+        </div>
+        {activeState.placeholder && (
+          <div className="mt-2 text-[12px] bg-amber-50 border border-amber-200 rounded-[10px] px-3 py-2 text-amber-900">🚧 {activeState.name} placeholder — structure preview. Real season dates & proclamations pending pipeline (see ND/SD for live example).</div>
+        )}
+      </div>
+
       {/* Heads Up strip */}
       <section id="heads-up" className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5">
         <div className="grid md:grid-cols-3 gap-3">
@@ -195,7 +232,7 @@ export default function App() {
             <h2 className="font-display font-bold text-[15px] flex items-center gap-2"><span className="w-7 h-7 rounded-full bg-[#c45d26] grid place-items-center text-[12px]">✉️</span>Get deadline alerts — don’t be Alec</h2>
             <span className="text-[11px] font-mono bg-white/15 border border-white/20 px-2 py-1 rounded-full">Example: deer lotto ends in 2 weeks → we email you</span>
           </div>
-          <DeadlineAlertCard />
+          <DeadlineAlertCard deadlines={data.deadlines} />
         </div>
         {/* Upcoming deadlines preview */}
         <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-2">

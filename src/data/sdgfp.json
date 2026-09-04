@@ -1,0 +1,775 @@
+{
+  "meta": {
+    "title": "South Dakota GFP \u2014 Season Dates",
+    "subtitle": "GFP Key Dates \u2022 One-stop hunter reminder (SD)",
+    "generated": "2026-09-04",
+    "sources": [
+      "https://gfp.sd.gov/events/keydates",
+      "https://gfp.sd.gov/pages/regulations/",
+      "https://gfp.sd.gov/hunt/",
+      "https://license.gooutdoorssouthdakota.com/"
+    ],
+    "note": "Live pull 2026-09-04 from GFP Key Dates. YoY diff vs 2025 tentative->finalized."
+  },
+  "headsUp": [
+    {
+      "level": "high",
+      "icon": "\ud83d\udd25",
+      "title": "Fire + Access \u2014 Check E-Posting Daily",
+      "body": "SD E-Posting (purple) = posted. Check GFP E-Posting map. Non-posted is open but 660ft building safety zone still applies.",
+      "link": "https://gfp.sd.gov/hunting/posting-land",
+      "date": "2026-09-04"
+    },
+    {
+      "level": "watch",
+      "icon": "\ud83e\udd8c",
+      "title": "CWD \u2014 SE SD surveillance",
+      "body": "Check GFP CWD map. Carcass transport rules differ from ND \u2014 quarter or tag check required if from CWD area.",
+      "link": "https://gfp.sd.gov/wildlife/diseases/",
+      "date": "2026-09-04"
+    },
+    {
+      "level": "info",
+      "icon": "\ud83d\udccb",
+      "title": "Nonres Waterfowl Lottery Jun 16\u2013Jul 8",
+      "body": "Nonres waterfowl must apply Jun 16\u2013Jul 8. Early goose Sep 1-30 open to all. Tundra swan Jun 17\u2013Jul 1.",
+      "link": "https://gfp.sd.gov/events/keydates",
+      "date": "2026-09-04"
+    }
+  ],
+  "residency": {
+    "resident": "SD resident: 90-day domicile. Youth mentored Apr 11\u2013May 31. Habitat stamp required.",
+    "nonresident": "Nonres deer archery Oct 1\u2013Jan 1 public/private (Jun 3\u201323 app), waterfowl lottery Jun 16\u2013Jul 8, pheasant same but limited public early."
+  },
+  "access": {
+    "title": "SD Land Access \u2014 Posted & E-Posted",
+    "note": "SDCL 41-9 \u2014 purple paint + E-Posting valid. When in doubt, ask.",
+    "rules": [
+      {
+        "label": "Non-posted = Open",
+        "body": "Not posted + not E-posted = open to hunting. Still obey 660ft safety zone from occupied buildings/livestock."
+      },
+      {
+        "label": "E-Posted = Posted",
+        "body": "Purple E-Posting on GFP map = legally posted. Check map before you go \u2014 no hunting without permission."
+      },
+      {
+        "label": "Try-to-post \u2014 skip",
+        "body": "If landowner tried to post (signs, purple, even if spacing off), treat as posted."
+      },
+      {
+        "label": "660ft rule",
+        "body": "No hunting within 660ft of occupied building/livestock without permission \u2014 even on open land."
+      },
+      {
+        "label": "Walk-In & CREP",
+        "body": "Walk-In Areas + CREP + GPA are SD's PLOTS \u2014 stay on enrolled acres, no driving."
+      }
+    ],
+    "links": [
+      {
+        "label": "E-Posting Map",
+        "url": "https://gfp.sd.gov/electronic-posting/"
+      },
+      {
+        "label": "Walk-In Atlas",
+        "url": "https://gfp.sd.gov/hunting/where/"
+      },
+      {
+        "label": "Regulations",
+        "url": "https://gfp.sd.gov/pages/regulations/"
+      }
+    ]
+  },
+  "deadlines": [
+    {
+      "id": "deer-east-special",
+      "category": "deer",
+      "species": "Deer \u2014 East River Special Buck",
+      "label": "East River Special Buck",
+      "deadline": "2026-04-14",
+      "note": "App Mar 19\u2013Apr 14"
+    },
+    {
+      "id": "deer-west-special",
+      "category": "deer",
+      "species": "Deer \u2014 West River Special Buck",
+      "label": "West River Special Buck",
+      "deadline": "2026-04-14",
+      "note": "App Mar 19\u2013Apr 14 (SDCL)"
+    },
+    {
+      "id": "elk",
+      "category": "biggame",
+      "species": "Elk",
+      "label": "Elk Lottery",
+      "deadline": "2026-05-19",
+      "note": "App Apr 22\u2013May 19, Black Hills archery Sep 1-30"
+    },
+    {
+      "id": "swan",
+      "category": "waterfowl",
+      "species": "Tundra Swan",
+      "label": "Tundra Swan Lottery",
+      "deadline": "2026-07-01",
+      "note": "App Jun 17\u2013Jul 1, season Oct 3\u2013Jan 8"
+    },
+    {
+      "id": "nonres-waterfowl",
+      "category": "waterfowl",
+      "species": "Nonres Waterfowl",
+      "label": "Nonres Waterfowl Lottery",
+      "deadline": "2026-07-08",
+      "note": "App Jun 16\u2013Jul 8"
+    },
+    {
+      "id": "paddlefish-gavins",
+      "category": "fishing",
+      "species": "Paddlefish \u2014 Gavins",
+      "label": "Paddlefish Gavins Snag",
+      "deadline": "2026-05-12",
+      "note": "Snag Oct 1-31, app Apr 20\u2013May 12"
+    },
+    {
+      "id": "turkey-spring",
+      "category": "nongame",
+      "species": "Turkey \u2014 Spring Prairie",
+      "label": "Spring Turkey",
+      "deadline": "2026-02-11",
+      "note": "App Jan 14\u2013Feb 11, season Apr 11\u2013May 31"
+    }
+  ],
+  "categories": [
+    {
+      "id": "deer",
+      "label": "Deer",
+      "icon": "\ud83e\udd8c",
+      "blurb": "SD deer \u2014 East River, West River, Black Hills, archery Sep 1.",
+      "species": [
+        {
+          "id": "deer-archery",
+          "name": "Deer \u2014 Archery",
+          "units": "Statewide Sep 1\u2013Jan 1",
+          "season": {
+            "open": "Sep 1, 2026",
+            "close": "Jan 1, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Any deer statewide Sep 1\u2013Jan 1. No unit lottery for archery.",
+          "nonresident": "Nonres archery Oct 1\u2013Jan 1 public/private (app May 20\u2013Jun 9).",
+          "briefing": {
+            "sex": "As licensed (whitetail/mule, antlered/antlerless)",
+            "bag": "1 per license. Archery tag valid statewide.",
+            "gear": "Bow \u226535lb, arrow \u226524\", broadhead \u22652 edges. Crossbow by permit. 660ft safety zone.",
+            "unchanged": "Sep 1\u2013Jan 1 statewide archery \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 1\u2013Jan 1 finalized. Nonres archery Oct 1 start."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same Sep 1\u2013Jan 1."
+            },
+            {
+              "year": "2024-25",
+              "change": "Municipal archery Sep 1\u2013Jan 1 added."
+            }
+          ],
+          "major5": [
+            "REMOVED: No east/west restriction for archery \u2014 statewide",
+            "2025: Nonres archery public/private app May 20\u2013Jun 9"
+          ],
+          "unitNotes": "Municipal archery Sep 1\u2013Jan 1 requires city permit.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/deer/",
+            "highlight": "<mark>Sep 1 \u2013 Jan 1 archery statewide. Nonres Oct 1.</mark>",
+            "removed": "REMOVED: No unit restriction for archery.",
+            "added": ""
+          },
+          "trashTalk": "Alec's SD deer blind is the one with extra legroom \u2014 still can't see over the corn.",
+          "firstTime": {
+            "resident": [
+              "Hunter ed if born after 1966",
+              "Archery Sep 1\u2013Jan 1 no lottery \u2014 buy online",
+              "660ft from buildings even on open land",
+              "Tag immediately"
+            ],
+            "nonresident": [
+              "Nonres archery Oct 1\u2013Jan 1, apply May 20\u2013Jun 9",
+              "Same 660ft rule",
+              "E-Posting check before you walk"
+            ]
+          }
+        },
+        {
+          "id": "deer-west",
+          "name": "Deer \u2014 West River",
+          "units": "West River Nov 14\u201329",
+          "season": {
+            "open": "Nov 14, 2026",
+            "close": "Nov 29, 2026",
+            "status": "Finalized"
+          },
+          "resident": "West River firearms Nov 14\u201329 \u2014 limited buck tags by lottery.",
+          "nonresident": "Nonres West River same dates, app Jun 3\u201323 \u2014 limited.",
+          "briefing": {
+            "sex": "As drawn (whitetail/mule, antlered/antlerless)",
+            "bag": "1 per license, unit-specific",
+            "gear": "Centerfire \u2265.243, shotgun slugs where allowed. 660ft zone.",
+            "unchanged": "Mid-Nov West River \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 14\u201329 West River finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Nov 15\u201330 prior year."
+            },
+            {
+              "year": "2024-25",
+              "change": "East/West split clarified."
+            }
+          ],
+          "major5": [
+            "East/West River split \u2014 check river boundary not just county"
+          ],
+          "unitNotes": "West River = west of Missouri. Check GFP map.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/events/keydates",
+            "highlight": "<mark>West River Nov 14\u201329</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "West River wind \u2014 Alec's hat flies farther than his shot.",
+          "firstTime": {
+            "resident": [
+              "Apply West River lottery Jun 3\u201323",
+              "Unit/license as printed",
+              "660ft"
+            ],
+            "nonresident": [
+              "Same lottery, same unit",
+              "Nonres West River app Jun 3\u201323"
+            ]
+          }
+        },
+        {
+          "id": "deer-east",
+          "name": "Deer \u2014 East River",
+          "units": "East River Nov 21\u2013Dec 6",
+          "season": {
+            "open": "Nov 21, 2026",
+            "close": "Dec 6, 2026",
+            "status": "Finalized"
+          },
+          "resident": "East River firearms Nov 21\u2013Dec 6 \u2014 East River whitetail focus.",
+          "nonresident": "Nonres East River Nov 21\u2013Dec 6, app Sep 10\u201324.",
+          "briefing": {
+            "sex": "As drawn",
+            "bag": "1 per license",
+            "gear": "Centerfire, 660ft. No baiting.",
+            "unchanged": "Late Nov East River \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Nov 21\u2013Dec 6 East River."
+            },
+            {
+              "year": "2025-26",
+              "change": "Nov 22\u2013Dec 7 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "No major change."
+            }
+          ],
+          "major5": [
+            "East River = east of Missouri"
+          ],
+          "unitNotes": "East River includes most ag land \u2014 permission still needed if posted.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/events/keydates",
+            "highlight": "<mark>East River Nov 21\u2013Dec 6</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "East River deer \u2014 Alec finally finds a tree tall enough to lean on.",
+          "firstTime": {
+            "resident": [
+              "East River lottery Jun 23\u2013Jul 7 special buck",
+              "Read unit map"
+            ],
+            "nonresident": [
+              "Nonres East River app Sep 10\u201324"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "upland",
+      "label": "Upland",
+      "icon": "\ud83d\udc26",
+      "blurb": "Pheasant capital \u2014 youth Sep 26, traditional Oct 17.",
+      "species": [
+        {
+          "id": "pheasant",
+          "name": "Ring-necked Pheasant",
+          "units": "Traditional Oct 17\u2013Jan 31",
+          "season": {
+            "open": "Oct 17, 2026",
+            "close": "Jan 31, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Traditional Oct 17\u2013Jan 31, 3 roosters daily. Resident-only Oct 10-12, Youth Sep 26-Oct 4.",
+          "nonresident": "Nonres same Oct 17\u2013Jan 31.",
+          "briefing": {
+            "sex": "Roosters only (hens illegal)",
+            "bag": "3 daily / 15 possession",
+            "gear": "Shotgun plugged 1+2 (3 max). Nontoxic NOT required except posted WMAs. Blaze orange recommended.",
+            "unchanged": "3-bird, rooster-only \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 17\u2013Jan 31 traditional finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Oct 18\u2013Jan 31 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "Resident-only Oct 11-13 added."
+            }
+          ],
+          "major5": [
+            "REMOVED: No hen harvest \u2014 rooster only stays",
+            "Youth Sep 26\u2013Oct 4 inclusive"
+          ],
+          "unitNotes": "Walk-In Atlas + CREP \u2014 stay on enrolled acres.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/pheasant/",
+            "highlight": "<mark>Oct 17 \u2013 Jan 31 traditional, 3 roosters</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Pheasants flush at 6ft. Alec flushes at 5'6\" \u2014 still counts.",
+          "firstTime": {
+            "resident": [
+              "Roosters only, 3/15",
+              "Walk-In Atlas is your friend",
+              "Youth Sep 26\u2013Oct 4 take a kid"
+            ],
+            "nonresident": [
+              "Same Oct 17\u2013Jan 31",
+              "Small game + habitat stamp"
+            ]
+          }
+        },
+        {
+          "id": "grouse",
+          "name": "Prairie Grouse / Partridge",
+          "units": "Sharp-tail & prairie Sep 19\u2013Jan 31",
+          "season": {
+            "open": "Sep 19, 2026",
+            "close": "Jan 31, 2027",
+            "status": "Finalized"
+          },
+          "resident": "Prairie grouse Sep 19\u2013Jan 31, 3/15 combined. Partridge 5/15.",
+          "nonresident": "Same nonres.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "Grouse 3/15 combined, partridge 5/15",
+            "gear": "Shotgun 1+2, nontoxic not required except posted.",
+            "unchanged": "Sep 19 opener \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Sep 19\u2013Jan 31 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Sage grouse closed \u2014 not listed."
+            }
+          ],
+          "major5": [
+            "Sage closed \u2014 don't shoot"
+          ],
+          "unitNotes": "Check Walk-In for grouse",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/small-game/",
+            "highlight": "<mark>Prairie Sep 19\u2013Jan 31</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Sharp-tails love short grass \u2014 Alec's favorite sightline.",
+          "firstTime": {
+            "resident": [
+              "3 grouse/15, 5 partridge",
+              "No rifle"
+            ],
+            "nonresident": [
+              "Same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "waterfowl",
+      "label": "Waterfowl",
+      "icon": "\ud83e\udd86",
+      "blurb": "Ducks by zone, geese early Sep 1.",
+      "species": [
+        {
+          "id": "ducks",
+          "name": "Ducks (all zones)",
+          "units": "Low North Sep 26\u2013Dec 8 etc",
+          "season": {
+            "open": "Sep 26, 2026",
+            "close": "Dec 8, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Low North/Middle Sep 26\u2013Dec 8, Low South Oct 24\u2013Jan 5, High Oct 10\u2013Jan 14. Youth Sep 12-13.",
+          "nonresident": "Nonres waterfowl lottery Jun 16\u2013Jul 8 \u2014 must apply.",
+          "briefing": {
+            "sex": "Hen mallard \u22642 within 4",
+            "bag": "6 daily (18). Scaup (bluebill) 2, wood 3, redhead 2, canvasback 2, pintail 1 (verify 3). Coot 15, merg 5/2hooded.",
+            "gear": "Nontoxic shot only, plugged 3. HIP required.",
+            "unchanged": "6-duck Federal framework \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Zones Sep 26\u2013Dec 8 etc finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same zones."
+            },
+            {
+              "year": "2024-25",
+              "change": "Pintail 1 stays."
+            }
+          ],
+          "major5": [
+            "Blueheads = scaup 2 \u2014 listed in table",
+            "HIP required"
+          ],
+          "unitNotes": "Check Low North vs South \u2014 Missouri River line matters.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/waterfowl/",
+            "highlight": "<mark>Low North Sep 26\u2013Dec 8, High Oct 10\u2013Jan 14</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Ducks need decoys. Alec brings calling \u2014 decoys do the tall part.",
+          "firstTime": {
+            "resident": [
+              "HIP + federal stamp 16+, state stamp 12+",
+              "Nontoxic only"
+            ],
+            "nonresident": [
+              "Nonres waterfowl lottery Jun 16\u2013Jul 8 mandatory"
+            ]
+          }
+        },
+        {
+          "id": "geese",
+          "name": "Geese",
+          "units": "Early Sep 1\u201330, Unit 1 Oct 1\u2013Dec 16",
+          "season": {
+            "open": "Sep 1, 2026",
+            "close": "Sep 30, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Early Sep 1\u201330, Unit 1 Oct 1\u2013Dec 16, Unit 2 Nov 2\u2013Feb 14, Light Sep 26\u2013Jan 8. Tundra swan Oct 3\u2013Jan 8 lottery Jun 17\u2013Jul 1.",
+          "nonresident": "Nonres same, but waterfowl lottery applies.",
+          "briefing": {
+            "sex": "Either sex",
+            "bag": "Early 15, Unit 1 8, white-front 3, light 50/Unlimited spring. Tundra swan 1 tag lottery.",
+            "gear": "Nontoxic, plugged 3 (spring light geese unplugged + e-callers in CO).",
+            "unchanged": "Early/unit split \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Early Sep 1\u201330, swan Jun 17\u2013Jul 1."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Light 50/Unlimited."
+            }
+          ],
+          "major5": [
+            "Tundra swan lottery Jun 17\u2013Jul 1"
+          ],
+          "unitNotes": "Unit 1 vs 2 matters \u2014 check GFP zone map.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/waterfowl/",
+            "highlight": "<mark>Early Sep 1\u201330, swan lottery Jun 17</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Geese fly high. Alec brings a comfier blind chair.",
+          "firstTime": {
+            "resident": [
+              "Early goose 15, light 50",
+              "Swan separate tag"
+            ],
+            "nonresident": [
+              "Nonres goose via waterfowl lottery"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fishing",
+      "label": "Fishing",
+      "icon": "\ud83c\udfa3",
+      "blurb": "Paddlefish Gavins Oct 1\u201331.",
+      "species": [
+        {
+          "id": "paddlefish",
+          "name": "Paddlefish \u2014 Gavins Point",
+          "units": "Gavins Snag Oct 1\u201331",
+          "season": {
+            "open": "Oct 1, 2026",
+            "close": "Oct 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Gavins snag Oct 1\u201331, archery Jun 1\u201330, Francis Case May 1\u201331. Tag required.",
+          "nonresident": "Nonres same, tag lottery.",
+          "briefing": {
+            "sex": "N/A",
+            "bag": "1 paddlefish per tag, 1 tag/year",
+            "gear": "Snag hook, tag immediately, barbless maybe. ANS drain.",
+            "unchanged": "Gavins Oct \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 1\u201331 snag finalized, app Apr 20\u2013May 12."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Francis Case May 1\u201331."
+            }
+          ],
+          "major5": [
+            "Tag required \u2014 app Apr 20\u2013May 12"
+          ],
+          "unitNotes": "Missouri River \u2014 Gavins Point Dam. Check tailrace regs.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/fishing/paddlefish/",
+            "highlight": "<mark>Oct 1\u201331 Gavins snag, app Apr 20</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Fish don't measure height \u2014 Alec's even field.",
+          "firstTime": {
+            "resident": [
+              "Snag tag required",
+              "1 fish"
+            ],
+            "nonresident": [
+              "Same tag"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biggame",
+      "label": "Big Game \u2014 Other",
+      "icon": "\ud83c\udfd4\ufe0f",
+      "blurb": "Elk, antelope, bighorn.",
+      "species": [
+        {
+          "id": "elk",
+          "name": "Elk",
+          "units": "Black Hills app Apr 22\u2013May 19",
+          "season": {
+            "open": "Sep 1, 2026",
+            "close": "Sep 30, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Archery Sep 1\u201330 Black Hills, firearms Custer Oct 1\u201331. Lottery Apr 22\u2013May 19.",
+          "nonresident": "Nonres same, app same.",
+          "briefing": {
+            "sex": "As drawn",
+            "bag": "1 elk",
+            "gear": "Centerfire \u2265.243. CWD check.",
+            "unchanged": "Sep archery \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "App Apr 22\u2013May 19 finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "No major change."
+            }
+          ],
+          "major5": [
+            "Once-in-a-lifetime not SD elk \u2014 but limited"
+          ],
+          "unitNotes": "Black Hills elk \u2014 limited tags.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/elk/",
+            "highlight": "<mark>Archery Sep 1\u201330, Custer Oct 1\u201331</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Elk are tall. Alec is enthusiastic \u2014 both need patience.",
+          "firstTime": {
+            "resident": [
+              "App Apr 22\u2013May 19",
+              " Sep archery"
+            ],
+            "nonresident": [
+              "Same app"
+            ]
+          }
+        },
+        {
+          "id": "antelope",
+          "name": "Pronghorn \u2014 Firearms",
+          "units": "Oct 3\u201318",
+          "season": {
+            "open": "Oct 3, 2026",
+            "close": "Oct 18, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Archery Aug 15\u2013Oct 31 (closed during firearms), firearms Oct 3\u201318. Lottery Jun 23\u2013Jul 7.",
+          "nonresident": "Nonres archery Aug 15\u2013Oct 31 public/private, app same.",
+          "briefing": {
+            "sex": "Buck often, doe special",
+            "bag": "1",
+            "gear": "Centerfire, 660ft.",
+            "unchanged": "Oct firearms \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Oct 3\u201318 firearms finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Oct 4\u201319 prior."
+            },
+            {
+              "year": "2024-25",
+              "change": "Archery Aug 15\u2013Oct 31."
+            }
+          ],
+          "major5": [
+            "Custer State Park antelope Oct 3\u201318"
+          ],
+          "unitNotes": "Prairie \u2014 pronghorn speed 55mph.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/antelope/",
+            "highlight": "<mark>Oct 3\u201318 firearms, Aug 15 archery</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Pronghorn 55mph. Alec's excuse faster.",
+          "firstTime": {
+            "resident": [
+              "App Jun 23\u2013Jul 7",
+              " Aug archery"
+            ],
+            "nonresident": [
+              "Nonres archery same"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "nongame",
+      "label": "Non-Game / Turkey",
+      "icon": "\ud83d\udc3e",
+      "blurb": "Turkey spring Apr 11.",
+      "species": [
+        {
+          "id": "turkey",
+          "name": "Turkey",
+          "units": "Spring Prairie Apr 11\u2013May 31, Fall Nov 1\u2013Jan 31",
+          "season": {
+            "open": "Apr 11, 2026",
+            "close": "May 31, 2026",
+            "status": "Finalized"
+          },
+          "resident": "Spring prairie Apr 11\u2013May 31 (app Jan 14\u2013Feb 11), Black Hills Apr 25\u2013May 31, fall Nov 1\u2013Jan 31 (app Aug 18\u2013Sep 2).",
+          "nonresident": "Nonres Black Hills spring app Jan 21\u2013Feb 11.",
+          "briefing": {
+            "sex": "Bearded only spring",
+            "bag": "1 spring, 1 fall",
+            "gear": "Shotgun/bow, no rifles spring. 660ft.",
+            "unchanged": "Apr 11 spring \u2014 stable."
+          },
+          "yoy3": [
+            {
+              "year": "2026-27",
+              "change": "Apr 11\u2013May 31 prairie finalized."
+            },
+            {
+              "year": "2025-26",
+              "change": "Same."
+            },
+            {
+              "year": "2024-25",
+              "change": "Mentored Apr 11\u2013May 31."
+            }
+          ],
+          "major5": [
+            "Nonres Black Hills spring Jan 21\u2013Feb 11"
+          ],
+          "unitNotes": "Check prairie vs Black Hills \u2014 different dates.",
+          "proclamation": {
+            "url": "https://gfp.sd.gov/hunting/turkey/",
+            "highlight": "<mark>Spring Apr 11\u2013May 31, Fall Nov 1\u2013Jan 31</mark>",
+            "removed": "",
+            "added": ""
+          },
+          "trashTalk": "Turkey strut \u2014 Alec's strut is shorter but still confident.",
+          "firstTime": {
+            "resident": [
+              "Spring app Jan 14\u2013Feb 11",
+              "Fall app Aug 18\u2013Sep 2"
+            ],
+            "nonresident": [
+              "Nonres Black Hills Jan 21\u2013Feb 11"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
