@@ -337,7 +337,7 @@ export default function App() {
       </header>
 
       {/* State Tabs */}
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-3">
+      <div id="state-tabs" className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-3">
         <div className="flex flex-wrap items-center gap-2">
           {states.map(s => {
             const st = stateThemes[s.id] || stateThemes.nd
@@ -360,9 +360,9 @@ export default function App() {
       </div>
 
       {/* Active Map + New Hunter Todo */}
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5 grid lg:grid-cols-[1.1fr_0.9fr] gap-3">
-        <ActiveMap categories={categories} theme={theme} stateId={stateId} />
-        {data.newHunterTodo && <NewHunterCard todo={data.newHunterTodo} theme={theme} categories={categories} stateName={activeState.name} />}
+      <div id="active-map" className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5 grid lg:grid-cols-[1.1fr_0.9fr] gap-3">
+        <div id="active-map-card"><ActiveMap categories={categories} theme={theme} stateId={stateId} /></div>
+        <div id="new-hunter-print">{data.newHunterTodo && <NewHunterCard todo={data.newHunterTodo} theme={theme} categories={categories} stateName={activeState.name} />}</div>
       </div>
 
       {/* Heads Up strip */}
@@ -393,7 +393,7 @@ export default function App() {
       </section>
 
       {/* Email Collector — Deadline Alerts */}
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5">
+      <section id="email-collector" className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5">
         <div className="bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden">
           <div className="px-4 py-3 bg-[#1a2e1a] text-[#f4f1eb] flex flex-wrap items-center justify-between gap-3">
             <h2 className="font-display font-bold text-[15px] flex items-center gap-2"><span className="w-7 h-7 rounded-full bg-[#c45d26] grid place-items-center text-[12px]">✉️</span>Get deadline alerts — don’t be Alec</h2>

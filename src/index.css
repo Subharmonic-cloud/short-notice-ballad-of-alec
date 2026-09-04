@@ -42,3 +42,11 @@ html.dark .text-\[\#8b7355\] { color: #9ab09a !important; }
 html.dark header.bg-\[\#1a2e1a\] { background-color: #0a150a !important; }
 html.dark .bg-\[\#1a2e1a\] { background-color: #1a2e1a !important; } /* keep ink for badges where needed */
 html.dark .divide-\[\#ede8dc\] > * + * { border-color: #2a3d2a !important; }
+
+@media print {
+  header, #state-tabs, #heads-up, #email-collector, #active-map, nav, footer, .no-print { display: none !important; }
+  body { background: white !important; color: #1a2e1a !important; }
+  #new-hunter-print { display: block !important; position: static !important; box-shadow: none !important; border: 2px solid #1a2e1a !important; }
+  #new-hunter-print * { visibility: visible !important; }
+  a[href]:after { content: " (" attr(href) ")"; font-size: 9px; }
+}
