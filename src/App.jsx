@@ -16,6 +16,73 @@ function Badge({ type, children }) {
   return <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase border ${map[type] || map.info}`}>{children}</span>
 }
 
+function DeadlineAlertCard() {
+  const [email, setEmail] = useState('')
+  const [selected, setSelected] = useState(['deer-gun', 'swan'])
+  const [status, setStatus] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const toggle = id => setSelected(s => s.includes(id) ? s.filter(x => x !== id) : [...s, id])
+  const submit = async e => {
+    e.preventDefault()
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setStatus({ type: 'error', msg: 'Enter a valid email' })
+    if (selected.length === 0) return setStatus({ type: 'error', msg: 'Pick at least one category (deer, swan, etc.)' })
+    setLoading(true)
+    setStatus(null)
+    try {
+      const r = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, categories: selected }) })
+      const j = await r.json()
+      if (!r.ok) throw new Error(j.error || 'Failed')
+      setStatus({ type: 'ok', msg: `You're in — ${email} will get alerts for ${selected.length} picks. We'll email 2 weeks before each deadline.` })
+      setEmail('')
+      // keep selected for next time, or not
+      localStorage.setItem('alec-alert-email', email)
+      localStorage.setItem('alec-alert-cats', JSON.stringify(selected))
+    } catch (err) {
+      // fallback to localStorage mock if api not available (dev)
+      try { localStorage.setItem('alec-alert-email', email); localStorage.setItem('alec-alert-cats', JSON.stringify(selected)); setStatus({ type: 'ok', msg: `Saved locally — ${email} (${selected.length} picks). In production this hits /api/subscribe.` }) } catch {}
+      if (!status) setStatus({ type: 'error', msg: err.message })
+    } finally { setLoading(false) }
+  }
+  useEffect(() => {
+    const e = localStorage.getItem('alec-alert-email')
+    const c = localStorage.getItem('alec-alert-cats')
+    if (e) setEmail(e)
+    if (c) try { setSelected(JSON.parse(c)) } catch {}
+  }, [])
+  return (
+    <form onSubmit={submit} className="p-3 sm:p-4 grid gap-3">
+      <div className="grid sm:grid-cols-[1.4fr_1fr] gap-3">
+        <div>
+          <label className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">Email</label>
+          <input value={email} onChange={e => setEmail(e.target.value)} placeholder="you@email.com" type="email" className="mt-1.5 w-full bg-white border border-[#e8e0d0] rounded-full px-4 py-2.5 text-[13px] placeholder:text-[#8b7355]/50 focus:outline-none focus:border-[#c45d26] focus:ring-2 focus:ring-[#c45d26]/20" />
+          <div className="mt-2 text-[11px] text-[#8b7355]">Pick categories — we only email for your picks, ~2 weeks before each deadline. No spam. Unsubscribe anytime.</div>
+        </div>
+        <div>
+          <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">Categories you care about</div>
+          <div className="mt-1.5 grid grid-cols-2 gap-1.5 max-h-[120px] overflow-auto pr-1">
+            {(data.deadlines || []).map(dl => (
+              <label key={dl.id} className={`flex items-center gap-2 px-2.5 py-1.5 rounded-full border text-[12px] cursor-pointer transition ${selected.includes(dl.id) ? 'bg-[#1a2e1a] text-white border-[#1a2e1a]' : 'bg-white border-[#e8e0d0] hover:border-[#c2b8a3] text-[#1a2e1a]'}`}>
+                <input type="checkbox" checked={selected.includes(dl.id)} onChange={() => toggle(dl.id)} className="accent-[#c45d26] w-3.5 h-3.5" />
+                <span className="truncate">{dl.species.replace(' — ', ' ')}</span>
+              </label>
+            ))}
+          </div>
+          <div className="mt-1.5 flex flex-wrap gap-1">
+            <button type="button" onClick={() => setSelected((data.deadlines || []).map(d => d.id))} className="text-[11px] font-mono bg-[#f4f1eb] border border-[#e8e0d0] px-2 py-1 rounded-full">All</button>
+            <button type="button" onClick={() => setSelected([])} className="text-[11px] font-mono bg-white border border-[#e8e0d0] px-2 py-1 rounded-full">None</button>
+            <span className="text-[11px] font-mono text-[#8b7355] self-center">{selected.length} selected</span>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <button disabled={loading} className="bg-[#c45d26] hover:bg-[#a34d1f] disabled:opacity-50 text-white text-[13px] font-semibold px-5 py-2.5 rounded-full transition"> {loading ? 'Saving…' : 'Get alerts →'} </button>
+        <span className="text-[11px] font-mono text-[#8b7355]">Example: “Deer Gun lotto ends in 12 days — last call”</span>
+        {status && <span className={`text-[12px] px-3 py-1.5 rounded-full border ${status.type === 'ok' ? 'bg-[#a3b18a]/20 border-[#a3b18a] text-[#1a2e1a]' : 'bg-[#8b2635]/10 border-[#8b2635]/30 text-[#8b2635]'}`}>{status.msg}</span>}
+      </div>
+    </form>
+  )
+}
+
 export default function App() {
   const [residency, setResidency] = useState('resident')
   const [activeCat, setActiveCat] = useState('deer')
@@ -118,6 +185,31 @@ export default function App() {
           <span className="px-2.5 py-1 rounded-full bg-[#a3b18a]/30 border border-[#a3b18a] font-mono">★ Removals highlighted green</span>
           <span className="px-2.5 py-1 rounded-full bg-[#f4f1eb] border border-[#e8e0d0]">Sources: gf.nd.gov • ndresponse.gov</span>
           <span className="px-2.5 py-1 rounded-full bg-[#1a2e1a] text-white border border-[#1a2e1a] font-mono hidden sm:inline">🌙 Dark theme toggle top-right</span>
+        </div>
+      </section>
+
+      {/* Email Collector — Deadline Alerts */}
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5">
+        <div className="bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden">
+          <div className="px-4 py-3 bg-[#1a2e1a] text-[#f4f1eb] flex flex-wrap items-center justify-between gap-3">
+            <h2 className="font-display font-bold text-[15px] flex items-center gap-2"><span className="w-7 h-7 rounded-full bg-[#c45d26] grid place-items-center text-[12px]">✉️</span>Get deadline alerts — don’t be Alec</h2>
+            <span className="text-[11px] font-mono bg-white/15 border border-white/20 px-2 py-1 rounded-full">Example: deer lotto ends in 2 weeks → we email you</span>
+          </div>
+          <DeadlineAlertCard />
+        </div>
+        {/* Upcoming deadlines preview */}
+        <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-2">
+          {data.deadlines.slice(0,4).map(dl => {
+            const days = Math.ceil((new Date(dl.deadline) - new Date()) / 86400000)
+            const urgent = days >= 0 && days <= 14
+            return (
+              <div key={dl.id} className={`bg-white border rounded-[10px] px-3 py-2.5 flex flex-col gap-1 ${urgent ? 'border-[#c45d26]/40 bg-[#c45d26]/5' : 'border-[#e8e0d0]'}`}>
+                <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">{dl.species}</div>
+                <div className="text-[12px] font-semibold leading-tight">{dl.label}</div>
+                <div className="text-[11px] font-mono flex items-center gap-1.5"><span className={`w-1.5 h-1.5 rounded-full ${urgent ? 'bg-[#c45d26] animate-pulse' : 'bg-[#a3b18a]'}`} />{dl.deadline} · {days < 0 ? `closed ${Math.abs(days)}d ago` : days === 0 ? 'today!' : `${days}d left${urgent ? ' — 2 weeks!' : ''}`}</div>
+              </div>
+            )
+          })}
         </div>
       </section>
 

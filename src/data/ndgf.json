@@ -979,5 +979,95 @@
         "url": "https://gf.nd.gov/private-lands/plots"
       }
     ]
-  }
+  },
+  "deadlines": [
+    {
+      "id": "deer-gun",
+      "category": "deer",
+      "species": "Deer \u2014 Gun",
+      "label": "Deer Gun Lottery",
+      "deadline": "2026-06-03",
+      "note": "Weighted lottery. Youth Deer same deadline. Miss = leftover lottery then first-come."
+    },
+    {
+      "id": "deer-muzzy",
+      "category": "deer",
+      "species": "Deer \u2014 Muzzleloader",
+      "label": "Deer Muzzleloader Lottery",
+      "deadline": "2026-06-03",
+      "note": "White-tailed only. Same deadline as gun."
+    },
+    {
+      "id": "elk",
+      "category": "biggame",
+      "species": "Elk",
+      "label": "Elk Lottery",
+      "deadline": "2026-03-25",
+      "note": "E1-E7, lottery Mar 25 Finalized. Once-in-a-lifetime bull."
+    },
+    {
+      "id": "moose",
+      "category": "biggame",
+      "species": "Moose",
+      "label": "Moose Lottery",
+      "deadline": "2026-03-25",
+      "note": "M1-M5, Mar 25. Once-in-a-lifetime."
+    },
+    {
+      "id": "bighorn",
+      "category": "biggame",
+      "species": "Bighorn Sheep",
+      "label": "Bighorn Lottery + Raffle",
+      "deadline": "2026-03-25",
+      "note": "Badlands + MDF raffle. Oct 30-Dec 31 season."
+    },
+    {
+      "id": "pronghorn-gun",
+      "category": "biggame",
+      "species": "Pronghorn \u2014 Gun",
+      "label": "Pronghorn Gun Lottery",
+      "deadline": "2026-07-15",
+      "note": "Bow Sep 4 open, gun by lottery Oct 2. Est. mid-July deadline."
+    },
+    {
+      "id": "swan",
+      "category": "waterfowl",
+      "species": "Tundra Swan",
+      "label": "Tundra Swan Lottery",
+      "deadline": "2026-08-19",
+      "note": "Waterfowl swan tag \u2014 limited lottery."
+    },
+    {
+      "id": "paddlefish",
+      "category": "fishing",
+      "species": "Paddlefish",
+      "label": "Paddlefish Snag Tag (Missouri/ Yellowstone)",
+      "deadline": "2026-04-15",
+      "note": "May 1-21 snag season, tag required."
+    },
+    {
+      "id": "spring-turkey",
+      "category": "nongame",
+      "species": "Turkey \u2014 Spring",
+      "label": "Spring Turkey Lottery",
+      "deadline": "2026-02-11",
+      "note": "Bearded only, Apr 11-May 17. App early Feb."
+    },
+    {
+      "id": "fall-turkey",
+      "category": "nongame",
+      "species": "Turkey \u2014 Fall",
+      "label": "Fall Turkey Lottery",
+      "deadline": "2026-09-02",
+      "note": "Oct 10-Jan 3 either sex."
+    },
+    {
+      "id": "fisher-bobcat",
+      "category": "nongame",
+      "species": "Fisher / Bobcat",
+      "label": "Fisher / Bobcat Lottery",
+      "deadline": "2026-11-01",
+      "note": "Limited quota \u2014 check pred Nov."
+    }
+  ]
 }
