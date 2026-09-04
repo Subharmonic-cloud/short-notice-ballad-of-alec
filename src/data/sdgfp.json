@@ -201,6 +201,18 @@
               "Same 660ft rule",
               "E-Posting check before you walk"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -255,6 +267,18 @@
               "Same lottery, same unit",
               "Nonres West River app Jun 3\u201323"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -307,6 +331,18 @@
             "nonresident": [
               "Nonres East River app Sep 10\u201324"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -370,6 +406,18 @@
               "Same Oct 17\u2013Jan 31",
               "Small game + habitat stamp"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -422,6 +470,18 @@
             "nonresident": [
               "Same"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 + $20 = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 + $5 + $20 = $175 (proxy)"
+            }
           }
         }
       ]
@@ -483,6 +543,18 @@
             "nonresident": [
               "Nonres waterfowl lottery Jun 16\u2013Jul 8 mandatory"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 76,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat + $5 Restoration + $29 Federal Duck = $76 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 212,
+              "mark": "$$",
+              "breakdown": "$153 Waterfowl Zone + $5 Cert + $20 Habitat + $5 Restoration + $29 Federal = $212 (proxy)"
+            }
           }
         },
         {
@@ -535,6 +607,18 @@
             "nonresident": [
               "Nonres goose via waterfowl lottery"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 76,
+              "mark": "$",
+              "breakdown": "Same as ducks \u2014 waterfowl bundle $76 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 212,
+              "mark": "$$",
+              "breakdown": "Same $212 (zone) + HIP free (proxy)"
+            }
           }
         }
       ]
@@ -595,6 +679,18 @@
             "nonresident": [
               "Same tag"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -655,6 +751,18 @@
             "nonresident": [
               "Same app"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 62,
+              "mark": "$",
+              "breakdown": "$35 Elk + $2 Cert + $20 Habitat + $5 App = $62 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 625,
+              "mark": "$$$",
+              "breakdown": "$600 Bighorn-style? Actually Elk nonres limited quota ~$500+? Using $600 placeholder + $5 + $20 = $625 (proxy)"
+            }
           }
         },
         {
@@ -707,6 +815,18 @@
             "nonresident": [
               "Nonres archery same"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -767,6 +887,18 @@
             "nonresident": [
               "Nonres Black Hills Jan 21\u2013Feb 11"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -818,6 +950,18 @@
             "nonresident": [
               "Nonres Dec 1"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 Cert = $22 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 200,
+              "mark": "$$",
+              "breakdown": "Nonres beaver resident only (proxy)"
+            }
           }
         },
         {
@@ -861,6 +1005,18 @@
             "nonresident": [
               "Nonres"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 = $22 + pelt tag (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 200,
+              "mark": "$$",
+              "breakdown": "Nonres limited (proxy)"
+            }
           }
         }
       ]

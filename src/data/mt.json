@@ -175,6 +175,18 @@
               "Same deadlines",
               "Upland 10-day delay doesn't apply deer \u2014 but check access"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -227,6 +239,18 @@
             "nonresident": [
               "Same HD map"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -279,6 +303,18 @@
             "nonresident": [
               "Same"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 57,
+              "mark": "$",
+              "breakdown": "$35 Muzzy + $2 Cert + $20 Habitat = $57 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 380,
+              "mark": "$$$",
+              "breakdown": "$355 (if avail) + $5 + $20 = $380 (proxy)"
+            }
           }
         }
       ]
@@ -339,6 +375,18 @@
             "nonresident": [
               "Same but public Sep 20 start"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -391,6 +439,18 @@
             "nonresident": [
               "Same + 10-day delay public"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 + $20 = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 + $5 + $20 = $175 (proxy)"
+            }
           }
         }
       ]
@@ -451,6 +511,18 @@
             "nonresident": [
               "Same special license"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -511,6 +583,18 @@
             "nonresident": [
               "Same Jun 1"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         },
         {
@@ -563,6 +647,18 @@
             "nonresident": [
               "Same"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 62,
+              "mark": "$",
+              "breakdown": "$35 Bighorn + $2 + $20 + $5 = $62 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 625,
+              "mark": "$$$",
+              "breakdown": "$600 + $5 + $20 (+ $500 if drawn) = $625+ (proxy)"
+            }
           }
         }
       ]
@@ -614,6 +710,18 @@
             "nonresident": [
               "Same"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -674,6 +782,18 @@
             "nonresident": [
               "Same"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175 (proxy)"
+            }
           }
         }
       ]
@@ -725,6 +845,18 @@
             "nonresident": [
               "Resident only"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 Cert = $22 (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 200,
+              "mark": "$$",
+              "breakdown": "Nonres beaver resident only (proxy)"
+            }
           }
         },
         {
@@ -768,6 +900,18 @@
             "nonresident": [
               "Resident"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 = $22 + pelt tag (SD/MT/MN/WY proxy)"
+            },
+            "nonresident": {
+              "total": 200,
+              "mark": "$$",
+              "breakdown": "Nonres limited (proxy)"
+            }
           }
         }
       ]

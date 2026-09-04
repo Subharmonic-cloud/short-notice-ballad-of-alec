@@ -539,6 +539,35 @@ export default function App() {
                               </div>
                             </div>
 
+                            {/* Pricing — All-in with prereqs */}
+                            {sp.pricing && (
+                              <div className="grid md:grid-cols-2 gap-3">
+                                <div className="bg-white border border-[#e8e0d0] rounded-[10px] p-3">
+                                  <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355] flex items-center gap-1.5">Resident <span className="font-mono text-[10px] bg-[#f4f1eb] border border-[#e8e0d0] px-1.5 py-0.5 rounded-full">{sp.pricing.resident.mark}</span> <span className="text-[10px] font-mono text-[#8b7355]">all-in</span></div>
+                                  <div className="flex items-baseline gap-2 mt-1">
+                                    <span className="text-[18px] font-black font-mono" style={{ color: theme.header }}>{sp.pricing.resident.total != null ? '$' + sp.pricing.resident.total : '—'}</span>
+                                    <span className="text-[11px] font-mono text-[#5a4a32]">all-in</span>
+                                  </div>
+                                  <div className="text-[11px] leading-[1.4] text-[#5a4a32] mt-1">{sp.pricing.resident.breakdown}</div>
+                                </div>
+                                <div className="rounded-[10px] p-3 border" style={{ backgroundColor: theme.header, borderColor: theme.header, color: 'white' }}>
+                                  <div className="text-[11px] tracking-[0.12em] uppercase font-bold flex items-center gap-1.5" style={{ color: theme.accent }}>Nonresident <span className="font-mono text-[10px] bg-white/15 border border-white/20 px-1.5 py-0.5 rounded-full text-white">{sp.pricing.nonresident.mark}</span> <span className="text-[10px] font-mono text-white/70">all-in</span></div>
+                                  <div className="flex items-baseline gap-2 mt-1">
+                                    <span className="text-[18px] font-black font-mono">{sp.pricing.nonresident.total != null ? '$' + sp.pricing.nonresident.total : '—'}</span>
+                                    <span className="text-[11px] font-mono text-white/70">all-in</span>
+                                  </div>
+                                  <div className="text-[11px] leading-[1.4] text-white/80 mt-1">{sp.pricing.nonresident.breakdown}</div>
+                                </div>
+                              </div>
+                            )}
+                            <div className="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                              <span className="px-2 py-1 rounded-full bg-white border border-[#e8e0d0]">$ &lt;100</span>
+                              <span className="px-2 py-1 rounded-full bg-white border border-[#e8e0d0]">$$ 101-300</span>
+                              <span className="px-2 py-1 rounded-full bg-white border border-[#e8e0d0]">$$$ 301-699</span>
+                              <span className="px-2 py-1 rounded-full bg-[#1a2e1a] text-white border border-[#1a2e1a]">$$$$ 700+</span>
+                              <span className="px-2 py-1 rounded-full bg-[#f4f1eb] border border-[#e8e0d0]">all-in = cert + habitat + small game/fur + stamps</span>
+                            </div>
+
                             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                               <div className="bg-white border border-[#e8e0d0] rounded-[10px] p-3">
                                 <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#8b7355]">Sex</div>

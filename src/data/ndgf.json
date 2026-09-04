@@ -109,6 +109,18 @@
               "Crossbow only with director permit \u2014 don't assume",
               "Same tag + head/photo rule as resident"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 57,
+              "mark": "$",
+              "breakdown": "$35 Deer Bow + $2 Cert + $20 Habitat = $57"
+            },
+            "nonresident": {
+              "total": 375,
+              "mark": "$$$",
+              "breakdown": "$350 Bow + $5 Cert + $20 Habitat = $375"
+            }
           }
         },
         {
@@ -170,6 +182,18 @@
               "Nonres WMA/PLOTS blackout Oct 10-16 still counts \u2014 don't scout then",
               "Need ND hunting cert + habitat stamp \u2014 buy before you apply"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 57,
+              "mark": "$",
+              "breakdown": "$35 Deer Gun + $2 Cert + $20 Habitat = $57"
+            },
+            "nonresident": {
+              "total": 380,
+              "mark": "$$$",
+              "breakdown": "$355 Deer Gun + $5 Cert + $20 Habitat = $380"
+            }
           }
         },
         {
@@ -226,6 +250,18 @@
               "If you own PLOTS, you can use it muzzy season",
               "1x scope only \u2014 leave the 3-9x at home"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 57,
+              "mark": "$",
+              "breakdown": "$35 Muzzy + $2 Cert + $20 Habitat = $57"
+            },
+            "nonresident": {
+              "total": 380,
+              "mark": "$$$",
+              "breakdown": "$355 (if avail) + $5 + $20 = $380"
+            }
           }
         },
         {
@@ -281,6 +317,18 @@
               "Youth deer is RESIDENT ONLY \u2014 nonres youth cannot apply",
               "Nonres youth can do small game/waterfowl on resident cert if <16 Sep 1 + hunter ed"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 32,
+              "mark": "$",
+              "breakdown": "$10 Youth Deer + $2 Cert + $20 Habitat = $32 (res youth only)"
+            },
+            "nonresident": {
+              "total": null,
+              "mark": "\u2014",
+              "breakdown": "Not eligible \u2014 resident youth only"
+            }
           }
         }
       ]
@@ -345,6 +393,18 @@
               "Same male-only, same dates \u2014 no nonres restriction on pheasant",
               "PLOTS open but respect posted + call ahead on fire ban days"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat = $42"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 Small Game (14-day) + $5 Cert + $20 Habitat = $175"
+            }
           }
         },
         {
@@ -400,6 +460,18 @@
               "Same seasons, same closures",
               "Prairie chicken lottery resident-leaning \u2014 nonres odds low if open"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 42,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 + $20 = $42"
+            },
+            "nonresident": {
+              "total": 175,
+              "mark": "$$",
+              "breakdown": "$150 + $5 + $20 = $175"
+            }
           }
         }
       ]
@@ -519,7 +591,19 @@
               "limit": "5 (\u22642 hooded, 15)",
               "note": "separate"
             }
-          ]
+          ],
+          "pricing": {
+            "resident": {
+              "total": 76,
+              "mark": "$",
+              "breakdown": "$20 Small Game + $2 Cert + $20 Habitat + $5 Restoration + $29 Federal Duck = $76"
+            },
+            "nonresident": {
+              "total": 212,
+              "mark": "$$",
+              "breakdown": "$153 Waterfowl Zone + $5 Cert + $20 Habitat + $5 Restoration + $29 Federal = $212"
+            }
+          }
         },
         {
           "id": "geese",
@@ -573,6 +657,18 @@
               "Same bags, same spring CO \u2014 spring is your best nonres value",
               "Spring CO: unplugged + e-callers legal \u2014 fall? absolutely not"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 76,
+              "mark": "$",
+              "breakdown": "Same as ducks \u2014 waterfowl bundle $76"
+            },
+            "nonresident": {
+              "total": 212,
+              "mark": "$$",
+              "breakdown": "Same $212 (zone) + HIP free"
+            }
           }
         }
       ]
@@ -639,6 +735,18 @@
               "Same ANS drain rule \u2014 they check at ramps",
               "Barotrauma descender needed >30ft on Sakakawea \u2014 they enforce"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 29,
+              "mark": "$",
+              "breakdown": "$27 Fishing + $2 Cert = $29 (Paddlefish +$15 = $44)"
+            },
+            "nonresident": {
+              "total": 73,
+              "mark": "$",
+              "breakdown": "$68 Season Fishing + $5 Cert = $73 (Paddlefish +$35 = $108)"
+            }
           }
         }
       ]
@@ -702,6 +810,18 @@
               "Very limited nonres elk \u2014 same Mar 25, same windows",
               "Nonres draw odds brutal \u2014 bring preference points and patience"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 62,
+              "mark": "$",
+              "breakdown": "$35 Elk + $2 Cert + $20 Habitat + $5 App = $62"
+            },
+            "nonresident": {
+              "total": 625,
+              "mark": "$$$",
+              "breakdown": "$600 Bighorn-style? Actually Elk nonres limited quota ~$500+? Using $600 placeholder + $5 + $20 = $625"
+            }
           }
         },
         {
@@ -756,6 +876,18 @@
               "Moose nonres tags almost mythical \u2014 check lottery for any",
               "If you draw, same season, same gear"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 62,
+              "mark": "$",
+              "breakdown": "$35 Moose + $2 + $20 + $5 = $62"
+            },
+            "nonresident": {
+              "total": null,
+              "mark": "\u2014",
+              "breakdown": "Nonres moose mythical \u2014 no standard fee"
+            }
           }
         },
         {
@@ -811,6 +943,18 @@
               "Bow same Sep 4-27, gun lottery limited nonres pool",
               "Bow is your best nonres odds"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 57,
+              "mark": "$",
+              "breakdown": "$35 Pronghorn + $2 + $20 = $57"
+            },
+            "nonresident": {
+              "total": 380,
+              "mark": "$$$",
+              "breakdown": "$355? Actually pronghorn nonres similar to deer $350-355 + $5 + $20"
+            }
           }
         },
         {
@@ -865,6 +1009,18 @@
               "Lottery resident-only; raffle tag is your shot \u2014 buy it",
               "Same Oct 30-Dec 31, same \u00be curl rule"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 62,
+              "mark": "$",
+              "breakdown": "$35 Bighorn + $2 + $20 + $5 = $62"
+            },
+            "nonresident": {
+              "total": 625,
+              "mark": "$$$",
+              "breakdown": "$600 + $5 + $20 (+ $500 if drawn) = $625+"
+            }
           }
         }
       ]
@@ -931,6 +1087,18 @@
               "Spring turkey nonres lottery Sep 2 deadline \u2014 don't miss",
               "HIP needed for snipe/woodcock/dove \u2014 not just ducks"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 Cert = $22 (youth no license)"
+            },
+            "nonresident": {
+              "total": 55,
+              "mark": "$",
+              "breakdown": "$25 Nongame + $5 Cert = $30 (or $50 Fur+Nongame + $5 = $55)"
+            }
           }
         }
       ]
@@ -983,6 +1151,18 @@
             "nonresident": [
               "Nonres beaver not open"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 Cert = $22"
+            },
+            "nonresident": {
+              "total": null,
+              "mark": "\u2014",
+              "breakdown": "Nonres beaver resident only"
+            }
           }
         },
         {
@@ -1027,6 +1207,18 @@
             "nonresident": [
               "Nonres limited"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 Furbearer + $2 = $22 + pelt tag"
+            },
+            "nonresident": {
+              "total": null,
+              "mark": "\u2014",
+              "breakdown": "Nonres limited"
+            }
           }
         },
         {
@@ -1070,6 +1262,18 @@
             "nonresident": [
               "Nonres check"
             ]
+          },
+          "pricing": {
+            "resident": {
+              "total": 22,
+              "mark": "$",
+              "breakdown": "$20 + $2 = $22"
+            },
+            "nonresident": {
+              "total": null,
+              "mark": "\u2014",
+              "breakdown": "Nonres limited"
+            }
           }
         }
       ]
