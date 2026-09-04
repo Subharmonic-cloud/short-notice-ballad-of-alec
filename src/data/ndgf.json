@@ -92,7 +92,7 @@
             "removed": "REMOVED: No general sex change \u2014 any-deer still resident bow.",
             "added": "ADDED: South Bismarck/Mandan MDHRS lab access via ARS permit."
           },
-          "trashTalk": "Alec tried to peek over the corn \u2014 still couldn't see the buck. Bow season waits for no short king.",
+          "trashTalk": "Alec's bow is taller than he is \u2014 still shoots straight, just needs a lower blind window.",
           "firstTime": {
             "resident": [
               "Hunter ed if born after 1961 (or apprentice license + mentor)",
@@ -154,7 +154,7 @@
             "removed": "REMOVED: No new statewide antler restriction \u2014 check unit-specific antlerless tags.",
             "added": "ADDED: Confirm concurrent season after lottery \u2014 proclamation adds herd-reduction appendix."
           },
-          "trashTalk": "Alec brought a step stool to the deer stand. Game warden said 'nice try, still need orange.'",
+          "trashTalk": "Alec's orange vest is 90% of his silhouette. Easy to spot, hard to miss.",
           "firstTime": {
             "resident": [
               "Apply lottery at gf.nd.gov/lotteries \u2014 deadline early June",
@@ -213,7 +213,7 @@
             "removed": "No change to Caliber \u2014 \u2265.45 long gun, \u2265.50 handgun muzzy.",
             "added": ""
           },
-          "trashTalk": "Muzzleloader smoke is the only time Alec looks tall \u2014 disappearing in a cloud.",
+          "trashTalk": "Muzzleloader season: Alec finally gets to make extra smoke to hide behind \u2014 tactically.",
           "firstTime": {
             "resident": [
               "Lottery at gf.nd.gov \u2014 white-tailed only, statewide",
@@ -269,7 +269,7 @@
             "removed": "REMOVED: No carry for mentor \u2014 enforced.",
             "added": ""
           },
-          "trashTalk": "Youth season: Alec finally qualified\u2026 on height, not age.",
+          "trashTalk": "Youth season reminder \u2014 Alec still gets carded at the license counter. He takes it as a compliment.",
           "firstTime": {
             "resident": [
               "Residents 11-15 only \u2014 11-13 antlerless only, 14-15 any deer",
@@ -332,7 +332,7 @@
             "removed": "No hen season \u2014 removed years ago, stays removed.",
             "added": ""
           },
-          "trashTalk": "Pheasants flush at 6 feet. Alec flushes at 5'6\". Advantage: bird.",
+          "trashTalk": "Pheasants love CRP. Alec loves CRP \u2014 finally, cover that fits.",
           "firstTime": {
             "resident": [
               "Male only \u2014 hens are off limits. Count your tail feathers",
@@ -388,7 +388,7 @@
             "removed": "REMOVED: no prairie chicken season 2024-26",
             "added": ""
           },
-          "trashTalk": "Sharp-tail said 'is that a hunter or a tumbleweed?' \u2014 Alec in the prairie grass.",
+          "trashTalk": "Sharp-tails love short grass. Alec loves that he can actually see over it.",
           "firstTime": {
             "resident": [
               "Sharp-tail & Huns Sep 12 \u2013 Jan 3, statewide",
@@ -422,23 +422,23 @@
           "resident": "Sep 26-Dec 6 Low, Oct 3-Dec 6 High (check zone). Youth Sep 12-13, Vet Sep 19-20.",
           "nonresident": "Nonres waterfowl needs nonres waterfowl lic + HIP + federal duck stamp. 14-day or season lic. Zone same.",
           "briefing": {
-            "sex": "Hen mallard restrictions, scaup season within season \u2014 see matrix.",
-            "bag": "\u26a0\ufe0f EXTRA WORK: 6 ducks daily (mallard 5/2 hen, scaup 1-2 split, pintail 1, canvasback 2, wood duck 3, redhead 2). Coot 15, merg 5/2 hooded. Possession 3x daily.",
+            "sex": "Hen mallard \u22642, pintail/scaup within season \u2014 see species caps left. Federal framework applies.",
+            "bag": "6 ducks daily (possession 18). Within that: mallard 4 (\u22642 hens) \u2022 wood duck 3 \u2022 scaup 2 \u2022 redhead 2 \u2022 canvasback 2 \u2022 black duck 2 \u2022 pintail 1 (2026 framework may allow 3 \u2014 verify gf.nd.gov/waterfowl before you go). Coot 15 (45), merganser 5 (\u22642 hooded, 15). Scaup may have split 45-day window \u2014 check dates.",
             "gear": "Nontoxic shot required. Shotgun plugged to 3 shells. Electronic calls prohibited (except light geese spring).",
             "unchanged": "Stamp + HIP + plugged gun \u2014 unchanged."
           },
           "yoy3": [
             {
               "year": "2026-27",
-              "change": "Low Plains Sep 26-Dec 6 finalized. High Plains Oct 3."
+              "change": "Low Plains Sep 26\u2013Dec 6, High Plains Oct 3\u2013Dec 6. Bag stays 6; pintail framework under review (1 vs 3 \u2014 verify)."
             },
             {
               "year": "2025-26",
-              "change": "Scaup 2-bird window extended 10 days."
+              "change": "Same 6-duck, scaup 2-bird window extended; HIP online-only."
             },
             {
               "year": "2024-25",
-              "change": "Pintail remained 1, canvasback 2 \u2014 no change."
+              "change": "Canvasback 2, pintail 1, scaup split \u2014 stable."
             }
           ],
           "major5": [
@@ -450,11 +450,11 @@
           "unitNotes": "Low Plains vs High Plains zone line matters \u2014 Missouri River corridor. Check gf.nd.gov/waterfowl map.",
           "proclamation": {
             "url": "https://gf.nd.gov/hunting/waterfowl",
-            "highlight": "<mark>6-duck, species caps matter. Youth Sep 12-13.</mark> Federal frameworks apply.",
+            "highlight": "<mark>6 ducks daily (45 possession: coot 15/45, merg 5/15). Mallard 4 (2 hens), wood 3, scaup 2, redhead 2</mark> \u2014 verify pintail 1 vs 3 at gf.nd.gov/waterfowl. Youth Sep 12-13.",
             "removed": "REMOVED: No lead shot \u2014 nontoxic only stays.",
             "added": "ADDED: Vet season in regs."
           },
-          "trashTalk": "Ducks fly at 40 mph. Alec runs at 4 mph. Math says: use decoys.",
+          "trashTalk": "Ducks need decoys. Alec brings the calling \u2014 the decoys do the looking tall part.",
           "firstTime": {
             "resident": [
               "Federal duck stamp + HIP + plugged gun (3 shells) \u2014 no excuses",
@@ -482,7 +482,7 @@
           "nonresident": "Same bags. Light goose spring conservation order Feb 21-May 10 \u2014 electronic calls + unplugged allowed.",
           "briefing": {
             "sex": "Either sex.",
-            "bag": "Canada early 15, regular 8; White-front 3; Light 20 (fall) / no limit spring CO.",
+            "bag": "Canada early Sep 1: 15 daily (45). Regular: 8 (24). White-front 3 (9). Light 20 (no possession fall) / no limit spring CO Feb 21\u2013May 10. Tundra swan lottery separate.",
             "gear": "Nontoxic, plugged 3 (except spring light geese \u2014 unplugged + e-callers legal).",
             "unchanged": "Early/regular split, spring CO rules unchanged."
           },
@@ -510,7 +510,7 @@
             "removed": "No fall light goose e-caller \u2014 still prohibited.",
             "added": ""
           },
-          "trashTalk": "Geese honk louder than Alec after missing \u2014 which is saying something.",
+          "trashTalk": "Geese fly high. Alec just brings louder calls and a comfier blind chair.",
           "firstTime": {
             "resident": [
               "Early Canada Sep 1 (15/45) \u2014 then 8/24 regular, White-front 3/9",
@@ -574,7 +574,7 @@
             "removed": "REMOVED: Live bait transport \u2014 now illegal.",
             "added": "ADDED: Barotrauma descender required >30ft Sakakawea."
           },
-          "trashTalk": "Fish don't care how tall you are. Finally, Alec's even playing field.",
+          "trashTalk": "Fish don't measure height \u2014 Alec's favorite even playing field.",
           "firstTime": {
             "resident": [
               "General + fishing lic \u2014 2 lines open water, 4 ice (tip-ups)",
@@ -638,7 +638,7 @@
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Elk bugle, Alec squeaks. Once-in-a-lifetime tag, once-in-a-lifetime squeak.",
+          "trashTalk": "Elk are tall. Alec is enthusiastic. Both require patience and good glass.",
           "firstTime": {
             "resident": [
               "Lottery Mar 25 deadline \u2014 don't miss it",
@@ -693,7 +693,7 @@
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Moose don't ask your height. They just block the whole trail.",
+          "trashTalk": "Moose are basically Alec's spirit animal \u2014 big, quiet, loves the willows.",
           "firstTime": {
             "resident": [
               "Once-in-a-lifetime bull \u2014 lottery Mar 25",
@@ -748,7 +748,7 @@
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Pronghorn runs 55 mph. Alec's excuse runs faster.",
+          "trashTalk": "Pronghorn are the second-fastest land animal. Alec is second-fastest to the coffee after a cold sit.",
           "firstTime": {
             "resident": [
               "Bow Sep 4-27 any pronghorn \u2014 great first big-game taste",
@@ -802,7 +802,7 @@
             "removed": "",
             "added": ""
           },
-          "trashTalk": "Bighorn lives on cliffs. Alec lives on excuses. Both are steep.",
+          "trashTalk": "Bighorn handles cliffs like Alec handles the step-stool \u2014 carefully and with style.",
           "firstTime": {
             "resident": [
               "Once-in-a-lifetime ram (\u00be curl+) \u2014 lottery + raffle (WSF/MDF)",
@@ -866,7 +866,7 @@
             "removed": "REMOVED: No fall hen protection change \u2014 spring bearded only stays.",
             "added": "ADDED: Hip needed for migratory: snipe/woodcock/dove."
           },
-          "trashTalk": "Coyote year-round \u2014 Alec's trash talk is also year-round. Perfect match.",
+          "trashTalk": "Coyotes don't care how tall you are. Year-round, like Alec's stories at camp.",
           "firstTime": {
             "resident": [
               "Coyote year-round \u2014 no license needed on own land, else furbearer",
