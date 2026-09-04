@@ -271,15 +271,18 @@ export default function App() {
           <div className="lg:sticky lg:top-[132px] space-y-3">
             <div className="hidden lg:block text-[11px] tracking-[0.14em] uppercase font-semibold text-[#8b7355]">Categories</div>
             <nav className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-none">
-              {filtered.map(cat => (
-                <button key={cat.id} onClick={() => setActiveCat(cat.id)} className={`group flex items-center gap-3 px-3 py-2.5 rounded-[10px] border text-left shrink-0 lg:shrink transition ${activeCat===cat.id ? 'bg-[#1a2e1a] text-[#f4f1eb] border-[#1a2e1a] shadow' : 'bg-white border-[#e8e0d0] hover:border-[#c2b8a3] text-[#1a2e1a]'}`}>
-                  <span className="w-7 h-7 rounded-full grid place-items-center text-[14px] bg-[#f4f1eb] border border-[#e8e0d0] shrink-0">{cat.icon}</span>
+              {filtered.map(cat => {
+                const isActive = activeCat===cat.id
+                return (
+                <button key={cat.id} onClick={() => setActiveCat(cat.id)} className={`group flex items-center gap-3 px-3 py-2.5 rounded-[10px] border text-left shrink-0 lg:shrink transition ${isActive ? 'text-[#f4f1eb] shadow' : 'hover:border-[#c2b8a3] text-[#1a2e1a]'}`} style={isActive ? { backgroundColor: theme.header, borderColor: theme.header, color: '#f4f1eb' } : { backgroundColor: dark ? '#1b2a1b' : 'white', borderColor: theme.accent + '35' }}>
+                  <span className="w-7 h-7 rounded-full grid place-items-center text-[14px] shrink-0" style={{ backgroundColor: isActive ? theme.accent : theme.bg, borderColor: theme.accent + '40', borderWidth: '1px' }}>{cat.icon}</span>
                   <span className="min-w-0">
                     <div className="text-[13px] font-semibold leading-none">{cat.label}</div>
-                    <div className={`text-[11px] leading-none mt-1 ${activeCat===cat.id ? 'text-white/60' : 'text-[#8b7355]'}`}>{cat.species.length} species</div>
+                    <div className={`text-[11px] leading-none mt-1 ${isActive ? 'text-white/60' : 'text-[#8b7355]'}`}>{cat.species.length} species</div>
                   </span>
                 </button>
-              ))}
+                )
+              })}
             </nav>
             <div className="hidden lg:block bg-white border border-[#e8e0d0] rounded-[10px] p-3">
               <div className="text-[11px] tracking-widest uppercase font-semibold text-[#8b7355]">Resident vs Nonres</div>
