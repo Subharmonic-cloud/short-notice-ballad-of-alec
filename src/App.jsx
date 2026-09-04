@@ -121,32 +121,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Access & Posting */}
-      {data.access && (
-        <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-5">
-          <div className="bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden">
-            <div className="px-4 py-3 bg-[#1a2e1a] text-[#f4f1eb] flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-display font-bold text-[15px] flex items-center gap-2"><span className="w-7 h-7 rounded-full bg-[#c45d26] grid place-items-center text-[12px]">🪧</span>{data.access.title}</h2>
-              <span className="text-[11px] font-mono bg-white/15 border border-white/20 px-2 py-1 rounded-full">{data.access.note}</span>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 p-3">
-              {data.access.rules.map((r,i) => (
-                <div key={i} className="bg-[#f4f1eb] border border-[#e8e0d0] rounded-[10px] p-3">
-                  <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#1a2e1a]">{r.label}</div>
-                  <div className="text-[12px] leading-[1.5] text-[#5a4a32] mt-1">{r.body}</div>
-                </div>
-              ))}
-            </div>
-            <div className="px-3 pb-3 flex flex-wrap gap-2">
-              {data.access.links.map(l => (
-                <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="text-[11px] font-mono bg-[#1a2e1a] text-white px-3 py-1.5 rounded-full hover:bg-black transition">{l.label} ↗</a>
-              ))}
-              <span className="text-[11px] font-mono bg-[#a3b18a]/30 border border-[#a3b18a] px-3 py-1.5 rounded-full">If they tried to post — even if not compliant — skip it.</span>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Layout */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mt-6 flex flex-col lg:flex-row gap-6 pb-10">
         {/* Left nav */}
@@ -384,6 +358,31 @@ export default function App() {
                 </div>
                 <a href="https://gf.nd.gov/hunting/where" target="_blank" rel="noreferrer" className="shrink-0 bg-[#c45d26] text-white text-[12px] font-semibold px-4 py-2 rounded-full">Where to Hunt Map ↗</a>
               </div>
+
+              {/* Access & Posting — moved to bottom, collapsed */}
+              {data.access && (
+                <details className="mt-4 bg-white border border-[#e8e0d0] rounded-[12px] overflow-hidden group">
+                  <summary className="px-4 py-3 flex items-center justify-between cursor-pointer bg-[#f4f1eb] hover:bg-[#ede8dc] transition list-none">
+                    <span className="font-display font-bold text-[13px] flex items-center gap-2"><span className="w-6 h-6 rounded-full bg-[#1a2e1a] text-white grid place-items-center text-[10px]">🪧</span>{data.access.title} <span className="hidden sm:inline font-normal text-[#8b7355]">— non-posted/E-posted & buildings</span></span>
+                    <span className="text-[11px] font-mono bg-white border border-[#e8e0d0] px-2.5 py-1 rounded-full group-open:hidden">Expand ▾</span>
+                    <span className="text-[11px] font-mono bg-[#1a2e1a] text-white px-2.5 py-1 rounded-full hidden group-open:inline">Hide ▴</span>
+                  </summary>
+                  <div className="p-3 grid md:grid-cols-2 lg:grid-cols-3 gap-3 border-t border-[#e8e0d0]">
+                    {data.access.rules.map((r,i) => (
+                      <div key={i} className="bg-[#f4f1eb] border border-[#e8e0d0] rounded-[10px] p-3">
+                        <div className="text-[11px] tracking-[0.12em] uppercase font-bold text-[#1a2e1a]">{r.label}</div>
+                        <div className="text-[12px] leading-[1.5] text-[#5a4a32] mt-1">{r.body}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="px-3 pb-3 flex flex-wrap gap-2">
+                    {data.access.links.map(l => (
+                      <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="text-[11px] font-mono bg-[#1a2e1a] text-white px-3 py-1.5 rounded-full hover:bg-black transition">{l.label} ↗</a>
+                    ))}
+                    <span className="text-[11px] font-mono bg-[#a3b18a]/30 border border-[#a3b18a] px-3 py-1.5 rounded-full hidden sm:inline">If they tried to post — even if not compliant — skip it.</span>
+                  </div>
+                </details>
+              )}
             </>
           ) : (
             <div className="py-16 text-center">
